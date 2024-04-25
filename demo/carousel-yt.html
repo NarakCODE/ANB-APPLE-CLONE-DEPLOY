@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Carousel Slider</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../styles/style.css" />
+		<style>
+			/* Additional custom styles */
+			.card {
+				flex: 0 0 auto;
+				width: 400px;
+				height: 500px; /* Adjust card width as needed */
+				box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+					rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div class="pl-40">
+				<h1 class="font-semibold text-2xl">
+					The latest.
+					<span class="text-gray-500"
+						>Take a look at what's new, right now.</span
+					>
+				</h1>
+			</div>
+			<div class="relative w-full h-[500px] flex items-center">
+				<!-- Section title -->
+
+				<button
+					id="prevBtn"
+					class="absolute z-10 left-0 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+				>
+					Previous
+				</button>
+
+				<button
+					id="nextBtn"
+					class="absolute z-10 right-0 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+				>
+					Next
+				</button>
+
+				<!-- Slider -->
+				<div id="carousel" class="px-40 flex gap-6 overflow-x-auto pb-10 py-6">
+					<!-- Carousel Content -->
+					<div class="card relative bg-gray-200 rounded-2xl overflow-hidden">
+						<div
+							class="text-white p-7 absolute left-0 top-0 flex flex-col gap-2"
+						>
+							<h4 class="uppercase text-xs">iPhone 15 Pro</h4>
+							<h1 class="text-3xl">Titanium</h1>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+
+						<div>
+							<img
+								src="../assets/product10.jpeg"
+								class="w-full h-full object-cover"
+								alt=""
+							/>
+						</div>
+					</div>
+					<div class="card bg-gray-200 rounded-lg p-4">
+						<h2 class="text-lg font-semibold">Card 2</h2>
+						<p>
+							Nulla facilisi. Sed eget dui dignissim, fringilla dolor id,
+							aliquam odio.
+						</p>
+					</div>
+					<div class="card bg-gray-200 rounded-lg p-4">
+						<h2 class="text-lg font-semibold">Card 3</h2>
+						<p>Etiam vel risus eu sapien varius aliquam nec at mi.</p>
+					</div>
+
+					<div class="card bg-gray-200 rounded-lg p-4">
+						<h2 class="text-lg font-semibold">Card 3</h2>
+						<p>Etiam vel risus eu sapien varius aliquam nec at mi.</p>
+					</div>
+
+					<div class="card bg-gray-200 rounded-lg p-4">
+						<h2 class="text-lg font-semibold">Card 3</h2>
+						<p>Etiam vel risus eu sapien varius aliquam nec at mi.</p>
+					</div>
+
+					<div class="card bg-gray-200 rounded-lg p-4">
+						<h2 class="text-lg font-semibold">Card 3</h2>
+						<p>Etiam vel risus eu sapien varius aliquam nec at mi.</p>
+					</div>
+
+					<div class="card bg-gray-200 rounded-lg p-4">
+						<h2 class="text-lg font-semibold">Card 3</h2>
+						<p>Etiam vel risus eu sapien varius aliquam nec at mi.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script>
+			const carousel = document.getElementById('carousel');
+			const prevBtn = document.getElementById('prevBtn');
+			const nextBtn = document.getElementById('nextBtn');
+			const cardWidth = document.querySelector('.card').offsetWidth + 20; // Card width including margin
+
+			prevBtn.addEventListener('click', () => {
+				carousel.scrollBy({
+					left: -cardWidth, // Scroll left by one card width
+					behavior: 'smooth',
+				});
+				updateNextButtonState();
+			});
+
+			nextBtn.addEventListener('click', () => {
+				carousel.scrollBy({
+					left: cardWidth, // Scroll right by one card width
+					behavior: 'smooth',
+				});
+				updateNextButtonState();
+			});
+
+			// Function to update the state of the next button
+			function updateNextButtonState() {
+				// Get the width of the carousel container and its scroll position
+				const containerWidth = carousel.clientWidth;
+				const scrollWidth = carousel.scrollWidth;
+				const scrollLeft = carousel.scrollLeft;
+			}
+
+			// Call the function initially to set the initial state of the next button
+			updateNextButtonState();
+		</script>
+	</body>
+</html>

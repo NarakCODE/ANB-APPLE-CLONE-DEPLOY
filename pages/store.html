@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Apple</title>
+		<!-- tailwindcss -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- font family -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+		></script>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+		/>
+
+		<!-- icons -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+
+		<!-- style -->
+		<link rel="stylesheet" href="../styles/style.css" />
+	</head>
+
+	<style></style>
+	<body class="bg-[#f5f5f7]">
+		<!-- Navbar -->
+		<navbar-component></navbar-component>
+
+		<!-- Main -->
+		<main class="">
+			<!-- Header title -->
+			<header
+				class="w-10/12 mx-auto py-20 flex items-center gap-2 justify-between"
+			>
+				<h1 class="lg:max-w-[800px] max-w-[500px] text-5xl font-semibold">
+					Store.
+					<span class="text-gray-500"
+						>The best way to buy the products you love.</span
+					>
+				</h1>
+				<div class="lg:flex flex-col gap-4 hidden">
+					<div class="flex items-center gap-2">
+						<img
+							class="w-9 h-9 rounded-full object-cover"
+							src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-chat-earth-day-specialist-icon-202404_AV3?wid=35&hei=35&fmt=jpeg&qlt=95&.v=1711478398896"
+							alt=""
+						/>
+						<div class="flex flex-col">
+							<p class="text-xs lg:text-sm">Need shopping help?</p>
+							<a
+								href="#"
+								class="text-blue-500 hover:underline text-xs lg:text-sm"
+								>Ask a Specialist</a
+							>
+						</div>
+					</div>
+
+					<div class="flex items-center gap-2">
+						<img
+							class="w-9 h-9 rounded-full object-cover"
+							src="https://i.pinimg.com/564x/34/64/ad/3464ad1c33c983b87d66f14b092f11ee.jpg"
+							alt=""
+						/>
+						<div class="flex flex-col">
+							<p class="text-xs lg:text-sm">Visit an Apple Store</p>
+							<a
+								href="#"
+								class="text-blue-500 hover:underline text-xs lg:text-sm"
+								>Find one near you ></a
+							>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<!-- Carousel 1-->
+			<section class="mt-14">
+				<header class="w-10/12 mx-auto flex items-center space-x-4 my-5">
+					<h2 class="text-black text-[26px] font-semibold">
+						Take a look at what’s new, right now.
+						<span class="text-gray-500"
+							>Take a look at what’s new, right now.</span
+						>
+					</h2>
+				</header>
+				<div class="flex items-center relative">
+					<div class="absolute left-8 z-10">
+						<button
+							class="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-lg prev"
+						>
+							&lt;
+						</button>
+					</div>
+					<div class="slider-container w-0full mx-auto">
+						<ul
+							class="h-[516px] pl-32 flex w-full gap-6 overflow-x-scroll transition-margin duration-700"
+						>
+							<li class="w-[400px] h-full pb-4 hover:scale-[101%] duration-500">
+								<div
+									class="relative rounded-2xl w-[400px] h-full overflow-hidden shadow-lg"
+								>
+									<div
+										class="absolute left-0 top-0 px-6 pt-6 w-full flex flex-col gap-2"
+									>
+										<p class="uppercase text-gray-500 font-semibold text-sm">
+											Enviroment
+										</p>
+										<h1 class="text-[28px] font-semibold leading-8">
+											Celebrate Earth Day with Apple.
+										</h1>
+										<p>
+											Today, and every day, you can recycle your Apple products
+											for free.
+										</p>
+									</div>
+									<img
+										src="../assets/product1.jpeg"
+										class="w-full h-full object-cover"
+										alt=""
+									/>
+								</div>
+							</li>
+
+							<li
+								class="w-[400px] h-full pb-4 hover:scale-[101%] duration-500 text-white"
+							>
+								<div
+									class="relative rounded-2xl w-[400px] h-full overflow-hidden shadow-lg"
+								>
+									<div
+										class="absolute left-0 top-0 px-6 pt-6 w-full flex flex-col gap-2"
+									>
+										<p class="uppercase text-gray-500 font-semibold text-sm">
+											iPhone 15 Pro
+										</p>
+										<h1 class="text-[28px] font-semibold leading-8">
+											Titanium
+										</h1>
+										<p>From $999 or $41.62/mo. for 24 mo.*</p>
+									</div>
+									<img
+										src="../assets/product2.jpeg"
+										class="w-full h-full object-cover"
+										alt=""
+									/>
+								</div>
+							</li>
+
+							<li class="w-[400px] h-full pb-4 hover:scale-[101%] duration-500">
+								<div
+									class="relative rounded-2xl w-[400px] h-full overflow-hidden shadow-lg"
+								>
+									<div
+										class="absolute left-0 top-0 px-6 pt-6 w-full flex flex-col gap-2"
+									>
+										<p class="uppercase text-gray-500 font-semibold text-sm">
+											Apple vision pro
+										</p>
+										<h1 class="text-[28px] font-semibold leading-8">
+											Welcome to spatial computing.
+										</h1>
+										<p>From $3499 or $281.58/mo. for 12 mo.</p>
+									</div>
+									<img
+										src="../assets/product3.jpeg"
+										class="w-full h-full object-cover"
+										alt=""
+									/>
+								</div>
+							</li>
+
+							<li class="w-[400px] h-full pb-4 hover:scale-[101%] duration-500">
+								<div
+									class="relative rounded-2xl w-[400px] h-full overflow-hidden shadow-lg"
+								>
+									<div
+										class="absolute left-0 top-0 px-6 pt-6 w-full flex flex-col gap-2"
+									>
+										<p class="uppercase text-gray-500 font-semibold text-sm">
+											Macbook air
+										</p>
+										<h1 class="text-[28px] font-semibold leading-8">
+											Designed to go places
+										</h1>
+										<p>From $999 or $83.25/mo. for 12 mo.</p>
+									</div>
+									<img
+										src="../assets/product4.jpeg"
+										class="w-full h-full object-cover"
+										alt=""
+									/>
+								</div>
+							</li>
+
+							<li
+								class="w-[400px] h-full pb-4 hover:scale-[101%] duration-500 text-white"
+							>
+								<div
+									class="relative rounded-2xl w-[400px] h-full overflow-hidden shadow-lg"
+								>
+									<div
+										class="absolute left-0 top-0 px-6 pt-6 w-full flex flex-col gap-2"
+									>
+										<p class="uppercase text-gray-500 font-semibold text-sm">
+											Macbook air
+										</p>
+										<h1 class="text-[28px] font-semibold leading-8">
+											Designed to go places
+										</h1>
+										<p>From $999 or $83.25/mo. for 12 mo.</p>
+									</div>
+									<img
+										src="../assets/product5.jpeg"
+										class="w-full h-full object-cover"
+										alt=""
+									/>
+								</div>
+							</li>
+
+							<li class="w-[400px] h-full pb-4 hover:scale-[101%] duration-500">
+								<div
+									class="relative rounded-2xl w-[400px] h-full overflow-hidden shadow-lg"
+								>
+									<div
+										class="absolute left-0 top-0 px-6 pt-6 w-full flex flex-col gap-2"
+									>
+										<p class="uppercase text-gray-500 font-semibold text-sm">
+											Macbook air
+										</p>
+										<h1 class="text-[28px] font-semibold leading-8">
+											Designed to go places
+										</h1>
+										<p>From $999 or $83.25/mo. for 12 mo.</p>
+									</div>
+									<img
+										src="../assets/product6.jpeg"
+										class="w-full h-full object-cover"
+										alt=""
+									/>
+								</div>
+							</li>
+
+							<li class="w-[400px] h-full pb-4 hover:scale-[101%] duration-500">
+								<div
+									class="relative rounded-2xl w-[400px] h-full overflow-hidden shadow-lg"
+								>
+									<div
+										class="absolute left-0 top-0 px-6 pt-6 w-full flex flex-col gap-2"
+									>
+										<p class="uppercase text-gray-500 font-semibold text-sm">
+											Macbook air
+										</p>
+										<h1 class="text-[28px] font-semibold leading-8">
+											Designed to go places
+										</h1>
+										<p>From $999 or $83.25/mo. for 12 mo.</p>
+									</div>
+									<img
+										src="../assets/product7.jpeg"
+										class="w-full h-full object-cover"
+										alt=""
+									/>
+								</div>
+							</li>
+
+							<li class="w-[400px] h-full pb-4 hover:scale-[101%] duration-500">
+								<div
+									class="relative rounded-2xl w-[400px] h-full overflow-hidden shadow-lg"
+								>
+									<div
+										class="absolute left-0 top-0 px-6 pt-6 w-full flex flex-col gap-2"
+									>
+										<p class="uppercase text-gray-500 font-semibold text-sm">
+											Macbook air
+										</p>
+										<h1 class="text-[28px] font-semibold leading-8">
+											Designed to go places
+										</h1>
+										<p>From $999 or $83.25/mo. for 12 mo.</p>
+									</div>
+									<img
+										src="../assets/product8.jpeg"
+										class="w-full h-full object-cover"
+										alt=""
+									/>
+								</div>
+							</li>
+
+							<li class="w-[400px] h-full pb-4 hover:scale-[101%] duration-500">
+								<div
+									class="relative rounded-2xl w-[400px] h-full overflow-hidden shadow-lg"
+								>
+									<div
+										class="absolute left-0 top-0 px-6 pt-6 w-full flex flex-col gap-2"
+									>
+										<p class="uppercase text-gray-500 font-semibold text-sm">
+											Macbook air
+										</p>
+										<h1 class="text-[28px] font-semibold leading-8">
+											Designed to go places
+										</h1>
+										<p>From $999 or $83.25/mo. for 12 mo.</p>
+									</div>
+									<img
+										src="../assets/product9.jpeg"
+										class="w-full h-full object-cover"
+										alt=""
+									/>
+								</div>
+							</li>
+
+							<li
+								class="w-[400px] h-full pb-4 hover:scale-[101%] duration-500 text-white"
+							>
+								<div
+									class="relative rounded-2xl w-[400px] h-full overflow-hidden shadow-lg"
+								>
+									<div
+										class="absolute left-0 top-0 px-6 pt-6 w-full flex flex-col gap-2"
+									>
+										<p class="uppercase text-gray-500 font-semibold text-sm">
+											Macbook air
+										</p>
+										<h1 class="text-[28px] font-semibold leading-8">
+											Designed to go places
+										</h1>
+										<p>From $999 or $83.25/mo. for 12 mo.</p>
+									</div>
+									<img
+										src="../assets/product10.jpeg"
+										class="w-full h-full object-cover"
+										alt=""
+									/>
+								</div>
+							</li>
+
+							<li class="w-[400px] h-full pb-4 hover:scale-[101%] duration-500">
+								<div
+									class="relative rounded-2xl w-[400px] h-full overflow-hidden shadow-lg"
+								>
+									<div
+										class="absolute left-0 top-0 px-6 pt-6 w-full flex flex-col gap-2"
+									>
+										<p class="upperc ase text-gray-500 font-semibold text-sm">
+											Macbook air
+										</p>
+										<h1 class="text-[28px] font-semibold leading-8">
+											Designed to go places
+										</h1>
+										<p>From $999 or $83.25/mo. for 12 mo.</p>
+									</div>
+									<img src="../assets/product11.jpeg" class="w-full h-full
+									object alt="" />
+								</div>
+							</li>
+
+							<li class="w-[400px] h-full pb-4 hover:scale-[101%] duration-500">
+								<div
+									class="relative rounded-2xl w-[400px] h-full overflow-hidden shadow-lg"
+								>
+									<div
+										class="absolute left-0 top-0 px-6 pt-6 w-full flex flex-col gap-2"
+									>
+										<p class="uppercase text-gray-500 font-semibold text-sm">
+											Macbook air
+										</p>
+										<h1 class="text-[28px] font-semibold leading-8">
+											Designed to go places
+										</h1>
+										<p>From $999 or $83.25/mo. for 12 mo.</p>
+									</div>
+									<img
+										src="../assets/product12.jpeg"
+										class="w-full h-full object-cover"
+										alt=""
+									/>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="absolute right-8 z-10">
+						<button
+							class="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-lg next"
+						>
+							&gt;
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- Carousel 1-->
+			<section class="mt-14">
+				<header class="w-10/12 mx-auto flex items-center space-x-4 my-5">
+					<h2 class="text-black text-[26px] font-semibold">
+						Take a look at what’s new, right now.
+						<span class="text-gray-500"
+							>Take a look at what’s new, right now.</span
+						>
+					</h2>
+				</header>
+				<div class="flex items-center relative">
+					<div class="absolute left-8 z-10">
+						<button
+							class="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-lg prev"
+						>
+							&lt;
+						</button>
+					</div>
+					<div class="slider-container w-10/12 mx-auto">
+						<ul
+							class="slide h-[516px] flex w-full gap-6 overflow-x-scroll transition-margin duration-700"
+						>
+							<li class="w-[400px] h-full pb-4 hover:scale-[101%] duration-500">
+								<div
+									class="relative rounded-2xl w-[400px] h-full overflow-hidden shadow-lg"
+								>
+									<div
+										class="absolute left-0 top-0 px-6 pt-6 w-full flex flex-col gap-2"
+									>
+										<p class="uppercase text-gray-500 font-semibold text-sm">
+											Enviroment
+										</p>
+										<h1 class="text-[28px] font-semibold leading-8">
+											Celebrate Earth Day with Apple.
+										</h1>
+										<p>
+											Today, and every day, you can recycle your Apple products
+											for free.
+										</p>
+									</div>
+									<img
+										src="../assets/product1.jpeg"
+										class="w-full h-full object-cover"
+										alt=""
+									/>
+								</div>
+							</li>
+
+							<li
+								class="w-[400px] h-full pb-4 hover:scale-[101%] duration-500 text-white"
+							>
+								<div
+									class="relative rounded-2xl w-[400px] h-full overflow-hidden shadow-lg"
+								>
+									<div
+										class="absolute left-0 top-0 px-6 pt-6 w-full flex flex-col gap-2"
+									>
+										<p class="uppercase text-gray-500 font-semibold text-sm">
+											iPhone 15 Pro
+										</p>
+										<h1 class="text-[28px] font-semibold leading-8">
+											Titanium
+										</h1>
+										<p>From $999 or $41.62/mo. for 24 mo.*</p>
+									</div>
+									<img
+										src="../assets/product2.jpeg"
+										class="w-full h-full object-cover"
+										alt=""
+									/>
+								</div>
+							</li>
+
+							<li class="w-[400px] h-full pb-4 hover:scale-[101%] duration-500">
+								<div
+									class="relative rounded-2xl w-[400px] h-full overflow-hidden shadow-lg"
+								>
+									<div
+										class="absolute left-0 top-0 px-6 pt-6 w-full flex flex-col gap-2"
+									>
+										<p class="uppercase text-gray-500 font-semibold text-sm">
+											Apple vision pro
+										</p>
+										<h1 class="text-[28px] font-semibold leading-8">
+											Welcome to spatial computing.
+										</h1>
+										<p>From $3499 or $281.58/mo. for 12 mo.</p>
+									</div>
+									<img
+										src="../assets/product3.jpeg"
+										class="w-full h-full object-cover"
+										alt=""
+									/>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="absolute right-8 z-10">
+						<button
+							class="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-lg next"
+						>
+							&gt;
+						</button>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer-component></footer-component>
+	</body>
+
+	<script src="../components/navbar.js"></script>
+	<script src="../components/primary-btn.js"></script>
+	<script src="../components/header.js"></script>
+	<script src="../components/footer.js"></script>
+	<script src="../components/outline-btn.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+	<script src="../components/carousel.js"></script>
+
+	<script>
+		var glide01 = new Glide('.glide-01', {
+			type: 'carousel',
+			focusAt: 'center',
+			perView: 4,
+			animationDuration: 700,
+			gap: 20,
+			classes: {
+				activeNav: '[&>*]:bg-slate-700',
+			},
+			breakpoints: {
+				1024: {
+					perView: 4,
+				},
+				640: {
+					perView: 3,
+				},
+			},
+		});
+
+		glide01.mount();
+
+		var glide02 = new Glide('.glide-02', {
+			type: 'carousel',
+			focusAt: 'center',
+			perView: 4,
+			animationDuration: 700,
+			gap: 20,
+			classes: {
+				activeNav: '[&>*]:bg-slate-700',
+			},
+			breakpoints: {
+				1024: {
+					perView: 4,
+				},
+				640: {
+					perView: 3,
+				},
+			},
+		});
+
+		glide02.mount();
+
+		var glide03 = new Glide('.glide-03', {
+			type: 'carousel',
+			focusAt: 'center',
+			perView: 4,
+			animationDuration: 700,
+			gap: 20,
+			classes: {
+				activeNav: '[&>*]:bg-slate-700',
+			},
+			breakpoints: {
+				1024: {
+					perView: 4,
+				},
+				640: {
+					perView: 3,
+				},
+			},
+		});
+
+		glide03.mount();
+
+		var glide04 = new Glide('.glide-04', {
+			type: 'carousel',
+			focusAt: 'center',
+			perView: 4,
+			animationDuration: 700,
+			gap: 20,
+			classes: {
+				activeNav: '[&>*]:bg-slate-700',
+			},
+			breakpoints: {
+				1024: {
+					perView: 4,
+				},
+				640: {
+					perView: 3,
+				},
+			},
+		});
+
+		glide04.mount();
+
+		var glide05 = new Glide('.glide-05', {
+			type: 'carousel',
+			focusAt: 'center',
+			perView: 4,
+			animationDuration: 700,
+			gap: 20,
+			classes: {
+				activeNav: '[&>*]:bg-slate-700',
+			},
+			breakpoints: {
+				1024: {
+					perView: 4,
+				},
+				640: {
+					perView: 3,
+				},
+			},
+		});
+
+		glide05.mount();
+
+		var glide06 = new Glide('.glide-06', {
+			type: 'carousel',
+			focusAt: 'center',
+			perView: 4,
+			animationDuration: 700,
+			gap: 20,
+			classes: {
+				activeNav: '[&>*]:bg-slate-700',
+			},
+			breakpoints: {
+				1024: {
+					perView: 4,
+				},
+				640: {
+					perView: 3,
+				},
+			},
+		});
+
+		glide06.mount();
+
+		var glide07 = new Glide('.glide-07', {
+			type: 'carousel',
+			focusAt: 'center',
+			perView: 4,
+			animationDuration: 700,
+			gap: 20,
+			classes: {
+				activeNav: '[&>*]:bg-slate-700',
+			},
+			breakpoints: {
+				1024: {
+					perView: 4,
+				},
+				640: {
+					perView: 3,
+				},
+			},
+		});
+
+		glide07.mount();
+
+		var glide08 = new Glide('.glide-08', {
+			type: 'carousel',
+			focusAt: 'center',
+			perView: 4,
+			animationDuration: 700,
+			gap: 20,
+			classes: {
+				activeNav: '[&>*]:bg-slate-700',
+			},
+			breakpoints: {
+				1024: {
+					perView: 4,
+				},
+				640: {
+					perView: 3,
+				},
+			},
+		});
+
+		glide08.mount();
+
+		var glide09 = new Glide('.glide-09', {
+			type: 'carousel',
+			focusAt: 'center',
+			perView: 4,
+			animationDuration: 700,
+			gap: 20,
+			classes: {
+				activeNav: '[&>*]:bg-slate-700',
+			},
+			breakpoints: {
+				1024: {
+					perView: 4,
+				},
+				640: {
+					perView: 3,
+				},
+			},
+		});
+
+		glide09.mount();
+	</script>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="bg-[#f6f6f6]">
+		<div
+			class="wrapper max-w-[1100px] mt-20 w-full px-6 flex items-center relative"
+		>
+			<button
+				id="prev"
+				class="absolute left-4 z-10 w-14 h-14 bg-gray-200 opacity-70 hover:opacity-90 hover:scale-[110%] duration-300 rounded-full flex items-center justify-center"
+			>
+				<img
+					src="https://www.svgrepo.com/show/127047/right-thin-chevron.svg"
+					alt=""
+					class="rotate-180 w-6"
+				/>
+			</button>
+			<ul class="carousel grid grid-flow-col auto-cols-max gap-4">
+				<li
+					class="card relative rounded-xl overflow-hidden w-[400px] h-[500px] bg-white shadow-lg"
+				>
+					<div class="p-6 absolute left-0 top-0">
+						<h1 class="uppercase font-semibold">Lorem, ipsum.</h1>
+						<h2 class="text-2xl font-semibold">Lorem ipsum dolor sit amet.</h2>
+						<p class="text-gray-500">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. In,
+							doloremque!
+						</p>
+					</div>
+					<div class="img w-full h-full object-cover">
+						<img src="../assets/product4.jpeg" alt="" />
+					</div>
+				</li>
+
+				<li
+					class="card relative rounded-xl overflow-hidden w-[400px] h-[500px] bg-white shadow-lg"
+				>
+					<div class="p-6 absolute left-0 top-0">
+						<h1 class="uppercase font-semibold">Lorem, ipsum.</h1>
+						<h2 class="text-2xl font-semibold">Lorem ipsum dolor sit amet.</h2>
+						<p class="text-gray-500">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. In,
+							doloremque!
+						</p>
+					</div>
+					<div class="img w-full h-full object-cover">
+						<img src="../assets/product4.jpeg" alt="" />
+					</div>
+				</li>
+
+				<li
+					class="card relative rounded-xl overflow-hidden w-[400px] h-[500px] bg-white shadow-lg"
+				>
+					<div class="p-6 absolute left-0 top-0">
+						<h1 class="uppercase font-semibold">Lorem, ipsum.</h1>
+						<h2 class="text-2xl font-semibold">Lorem ipsum dolor sit amet.</h2>
+						<p class="text-gray-500">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. In,
+							doloremque!
+						</p>
+					</div>
+					<div class="img w-full h-full object-cover">
+						<img src="../assets/product4.jpeg" alt="" />
+					</div>
+				</li>
+
+				<li
+					class="card relative rounded-xl overflow-hidden w-[400px] h-[500px] bg-white shadow-lg"
+				>
+					<div class="p-6 absolute left-0 top-0">
+						<h1 class="uppercase font-semibold">Lorem, ipsum.</h1>
+						<h2 class="text-2xl font-semibold">Lorem ipsum dolor sit amet.</h2>
+						<p class="text-gray-500">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. In,
+							doloremque!
+						</p>
+					</div>
+					<div class="img w-full h-full object-cover">
+						<img src="../assets/product4.jpeg" alt="" />
+					</div>
+				</li>
+
+				<li
+					class="card relative rounded-xl overflow-hidden w-[400px] h-[500px] bg-white shadow-lg"
+				>
+					<div class="p-6 absolute left-0 top-0">
+						<h1 class="uppercase font-semibold">Lorem, ipsum.</h1>
+						<h2 class="text-2xl font-semibold">Lorem ipsum dolor sit amet.</h2>
+						<p class="text-gray-500">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. In,
+							doloremque!
+						</p>
+					</div>
+					<div class="img w-full h-full object-cover">
+						<img src="../assets/product4.jpeg" alt="" />
+					</div>
+				</li>
+			</ul>
+			<button
+				id="next"
+				class="absolute right-4 z-10 w-14 h-14 bg-gray-200 opacity-70 hover:opacity-90 hover:scale-[110%] duration-300 rounded-full flex items-center justify-center"
+			>
+				<img
+					src="https://www.svgrepo.com/show/127047/right-thin-chevron.svg"
+					alt=""
+					class="w-6"
+				/>
+			</button>
+		</div>
+	</body>
+
+	<script>
+		const carousel = document.querySelector('.carousel');
+		const arrowBtns = document.querySelectorAll('.wrapper button');
+		const firstCardWidth = carousel.querySelector('.card').offsetWidth;
+
+		arrowBtns.forEach((btn) => {
+			btn.addEventListener('click', () => {
+				carousel.scrollLeft +=
+					btn.id === 'left' ? -firstCardWidth : firstCardWidth;
+			});
+		});
+
+		let isDragging = false;
+
+		const dragStart = () => {
+			isDragging = true;
+			carousel.classList.add('dragging');
+		};
+
+		const dragging = (e) => {
+			if (!isDragging) return;
+
+			carousel.scrollLeft = e.pageX;
+		};
+
+		carousel.addEventListener('mousedown', dragStart);
+		carousel.addEventListener('mousemove', dragging);
+	</script>
+</html>

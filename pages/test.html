@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		.carousel-container {
+			position: relative;
+			overflow: hidden;
+		}
+
+		.carousel-wrapper {
+			display: flex;
+			transition: transform 0.3s ease;
+		}
+
+		.carousel-track {
+			display: flex;
+		}
+
+		.carousel-card {
+			flex: 0 0 auto;
+			width: 200px; /* Set your card width here */
+			margin-right: 10px; /* Set your card margin */
+			background-color: #f0f0f0;
+			padding: 20px;
+			border-radius: 8px;
+		}
+
+		.prev-btn,
+		.next-btn {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			padding: 8px 16px;
+			background-color: #ccc;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		.prev-btn {
+			left: 10px;
+		}
+
+		.next-btn {
+			right: 10px;
+		}
+	</style>
+	<body>
+		<div class="carousel-container">
+			<div
+				class="carousel-wrapper"
+				x-data="{ currentIndex: 0, cardWidth: null }"
+				x-init="cardWidth = $refs.card.offsetWidth"
+			>
+				<div
+					class="carousel-track"
+					:style="{ transform: `translateX(-${currentIndex * cardWidth}px)` }"
+				>
+					<div class="carousel-card" x-ref="card">Card 1</div>
+					<div class="carousel-card">Card 2</div>
+					<div class="carousel-card">Card 3</div>
+					<!-- Add more cards here -->
+				</div>
+			</div>
+			<button @click="prev" class="prev-btn">Previous</button>
+			<button @click="next" class="next-btn">Next</button>
+		</div>
+	</body>
+
+	<script>
+		function clamp(value, min, max) {
+			return Math.min(Math.max(value, min), max);
+		}
+
+		const carousel = {
+			currentIndex: 0,
+			cardWidth: null,
+			prev() {
+				this.currentIndex = clamp(
+					this.currentIndex - 1,
+					0,
+					this.$refs.track.children.length - 1
+				);
+			},
+			next() {
+				this.currentIndex = clamp(
+					this.currentIndex + 1,
+					0,
+					this.$refs.track.children.length - 1
+				);
+			},
+			init() {
+				this.cardWidth = this.$refs.card.offsetWidth;
+			},
+		};
+
+		window.addEventListener('load', () => carousel.init());
+	</script>
+</html>
