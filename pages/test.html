@@ -7,106 +7,31 @@
 		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
 	<style></style>
-	<body>
-		<div
-			class="slider-container relative w-full overflow-hidden pt-10 py-20 group"
-		>
-			<div
-				class="slider flex gap-6 transition-transform duration-[0.5s] ease-[ease]"
-			>
-				<div
-					class="relative card flex-[0_0_400px] h-[500px] rounded-2xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] bg-[#fff] hover:scale-[101%] duration-500 cursor-pointer overflow-hidden"
-				>
-					<img
-						src="../assets/product4.jpeg"
-						class="w-full h-full object-cover"
-						alt=""
-					/>
-					<div class="p-8 absolute left-0 top-0">
-						<p class="text-gray-500 text-xs tracking-wider font-semibold">
-							ELECTRONICE
-						</p>
-						<h2 class="mt-2 font-semibold text-[26px]">
-							Designed to go places.
-						</h2>
-						<p class="text-md font-light text-gray-500">
-							From $999 or $83.25/mo. for 12 mo.
-						</p>
-					</div>
-				</div>
+	<body class="bg-[#F5F5F5] w-full h-screen flex items-center justify-center">
+		<div class="w-[500px]">
+			<button id="accordion-btn" class="underline py-5">Click me</button>
 
-				<div
-					class="relative card flex-[0_0_400px] h-[500px] rounded-2xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] bg-[#fff] hover:scale-[101%] duration-500 cursor-pointer overflow-hidden"
-				>
-					<img
-						src="../assets/product4.jpeg"
-						class="w-full h-full object-cover"
-						alt=""
-					/>
-					<div class="p-8 absolute left-0 top-0">
-						<p class="text-gray-500 text-xs tracking-wider font-semibold">
-							ELECTRONICE
-						</p>
-						<h2 class="mt-2 font-semibold text-[26px]">
-							Designed to go places.
-						</h2>
-						<p class="text-md font-light text-gray-500">
-							From $999 or $83.25/mo. for 12 mo.
-						</p>
-					</div>
-				</div>
+			<!-- Content to show -->
+			<div
+				id="accordion-container"
+				class="w-full h-0 overflow-hidden transition-[height] duration-300 ease-[ease] p-0"
+			>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi alias
+					nisi itaque aliquid asperiores sit, facere laboriosam, iure autem
+					nesciunt reiciendis sint non saepe consectetur, et quam veniam tempora
+					in.
+				</p>
 			</div>
-			<button
-				id="prevBtn"
-				class="absolute hidden -translate-y-2/4 bg-[#007bff] text-[white] cursor-pointer px-5 py-2.5 border-[none] top-2/4 left-0"
-			>
-				Prev
-			</button>
-			<button
-				id="nextBtn"
-				class="absolute scale-[90%] group-hover:scale-[110%] opacity-0 group-hover:opacity-100 duration-500 -translate-y-2/4 bg-[#a5a5a546] hover:bg-[#a5a5a56f] text-[white] cursor-pointer w-12 h-12 rounded-full top-2/4 right-0 flex items-center justify-center"
-			>
-				<img
-					src="https://icons.veryicon.com/png/o/miscellaneous/common-icons-of-web-system/chevron-right-29.png"
-					alt=""
-					class="w-6"
-				/>
-			</button>
 		</div>
 	</body>
 
 	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			const slider = document.querySelector('.slider');
-			const cards = document.querySelectorAll('.card');
-			const prevBtn = document.getElementById('prevBtn');
-			const nextBtn = document.getElementById('nextBtn');
-			let currentIndex = 0;
-			var bodyWidth = document.body.offsetWidth;
+		const accordionBtn = document.getElementById('accordion-btn');
+		const accordionContainer = document.getElementById('accordion-container');
 
-			function updateSlider() {
-				slider.style.transform = `translateX(${-currentIndex * 410}px)`; // Adjust card width and margin
-				// Disable buttons when end of slider reached
-				prevBtn.classList.toggle('hidden', currentIndex === 0);
-				nextBtn.classList.toggle('hidden', currentIndex === cards.length - 1);
-			}
-
-			function nextSlide() {
-				if (currentIndex < cards.length - 1) {
-					currentIndex++;
-					updateSlider();
-				}
-			}
-
-			function prevSlide() {
-				if (currentIndex > 0) {
-					currentIndex--;
-					updateSlider();
-				}
-			}
-
-			nextBtn.addEventListener('click', nextSlide);
-			prevBtn.addEventListener('click', prevSlide);
+		accordionBtn.addEventListener('click', () => {
+			accordionContainer.style.height = 'h-auto';
 		});
 	</script>
 </html>

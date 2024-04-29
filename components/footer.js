@@ -112,6 +112,10 @@ const footerLinks = [
 	],
 ];
 
+const createFooterComponent = () => {
+	
+}
+
 class FooterComponent extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML = `
@@ -169,31 +173,29 @@ class FooterComponent extends HTMLElement {
 					<div class="grid-cols-5 hidden lg:grid gap-4">
 						<!-- Loop through each column -->
 						${footerLinks
-									.map((column) => {
-										return `
+							.map((column) => {
+								return `
 									<div class="flex flex-col gap-6 text-black/60">
 										<!-- Loop through each list in the column -->
 										${column
-															.map((list) => {
-																return `
+											.map((list) => {
+												return `
 													<ul class="flex flex-col gap-2">
-														<li><p class="text-black">${
-																					list.title
-																				}</p></li>
+														<li><p class="text-black">${list.title}</p></li>
 														<!-- Loop through each link in the list and convert to lowercase -->
 														${list.links
-																					.map((link) => {
-																						return `<li><a href="${link.toLowerCase()}.html" class="hover:underline">${link}</a></li>`;
-																					})
-																					.join('')}
-													</ul>
-											`;
+															.map((link) => {
+																return `<li><a href="${link.toLowerCase()}.html" class="hover:underline">${link}</a></li>`;
 															})
 															.join('')}
+													</ul>
+											`;
+											})
+											.join('')}
 									</div>
 							`;
-									})
-									.join('')}
+							})
+							.join('')}
 					</div>
 
 					<!-- Accordion component -->
@@ -202,9 +204,9 @@ class FooterComponent extends HTMLElement {
 						<div x-data="{ expandedIndex: null }" class="py-2">
 							${footerLinks
 								.map((section, index) => {
-										const sectionId = `faqs-title-${index + 1}`;
-										const regionId = `faqs-text-${index + 1}`;
-										return `
+									const sectionId = `faqs-title-${index + 1}`;
+									const regionId = `faqs-text-${index + 1}`;
+									return `
 											<h2>
 												<button
 														id="${sectionId}"
@@ -248,7 +250,16 @@ class FooterComponent extends HTMLElement {
 												:class="{ 'grid-rows-[1fr] opacity-100': expandedIndex === ${index}, 'grid-rows-[0fr] opacity-0': expandedIndex !== ${index} }"
 											>
 												<ul class="px-2 overflow-hidden w-full flex flex-col gap-3 text-xs">
-														${section.map(subSection => subSection.links.map(link => `<a href="" class="w-full hover:underline">${link}</a>`).join('')).join('')}
+														${section
+															.map((subSection) =>
+																subSection.links
+																	.map(
+																		(link) =>
+																			`<a href="" class="w-full hover:underline">${link}</a>`
+																	)
+																	.join('')
+															)
+															.join('')}
 												</ul>
 											</div>
 										`;
