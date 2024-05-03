@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	let currentIndex = 0;
 
 	function updateSlider() {
-		categorySlider.style.transform = `translateX(${-currentIndex * 150}px)`; // card width 140px + 10px
+		categorySlider.style.transform = `translateX(${-currentIndex * 164}px)`; // card width 140px + 10px
 		categoryPrevBtn.classList.toggle('hidden', currentIndex === 0);
 		categoryNextBtn.classList.toggle(
 			'hidden',
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	let currentIndex = 0;
 
 	function updateSlider() {
-		slider.style.transform = `translateX(${-currentIndex * 410}px)`; // Adjust card width and margin
+		slider.style.transform = `translateX(${-currentIndex * 424}px)`; // Adjust card width and margin
 		// Disable buttons when end of slider reached
 		prevBtn.classList.toggle('hidden', currentIndex === 0);
 		nextBtn.classList.toggle('hidden', currentIndex === cards.length - 1);
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	let currentIndex = 0;
 
 	function updateSlider() {
-		serviceSlider.style.transform = `translateX(${-currentIndex * 500}px)`; // card width 480px + 10px
+		serviceSlider.style.transform = `translateX(${-currentIndex * 504}px)`; // card width 480px + 24px
 		servicePrevBtn.classList.toggle('hidden', currentIndex === 0);
 		serviceNextBtn.classList.toggle(
 			'hidden',
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	let currentIndex = 0;
 
 	function updateSlider() {
-		appleStoreSlider.style.transform = `translateX(${-currentIndex * 323}px)`; // card width 313px + 10px
+		appleStoreSlider.style.transform = `translateX(${-currentIndex * 337}px)`; // card width 313px + 10px
 		appleStorePrevBtn.classList.toggle('hidden', currentIndex === 0);
 		appleStoreNextBtn.classList.toggle(
 			'hidden',
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	let currentIndex = 0;
 
 	function updateSlider() {
-		accessorieSlider.style.transform = `translateX(${-currentIndex * 323}px)`; // card width 313px + 10px
+		accessorieSlider.style.transform = `translateX(${-currentIndex * 337}px)`; // card width 313px + 10px
 		accessoriePrevBtn.classList.toggle('hidden', currentIndex === 0);
 		accessorieNextBtn.classList.toggle(
 			'hidden',
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	let currentIndex = 0;
 
 	function updateSlider() {
-		loudSlider.style.transform = `translateX(${-currentIndex * 323}px)`; // card width 313px + 10px
+		loudSlider.style.transform = `translateX(${-currentIndex * 337}px)`; // card width 313px + 24px
 		loudPrevBtn.classList.toggle('hidden', currentIndex === 0);
 		loudNextBtn.classList.toggle(
 			'hidden',
@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	let currentIndex = 0;
 
 	function updateSlider() {
-		experienceSlider.style.transform = `translateX(${-currentIndex * 500}px)`; // card width 313px + 10px
+		experienceSlider.style.transform = `translateX(${-currentIndex * 504}px)`; // card width 313px + 10px
 		experiencePrevBtn.classList.toggle('hidden', currentIndex === 0);
 		experienceNextBtn.classList.toggle(
 			'hidden',
@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	let currentIndex = 0;
 
 	function updateSlider() {
-		specialSlider.style.transform = `translateX(${-currentIndex * 500}px)`; // card width 313px + 10px
+		specialSlider.style.transform = `translateX(${-currentIndex * 504}px)`; // card width 313px + 24px
 		specialPrevBtn.classList.toggle('hidden', currentIndex === 0);
 		specialNextBtn.classList.toggle(
 			'hidden',

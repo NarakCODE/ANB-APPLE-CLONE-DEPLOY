@@ -7,31 +7,293 @@
 		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
 	<style></style>
-	<body class="bg-[#F5F5F5] w-full h-screen flex items-center justify-center">
-		<div class="w-[500px]">
-			<button id="accordion-btn" class="underline py-5">Click me</button>
-
-			<!-- Content to show -->
+	<body class="bg-[#F5F5F5]">
+		<!-- Overlay Background -->
+		<div
+			id="overlay-bg"
+			class="z-[50] fixed top-0 left-0 right-0 opacity-0 pointer-events-none bottom-0 w-full h-screen bg-white/40 backdrop-blur-lg duration-500"
+		></div>
+		<nav
+			id="navbar-container"
+			class="w-full fixed pt-1 top-0 left-0 bg-white/90 text-black backdrop-blur-sm z-[99] border-b shadow-sm border-white duration-500 transition-all ease-in-out overflow-hidden"
+		>
+			<!-- Menu list -->
 			<div
-				id="accordion-container"
-				class="w-full h-0 overflow-hidden transition-[height] duration-300 ease-[ease] p-0"
+				class="max-w-[1100px] mx-auto px-6 py-2 flex items-center justify-between"
 			>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi alias
-					nisi itaque aliquid asperiores sit, facere laboriosam, iure autem
-					nesciunt reiciendis sint non saepe consectetur, et quam veniam tempora
-					in.
-				</p>
+				<div class="flex items-center justify-between w-full text-xs gap-6">
+					<a href="home.html">
+						<img class="w-4" src="../assets/apple-logo.png" alt="" />
+					</a>
+					<ul class="md:flex justify-between items-center w-full hidden">
+						<li id="hover-btn">
+							<a class="py-3 text-black/80 hover:text-black" href="store.html"
+								>Store</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="mac.html"
+								>Mac</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="ipad.html"
+								>iPad</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="iphone.html"
+								>iPhone</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="store.html"
+								>Watch</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="store.html"
+								>Vision</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="store.html"
+								>AirPods</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="store.html"
+								>TV & Home</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="store.html"
+								>Entertainment</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="store.html"
+								>Accessories</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="store.html"
+								>Support</a
+							>
+						</li>
+					</ul>
+					<div class="flex gap-4">
+						<button>
+							<span
+								class="material-symbols-outlined text-[20px] text-black/80 hover:text-black"
+							>
+								search
+							</span>
+						</button>
+
+						<button>
+							<span
+								class="material-symbols-outlined text-[20px] text-black/80 hover:text-black"
+							>
+								shopping_bag
+							</span>
+						</button>
+						<button class="md:hidden flex relative z-[50]" id="menu-btn">
+							<span class="material-symbols-outlined"> menu </span>
+						</button>
+
+						<!-- menu list dropdown -->
+						<div
+							id="menu-list"
+							class="fixed top-0 left-0 w-full h-0 bg-white z-[49] origin-top duration-500 backdrop-blur-md"
+						>
+							<div
+								class="px-12 flex flex-col mt-14 text-2xl gap-3 font-semibold opacity-0 pointer-events-none duration-500"
+								id="list-container"
+							>
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
+
+			<!-- Store dropdown container -->
+			<div
+				id="dropdown-list"
+				class="w-full fixed opacity-0 pointer-events-none top-9 pt-8 pb-16 -translate-y-4 duration-300"
+			>
+				<div
+					class="max-w-[1100px] px-6 mx-auto flex flex-wrap gap-x-20 gap-y-10 text-gray-700"
+				>
+					<ul class="text-xl font-semibold flex flex-col gap-2">
+						<li class="font-light text-xs text-gray-500">Explore Mac</li>
+						<li><a href="#">Explore All Mac</a></li>
+						<li><a href="#">MacBook Air</a></li>
+						<li><a href="#">MacBook Pro</a></li>
+						<li><a href="#">iMac</a></li>
+						<li><a href="#">Mac mini</a></li>
+						<li><a href="#">Mac Pro</a></li>
+						<li><a href="#">Displays</a></li>
+						<li><a href="#" class="text-xs">Compare Mac</a></li>
+						<li><a href="#" class="text-xs">Mac Does That</a></li>
+					</ul>
+
+					<div class="flex items-start gap-8">
+						<ul class="text-xs font-semibold flex flex-col gap-3">
+							<li class="font-light text-gray-500">Shop Mac</li>
+							<li><a href="#">Shop Mac</a></li>
+							<li><a href="#">Mac Accessories</a></li>
+							<li><a href="#">Apple Trade In</a></li>
+							<li><a href="#">Financing</a></li>
+						</ul>
+
+						<ul class="text-xs font-semibold flex flex-col gap-3">
+							<li class="font-light text-gray-500">More from Mac</li>
+							<li><a href="#">Mac Support</a></li>
+							<li><a href="#">AppleCare+ for Mac</a></li>
+							<li><a href="#">macOS Sonoma</a></li>
+							<li><a href="#">Apps by Apple</a></li>
+							<li><a href="#">Continuity</a></li>
+							<li><a href="#">iCloud+</a></li>
+							<li><a href="#">Mac for Business</a></li>
+							<li><a href="#">Education</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
 	</body>
-
 	<script>
-		const accordionBtn = document.getElementById('accordion-btn');
-		const accordionContainer = document.getElementById('accordion-container');
+		let hoverMenuBtns = document.querySelectorAll('#hover-btn');
+		let navbarContainer = document.querySelector('#navbar-container');
+		let dropdownList = document.querySelector('#dropdown-list');
+		let overlayBg = document.querySelector('#overlay-bg');
+		console.log(overlayBg);
 
-		accordionBtn.addEventListener('click', () => {
-			accordionContainer.style.height = 'h-auto';
+		hoverMenuBtns.forEach((hoverBtn) => {
+			hoverBtn.addEventListener('mouseenter', () => {
+				navbarContainer.classList.remove('h-10');
+				navbarContainer.classList.add('h-[500px]');
+
+				overlayBg.classList.add('pointer-events-auto');
+				overlayBg.classList.add('opacity-100');
+				dropdownList.classList.remove('pointer-events-none');
+				dropdownList.classList.remove('opacity-0');
+				dropdownList.classList.remove('-translate-y-4');
+				dropdownList.classList.add('pointer-events-auto');
+				dropdownList.classList.add('opacity-100');
+				dropdownList.classList.add('-translate-y-0');
+			});
+			navbarContainer.addEventListener('mouseleave', () => {
+				navbarContainer.classList.add('h-10');
+				navbarContainer.classList.remove('h-[500px]');
+
+				overlayBg.classList.remove('pointer-events-auto');
+				overlayBg.classList.remove('opacity-100');
+				dropdownList.classList.add('pointer-events-none');
+				dropdownList.classList.add('opacity-0');
+				dropdownList.classList.add('-translate-y-4');
+				dropdownList.classList.remove('pointer-events-auto');
+				dropdownList.classList.remove('opacity-100');
+				dropdownList.classList.remove('-translate-y-0');
+			});
 		});
 	</script>
 </html>

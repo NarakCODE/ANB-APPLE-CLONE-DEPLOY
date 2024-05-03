@@ -32,12 +32,12 @@
 		<!-- style -->
 		<link rel="stylesheet" href="../styles/style.css" />
 	</head>
-	<body class="bg-[#F5F5F5] overflow-x-hidden">
+	<body class="bg-[#fff] overflow-x-hidden">
 		<!-- Navbar -->
-		<navbar-component></navbar-component>
+		<navbar-component bgColor="white" textColor="black"></navbar-component>
 
 		<!-- Header -->
-		<div class="w-full max-w-[1000px] mx-auto px-4">
+		<div class="w-full max-w-[1000px] mx-auto px-4 mt-20">
 			<header class="my-10 flex px-10 flex-wrap gap-10 items-center">
 				<!-- card -->
 				<div class="flex items-center h-10">
@@ -201,7 +201,6 @@
 				<a href="#" class="text-blue-600">Learn more ></a>
 			</p>
 		</div>
-
 		<!-- Mac -->
 		<section class="bg-white md:pt-20 md:pb-40 py-12">
 			<div class="md:w-10/12 w-11/12 md:px-8 mx-auto">
@@ -246,8 +245,8 @@
 			</div>
 		</section>
 
-		<!-- Mac -->
-		<section class="md:pt-20 md:pb-40 py-12">
+		<!-- Explore the lineup. -->
+		<section class="md:pt-20 md:pb-40 py-12 bg-[#fafafa]">
 			<div class="md:w-10/12 w-11/12 mx-auto">
 				<header
 					class="flex md:items-center gap-2 justify-between md:flex-row flex-col"
@@ -486,7 +485,7 @@
 				</h1>
 				<!-- Accordion Container -->
 				<div
-					class="mt-20 w-full md:p-24 p-10 overflow-hidden bg-[#fafafa] rounded-3xl flex lg:flex-row flex-col items-center"
+					class="mt-20 w-full md:p-24 p-10 overflow-hidden bg-[#fafafa] duration-300 transition-all h-auto rounded-3xl flex lg:flex-row flex-col items-center"
 				>
 					<!-- left -->
 					<div class="max-w-[700px] h-full">
@@ -498,6 +497,7 @@
 									Mac and iPhone
 									<img
 										src="https://cdn-icons-png.flaticon.com/512/9923/9923748.png"
+										id="arrow-icon"
 										alt=""
 										class="w-6"
 									/>
@@ -525,6 +525,7 @@
 									Mac and iPad
 									<img
 										src="https://cdn-icons-png.flaticon.com/512/9923/9923748.png"
+										id="arrow-icon"
 										alt=""
 										class="w-6"
 									/>
@@ -552,6 +553,7 @@
 									Mac and Apple Watch
 									<img
 										src="https://cdn-icons-png.flaticon.com/512/9923/9923748.png"
+										id="arrow-icon"
 										alt=""
 										class="w-6"
 									/>
@@ -610,6 +612,115 @@
 			</div>
 		</section>
 
+		<!-- Mac essentials -->
+		<section class="md:pt-10 md:pb-40 py-12 bg-white">
+			<div class="md:w-10/12 w-11/12 mx-auto">
+				<header
+					class="flex md:items-center gap-2 justify-between md:flex-row flex-col"
+				>
+					<h1 class="md:text-6xl text-5xl font-semibold">Mac essentials.</h1>
+					<a href="#" class="text-blue-500 hover:underline"
+						>All Mac accessories ></a
+					>
+				</header>
+
+				<div class="mt-10 w-full grid md:grid-cols-2 grid-cols-1 gap-6">
+					<div
+						class="relative pt-52 w-full bg-[#fafafa] rounded-3xl overflow-hidden"
+					>
+						<div
+							class="absolute left-0 w-full top-0 text-center flex flex-col gap-2 text-gray-600 px-6 pt-14"
+						>
+							<h2 class="text-2xl md:text-3xl">Mac accessories</h2>
+							<p class="text-sm lg:text-lg">
+								Explore keyboards, mice, and other essentials.
+							</p>
+							<a
+								href="#"
+								class="text-sm lg:text-lg text-blue-500 hover:underline"
+								>Shop Mac accessories ></a
+							>
+						</div>
+						<img
+							src="https://www.apple.com/v/mac/home/bz/images/overview/essentials/essentials_accessories__dglhsic54owi_xlarge.jpg"
+							alt=""
+							class="w-full h-full object-contain"
+						/>
+					</div>
+
+					<div
+						class="relative pt-52 w-ful bg-[#fafafa] rounded-3xl overflow-hidden"
+					>
+						<div
+							class="absolute left-0 w-full top-0 text-center flex flex-col gap-2 text-gray-600 px-6 pt-14"
+						>
+							<h2 class="text-2xl md:text-3xl">Studio Display</h2>
+							<p class="text-sm lg:text-lg">
+								The 27-inch 5K Retina display pairs beautifully with any Mac.
+							</p>
+							<a
+								href="#"
+								class="text-sm lg:text-lg text-blue-500 hover:underline"
+								>Learn more ></a
+							>
+						</div>
+						<img
+							src="https://www.apple.com/v/mac/home/bz/images/overview/essentials/essentials_display__bk3i351qm0c2_medium.jpg"
+							alt=""
+							class="w-full h-full object-contain"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Shop All Mac -->
+		<section class="md:pt-10 md:pb-40 py-12 bg-[#fafafa]">
+			<div class="md:w-10/12 w-11/12 mx-auto">
+				<header
+					class="flex md:items-center gap-2 justify-between md:flex-row flex-col"
+				>
+					<h1 class="md:text-6xl text-5xl font-semibold">Mac</h1>
+				</header>
+
+				<div class="flex flex-wrap gap-x-20 gap-y-10 mt-10 text-gray-700">
+					<ul class="text-xl font-semibold flex flex-col gap-2">
+						<li class="font-light text-sm text-gray-500">Explore Mac</li>
+						<li><a href="#">Explore All Mac</a></li>
+						<li><a href="#">MacBook Air</a></li>
+						<li><a href="#">MacBook Pro</a></li>
+						<li><a href="#">iMac</a></li>
+						<li><a href="#">Mac mini</a></li>
+						<li><a href="#">Mac Pro</a></li>
+						<li><a href="#">Displays</a></li>
+						<li><a href="#" class="text-sm">Compare Mac</a></li>
+						<li><a href="#" class="text-sm">Mac Does That</a></li>
+					</ul>
+
+					<div class="flex items-start gap-8">
+						<ul class="text-sm font-semibold flex flex-col gap-4">
+							<li class="font-light text-gray-500">Shop Mac</li>
+							<li><a href="#">Shop Mac</a></li>
+							<li><a href="#">Mac Accessories</a></li>
+							<li><a href="#">Apple Trade In</a></li>
+							<li><a href="#">Financing</a></li>
+						</ul>
+
+						<ul class="text-sm font-semibold flex flex-col gap-4">
+							<li class="font-light text-gray-500">More from Mac</li>
+							<li><a href="#">Mac Support</a></li>
+							<li><a href="#">AppleCare+ for Mac</a></li>
+							<li><a href="#">macOS Sonoma</a></li>
+							<li><a href="#">Apps by Apple</a></li>
+							<li><a href="#">Continuity</a></li>
+							<li><a href="#">iCloud+</a></li>
+							<li><a href="#">Mac for Business</a></li>
+							<li><a href="#">Education</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
 		<!-- Footer -->
 		<footer-component></footer-component>
 	</body>
@@ -877,6 +988,7 @@
 		// Accordion
 		const accordionItems = document.querySelectorAll('.accordion-item');
 		const accordionPictures = document.querySelectorAll('.accordion-picture');
+		const accordionArrow = document.querySelectorAll('#arrow-icon');
 
 		accordionPictures.forEach((picture, index) => {
 			if (index === 0) {

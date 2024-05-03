@@ -112,9 +112,7 @@ const footerLinks = [
 	],
 ];
 
-const createFooterComponent = () => {
-	
-}
+const createFooterComponent = () => {};
 
 class FooterComponent extends HTMLElement {
 	connectedCallback() {
@@ -288,9 +286,9 @@ class FooterComponent extends HTMLElement {
 					</p>
 					<hr class="my-6" />
 
-					<div class="flex items-center justify-between">
+					<div class="flex lg:flex-row flex-col lg:items-center gap-4 justify-between">
 						<p>Copyright © 2024 Apple Inc. All rights reserved.</p>
-						<div class="divide-x divide-black flex-1 ml-6">
+						<div class="divide-x divide-black flex-1 flex-wrap lg:ml-6">
 							<span class="px-1">
 								<a href="" class="hover:underline">Privacy</a>
 							</span>
