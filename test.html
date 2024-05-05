@@ -3,188 +3,297 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Demo testing</title>
+		<title>Carousel Slider</title>
 		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
-	<body class="bg-[#fff]">
-		<section class="px-20">
-			<div class="w-full max-w-[1680px] mx-auto">
-				<!-- Container -->
-				<div
-					class="w-full p-24 overflow-hidden bg-[#fafafa] rounded-3xl flex items-center"
-				>
-					<!-- left -->
-					<div class="w-[700px] h-full">
-						<div class="accordion w-full flex flex-col gap-2 divide-y-2">
-							<div class="w-full accordion-item">
-								<div
-									class="accordion-item-header w-full cursor-pointer p-2.5 flex items-center justify-between text-[30px]"
-								>
-									Mac and iPhone
-									<img
-										src="https://cdn-icons-png.flaticon.com/512/9923/9923748.png"
-										alt=""
-										class="w-6"
-									/>
-								</div>
+	<style></style>
+	<body class="bg-[#F5F5F5]">
+		<!-- Overlay Background -->
+		<div
+			id="overlay-bg"
+			class="z-[50] fixed top-0 left-0 right-0 opacity-0 pointer-events-none bottom-0 w-full h-screen bg-white/40 backdrop-blur-lg duration-500"
+		></div>
+		<nav
+			id="navbar-container"
+			class="w-full fixed pt-1 top-0 left-0 bg-white/90 text-black backdrop-blur-sm z-[99] border-b shadow-sm border-white duration-500 transition-all ease-in-out overflow-hidden"
+		>
+			<!-- Menu list -->
+			<div
+				class="max-w-[1100px] mx-auto px-6 py-2 flex items-center justify-between"
+			>
+				<div class="flex items-center justify-between w-full text-xs gap-6">
+					<a href="home.html">
+						<img class="w-4" src="../assets/apple-logo.png" alt="" />
+					</a>
+					<ul class="md:flex justify-between items-center w-full hidden">
+						<li id="hover-btn">
+							<a class="py-3 text-black/80 hover:text-black" href="store.html"
+								>Store</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="mac.html"
+								>Mac</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="ipad.html"
+								>iPad</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="iphone.html"
+								>iPhone</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="store.html"
+								>Watch</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="store.html"
+								>Vision</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="store.html"
+								>AirPods</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="store.html"
+								>TV & Home</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="store.html"
+								>Entertainment</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="store.html"
+								>Accessories</a
+							>
+						</li>
+						<li>
+							<a class="py-3 text-black/80 hover:text-black" href="store.html"
+								>Support</a
+							>
+						</li>
+					</ul>
+					<div class="flex gap-4">
+						<button>
+							<span
+								class="material-symbols-outlined text-[20px] text-black/80 hover:text-black"
+							>
+								search
+							</span>
+						</button>
 
-								<div
-									class="accordion-item-body collapsed h-0 overflow-hidden transition-[height] duration-[0.3s] ease-[ease] p-0"
-								>
-									<p
-										class="m-0 px-4 py-2 text-[17px] text-gray-600 max-w-[90%]"
-									>
-										You can answer calls or messages from your iPhone directly
-										on your Mac. Copy images, video, or text on your iPhone,
-										then paste into another app on your nearby Mac. With iCloud,
-										you can access your favorite files from either your iPhone
-										or your Mac. And so much more.
-									</p>
-								</div>
-							</div>
+						<button>
+							<span
+								class="material-symbols-outlined text-[20px] text-black/80 hover:text-black"
+							>
+								shopping_bag
+							</span>
+						</button>
+						<button class="md:hidden flex relative z-[50]" id="menu-btn">
+							<span class="material-symbols-outlined"> menu </span>
+						</button>
 
-							<div class="w-full accordion-item">
-								<div
-									class="accordion-item-header w-full cursor-pointer p-2.5 flex items-center justify-between text-[30px]"
-								>
-									Mac and iPad
-									<img
-										src="https://cdn-icons-png.flaticon.com/512/9923/9923748.png"
-										alt=""
-										class="w-6"
-									/>
-								</div>
-
-								<div
-									class="accordion-item-body collapsed h-0 overflow-hidden transition-[height] duration-[0.3s] ease-[ease] p-0"
-								>
-									<p
-										class="m-0 px-4 py-2 text-[17px] text-gray-600 max-w-[90%]"
-									>
-										Sketch on your iPad and have it appear instantly on your
-										Mac. Or use your iPad as a second display, so you can work
-										on one screen while you reference the other. You can even
-										start a Final Cut Pro project on your iPad and continue it
-										on your Mac.
-									</p>
-								</div>
-							</div>
-
-							<div class="w-full accordion-item">
-								<div
-									class="accordion-item-header w-full cursor-pointer p-2.5 flex items-center justify-between text-[30px]"
-								>
-									Mac and Apple Watch
-									<img
-										src="https://cdn-icons-png.flaticon.com/512/9923/9923748.png"
-										alt=""
-										class="w-6"
-									/>
-								</div>
-
-								<div
-									class="accordion-item-body w-full collapsed h-0 overflow-hidden transition-[height] duration-[0.3s] ease-[ease] p-0"
-								>
-									<p
-										class="m-0 px-4 py-2 text-[17px] text-gray-600 max-w-[90%]"
-									>
-										Automatically log in to your Mac when you’re wearing your
-										Apple Watch with Auto Unlock. No password typing required.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- right -->
-					<div class="pl-40 w-full">
+						<!-- menu list dropdown -->
 						<div
-							class="h-full w-full accordion-picture"
-							id="accordion-picture-1"
+							id="menu-list"
+							class="fixed top-0 left-0 w-full h-0 bg-white z-[49] origin-top duration-500 backdrop-blur-md"
 						>
-							<img
-								src="./assets/mac/mac-and-iphone.jpeg"
-								alt=""
-								class="h-full w-full object-cover"
-							/>
-						</div>
+							<div
+								class="px-12 flex flex-col mt-14 text-2xl gap-3 font-semibold opacity-0 pointer-events-none duration-500"
+								id="list-container"
+							>
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
 
-						<div
-							class="h-full w-full accordion-picture"
-							id="accordion-picture-2"
-						>
-							<img
-								src="./assets/mac/mac-and-ipad.jpeg"
-								alt=""
-								class="h-full w-full object-cover"
-							/>
-						</div>
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
 
-						<div
-							class="h-full w-full accordion-picture"
-							id="accordion-picture-3"
-						>
-							<img
-								src="./assets/mac/mac-and-watch.jpeg"
-								alt=""
-								class="h-full w-full object-cover"
-							/>
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+
+								<a href="" class="flex items-center justify-between group"
+									>Store
+									<span
+										class="material-symbols-outlined group-hover:block hidden"
+									>
+										chevron_right
+									</span></a
+								>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
+
+			<!-- Store dropdown container -->
+			<div
+				id="dropdown-list"
+				class="w-full fixed opacity-0 pointer-events-none top-9 pt-8 pb-16 -translate-y-4 duration-300"
+			>
+				<div
+					class="max-w-[1100px] px-6 mx-auto flex flex-wrap gap-x-20 gap-y-10 text-gray-700"
+				>
+					<ul class="text-xl font-semibold flex flex-col gap-2">
+						<li class="font-light text-xs text-gray-500">Explore Mac</li>
+						<li><a href="#">Explore All Mac</a></li>
+						<li><a href="#">MacBook Air</a></li>
+						<li><a href="#">MacBook Pro</a></li>
+						<li><a href="#">iMac</a></li>
+						<li><a href="#">Mac mini</a></li>
+						<li><a href="#">Mac Pro</a></li>
+						<li><a href="#">Displays</a></li>
+						<li><a href="#" class="text-xs">Compare Mac</a></li>
+						<li><a href="#" class="text-xs">Mac Does That</a></li>
+					</ul>
+
+					<div class="flex items-start gap-8">
+						<ul class="text-xs font-semibold flex flex-col gap-3">
+							<li class="font-light text-gray-500">Shop Mac</li>
+							<li><a href="#">Shop Mac</a></li>
+							<li><a href="#">Mac Accessories</a></li>
+							<li><a href="#">Apple Trade In</a></li>
+							<li><a href="#">Financing</a></li>
+						</ul>
+
+						<ul class="text-xs font-semibold flex flex-col gap-3">
+							<li class="font-light text-gray-500">More from Mac</li>
+							<li><a href="#">Mac Support</a></li>
+							<li><a href="#">AppleCare+ for Mac</a></li>
+							<li><a href="#">macOS Sonoma</a></li>
+							<li><a href="#">Apps by Apple</a></li>
+							<li><a href="#">Continuity</a></li>
+							<li><a href="#">iCloud+</a></li>
+							<li><a href="#">Mac for Business</a></li>
+							<li><a href="#">Education</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
 	</body>
 	<script>
-		const accordionItems = document.querySelectorAll('.accordion-item');
-		const accordionPictures = document.querySelectorAll('.accordion-picture');
+		let hoverMenuBtns = document.querySelectorAll('#hover-btn');
+		let navbarContainer = document.querySelector('#navbar-container');
+		let dropdownList = document.querySelector('#dropdown-list');
+		let overlayBg = document.querySelector('#overlay-bg');
+		console.log(overlayBg);
 
-		accordionPictures.forEach((picture, index) => {
-			if (index === 0) {
-				picture.style.display = 'block';
-			} else {
-				picture.style.display = 'none';
-			}
-		});
+		hoverMenuBtns.forEach((hoverBtn) => {
+			hoverBtn.addEventListener('mouseenter', () => {
+				navbarContainer.classList.remove('h-10');
+				navbarContainer.classList.add('h-[500px]');
 
-		accordionItems.forEach((item, index) => {
-			const header = item.querySelector('.accordion-item-header');
-			const body = item.querySelector('.accordion-item-body');
-			const picture = accordionPictures[index];
+				overlayBg.classList.add('pointer-events-auto');
+				overlayBg.classList.add('opacity-100');
+				dropdownList.classList.remove('pointer-events-none');
+				dropdownList.classList.remove('opacity-0');
+				dropdownList.classList.remove('-translate-y-4');
+				dropdownList.classList.add('pointer-events-auto');
+				dropdownList.classList.add('opacity-100');
+				dropdownList.classList.add('-translate-y-0');
+			});
+			navbarContainer.addEventListener('mouseleave', () => {
+				navbarContainer.classList.add('h-10');
+				navbarContainer.classList.remove('h-[500px]');
 
-			header.addEventListener('click', () => {
-				accordionItems.forEach((accItem, i) => {
-					if (
-						i !== index &&
-						!accItem
-							.querySelector('.accordion-item-body')
-							.classList.contains('collapsed')
-					) {
-						accItem
-							.querySelector('.accordion-item-body')
-							.classList.add('collapsed');
-						accItem.querySelector('.accordion-item-body').style.height = '0';
-					}
-				});
-
-				body.classList.toggle('collapsed');
-				if (body.classList.contains('collapsed')) {
-					body.style.height = '0';
-				} else {
-					body.style.height = body.scrollHeight + 'px';
-				}
-
-				accordionPictures.forEach((pic, i) => {
-					if (i === index) {
-						pic.style.display = 'block';
-					} else {
-						pic.style.display = 'none';
-					}
-				});
+				overlayBg.classList.remove('pointer-events-auto');
+				overlayBg.classList.remove('opacity-100');
+				dropdownList.classList.add('pointer-events-none');
+				dropdownList.classList.add('opacity-0');
+				dropdownList.classList.add('-translate-y-4');
+				dropdownList.classList.remove('pointer-events-auto');
+				dropdownList.classList.remove('opacity-100');
+				dropdownList.classList.remove('-translate-y-0');
 			});
 		});
 	</script>
-
-	<script src="./components/primary-btn.js"></script>
-	<script src="./components/outline-btn.js"></script>
 </html>

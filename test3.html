@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Demo testing</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="bg-[#fff]">
+		<section class="px-20">
+			<div class="w-full max-w-[1680px] mx-auto">
+				<!-- Container -->
+				<div
+					class="w-full p-24 overflow-hidden bg-[#fafafa] rounded-3xl flex items-center"
+				>
+					<!-- left -->
+					<div class="w-[700px] h-full">
+						<div class="accordion w-full flex flex-col gap-2 divide-y-2">
+							<div class="w-full accordion-item">
+								<div
+									class="accordion-item-header w-full cursor-pointer p-2.5 flex items-center justify-between text-[30px]"
+								>
+									Mac and iPhone
+									<img
+										src="https://cdn-icons-png.flaticon.com/512/9923/9923748.png"
+										alt=""
+										class="w-6"
+									/>
+								</div>
+
+								<div
+									class="accordion-item-body collapsed h-0 overflow-hidden transition-[height] duration-[0.3s] ease-[ease] p-0"
+								>
+									<p
+										class="m-0 px-4 py-2 text-[17px] text-gray-600 max-w-[90%]"
+									>
+										You can answer calls or messages from your iPhone directly
+										on your Mac. Copy images, video, or text on your iPhone,
+										then paste into another app on your nearby Mac. With iCloud,
+										you can access your favorite files from either your iPhone
+										or your Mac. And so much more.
+									</p>
+								</div>
+							</div>
+
+							<div class="w-full accordion-item">
+								<div
+									class="accordion-item-header w-full cursor-pointer p-2.5 flex items-center justify-between text-[30px]"
+								>
+									Mac and iPad
+									<img
+										src="https://cdn-icons-png.flaticon.com/512/9923/9923748.png"
+										alt=""
+										class="w-6"
+									/>
+								</div>
+
+								<div
+									class="accordion-item-body collapsed h-0 overflow-hidden transition-[height] duration-[0.3s] ease-[ease] p-0"
+								>
+									<p
+										class="m-0 px-4 py-2 text-[17px] text-gray-600 max-w-[90%]"
+									>
+										Sketch on your iPad and have it appear instantly on your
+										Mac. Or use your iPad as a second display, so you can work
+										on one screen while you reference the other. You can even
+										start a Final Cut Pro project on your iPad and continue it
+										on your Mac.
+									</p>
+								</div>
+							</div>
+
+							<div class="w-full accordion-item">
+								<div
+									class="accordion-item-header w-full cursor-pointer p-2.5 flex items-center justify-between text-[30px]"
+								>
+									Mac and Apple Watch
+									<img
+										src="https://cdn-icons-png.flaticon.com/512/9923/9923748.png"
+										alt=""
+										class="w-6"
+									/>
+								</div>
+
+								<div
+									class="accordion-item-body w-full collapsed h-0 overflow-hidden transition-[height] duration-[0.3s] ease-[ease] p-0"
+								>
+									<p
+										class="m-0 px-4 py-2 text-[17px] text-gray-600 max-w-[90%]"
+									>
+										Automatically log in to your Mac when you’re wearing your
+										Apple Watch with Auto Unlock. No password typing required.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- right -->
+					<div class="pl-40 w-full">
+						<div
+							class="h-full w-full accordion-picture"
+							id="accordion-picture-1"
+						>
+							<img
+								src="./assets/mac/mac-and-iphone.jpeg"
+								alt=""
+								class="h-full w-full object-cover"
+							/>
+						</div>
+
+						<div
+							class="h-full w-full accordion-picture"
+							id="accordion-picture-2"
+						>
+							<img
+								src="./assets/mac/mac-and-ipad.jpeg"
+								alt=""
+								class="h-full w-full object-cover"
+							/>
+						</div>
+
+						<div
+							class="h-full w-full accordion-picture"
+							id="accordion-picture-3"
+						>
+							<img
+								src="./assets/mac/mac-and-watch.jpeg"
+								alt=""
+								class="h-full w-full object-cover"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+	<script>
+		const accordionItems = document.querySelectorAll('.accordion-item');
+		const accordionPictures = document.querySelectorAll('.accordion-picture');
+
+		accordionPictures.forEach((picture, index) => {
+			if (index === 0) {
+				picture.style.display = 'block';
+			} else {
+				picture.style.display = 'none';
+			}
+		});
+
+		accordionItems.forEach((item, index) => {
+			const header = item.querySelector('.accordion-item-header');
+			const body = item.querySelector('.accordion-item-body');
+			const picture = accordionPictures[index];
+
+			header.addEventListener('click', () => {
+				accordionItems.forEach((accItem, i) => {
+					if (
+						i !== index &&
+						!accItem
+							.querySelector('.accordion-item-body')
+							.classList.contains('collapsed')
+					) {
+						accItem
+							.querySelector('.accordion-item-body')
+							.classList.add('collapsed');
+						accItem.querySelector('.accordion-item-body').style.height = '0';
+					}
+				});
+
+				body.classList.toggle('collapsed');
+				if (body.classList.contains('collapsed')) {
+					body.style.height = '0';
+				} else {
+					body.style.height = body.scrollHeight + 'px';
+				}
+
+				accordionPictures.forEach((pic, i) => {
+					if (i === index) {
+						pic.style.display = 'block';
+					} else {
+						pic.style.display = 'none';
+					}
+				});
+			});
+		});
+	</script>
+
+	<script src="./components/primary-btn.js"></script>
+	<script src="./components/outline-btn.js"></script>
+</html>

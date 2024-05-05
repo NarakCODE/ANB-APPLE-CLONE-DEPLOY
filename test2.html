@@ -7,12 +7,16 @@
 		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
 	<body>
-		<!-- accordion container -->
 		<div class="max-w-[500px] mx-auto mt-40 flex flex-col gap-4">
-			<div class="">
+			<!-- Accordion container -->
+			<div
+				id="accordion-container"
+				class="bg-black/50 duration-300 max-h-[50px] overflow-hidden w-full rounded-lg flex items-center flex-col"
+			>
+				<!-- Accordion button -->
 				<button
 					id="accordion-btn"
-					class="p-4 border w-full text-start flex items-center justify-between"
+					class="text-white w-full text-start p-3 flex items-center justify-between"
 				>
 					USA: YONEX U.S.A
 
@@ -45,10 +49,10 @@
 					</svg>
 				</button>
 				<!-- Accordion dropdown -->
-				<div
-					id="accordion-dropdown"
-					class="px-4 border w-full bg-green-400 h-[0px] overflow-hidden duration-500"
-				>
+				<div id="accordion-dropdown" class="px-4 w-full">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae</p>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae</p>
 				</div>
 			</div>
@@ -59,10 +63,12 @@
 		let accordionDropdown = document.querySelectorAll('#accordion-dropdown');
 		let plusIcon = document.querySelectorAll('#plus-icon');
 		let closeIcon = document.querySelectorAll('#close-icon');
+		let accordionContainer = document.querySelectorAll('#accordion-container');
 
 		accordionBtn.forEach((btn, i) => {
 			btn.addEventListener('click', () => {
-				accordionDropdown[i].classList.toggle('h-[50px]');
+				// accordionDropdown[i].classList.toggle('max-h-[100px]');
+				accordionContainer[i].classList.toggle('max-h-[1000px]');
 				plusIcon[i].classList.toggle('hidden');
 				closeIcon[i].classList.toggle('hidden');
 			});
