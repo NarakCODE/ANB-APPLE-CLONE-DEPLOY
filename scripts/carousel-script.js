@@ -292,3 +292,5 @@ document.addEventListener('DOMContentLoaded', function () {
 	specialNextBtn.addEventListener('click', nextSlide);
 	specialPrevBtn.addEventListener('click', prevSlide);
 });
+
+

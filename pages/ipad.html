@@ -173,184 +173,411 @@
 		</header>
 
 		<!-- Which iPad is right for you? -->
-		<section class="max-w-[1322px] mx-10 mt-10 px-10 py-10 bg-white">
-			<!-- Section Title -->
-			<div class="flex flex-col gap-4 items-center text-center">
-				<h1 class="text-4xl md:text-5xl font-semibold text-center">
-					Which iPad is right for you?
-				</h1>
-				<div class="flex flex-col items-center md:flex-row md:gap-8 gap-4">
-					<a
-						href="#"
-						class="text-blue-500 text-lg md:text-xl flex items-center space-x-2 hover:underline"
-						>Compare all iPad models
-						<span>
-							<svg
-								class="size-6"
-								width="800px"
-								height="800px"
-								viewBox="0 0 24 24"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M9 6L15 12L9 18"
-									stroke=" rgb(59 130 246)"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-							</svg>
-						</span>
-					</a>
+		<section class="w-full max-w-full flex justify-center mx-auto">
+			<div
+				class="lg:max-w-[1322px] md:max-w-[736px] w-full mx-auto lg:mx-8 lg:mt-8 mt-4 pt-10 pb-32 bg-white"
+			>
+				<!-- Section Title -->
+				<div class="flex flex-col gap-4 items-center text-center my-20">
+					<h1 class="text-3xl md:text-5xl font-semibold text-center">
+						Which iPad is right for you?
+					</h1>
+					<div class="flex flex-col items-center md:flex-row md:gap-8 gap-4">
+						<a
+							href="#"
+							class="text-blue-500 text-md md:text-xl flex items-center space-x-2 hover:underline"
+							>Compare all iPad models
+							<span>
+								<svg
+									class="size-6"
+									width="800px"
+									height="800px"
+									viewBox="0 0 24 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M9 6L15 12L9 18"
+										stroke=" rgb(59 130 246)"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+							</span>
+						</a>
 
-					<a
-						href="#"
-						class="text-blue-500 text-lg md:text-xl flex items-center space-x-2 hover:underline"
-						>Shop iPad
-						<span>
-							<svg
-								class="size-6"
-								width="800px"
-								height="800px"
-								viewBox="0 0 24 24"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M9 6L15 12L9 18"
-									stroke=" rgb(59 130 246)"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-							</svg>
-						</span>
-					</a>
+						<a
+							href="#"
+							class="text-blue-500 text-md md:text-xl flex items-center space-x-2 hover:underline"
+							>Shop iPad
+							<span>
+								<svg
+									class="size-6"
+									width="800px"
+									height="800px"
+									viewBox="0 0 24 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M9 6L15 12L9 18"
+										stroke=" rgb(59 130 246)"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+							</span>
+						</a>
+					</div>
 				</div>
+
+				<!-- Card Container -->
+				<which-ipad-is-right-for-you-card></which-ipad-is-right-for-you-card>
 			</div>
+		</section>
 
-			<!-- Card Container -->
-			<div class="grid grid-cols-4 gap-x-10">
-				<!-- Card -->
-				<div>
-					<div class="w-full h-[191px]">
-						<img
-							class="w-full h-full object-contain"
-							src="https://www.apple.com/v/ipad/home/ci/images/overview/compare_ipad_pro__erf9x8mw04sy_large.png"
-							alt=""
-						/>
-					</div>
-
-					<!-- Card content -->
-					<div class="flex flex-col justify-center text-center">
-						<!-- Colors -->
-						<div class="flex items-center space-x-1 justify-center">
-							<span
-								class="w-4 h-4 bg-[#eee] rounded-full shadow-[inset_-12px_-8px_40px_#46464620]"
-							></span>
-							<span
-								class="w-4 h-4 bg-[#eee] rounded-full shadow-[inset_-12px_-8px_40px_#46464620]"
-							></span>
-						</div>
-
-						<h2>iPad Pro</h2>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
-							praesentium!
-						</p>
-						<p>From $788</p>
-						<primary-btn-component text="Buy">Buy</primary-btn-component>
-						<span>
-							<a href="#" class="text-blue-500 hover:underline">Learn more ></a>
-						</span>
-					</div>
-
-					<hr class="my-8" />
-
-					<!-- Card detail -->
-					<div>
-						<!-- Display -->
-						<div>
-							<h2>12.9" or 11"</h2>
-							<p>
-								Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-								Voluptatem alias dolor ipsam consectetur ducimus!
-							</p>
-						</div>
-						<!-- Chip -->
-						<div>
+		<!-- Get 3% Daily Cash -->
+		<section class="w-full max-w-full mx-auto">
+			<div class="flex justify-center">
+				<div
+					class="lg:max-w-[1322px] md:max-w-[736px] w-full md:mx-8 lg:mt-8 mt-4 pb-32"
+				>
+					<!-- Carc Container -->
+					<div class="flex lg:flex-row flex-col md:gap-8 gap-4">
+						<!-- Card -->
+						<div
+							class="overflow-hidden bg-white w-full md:h-[750px] flex flex-col justify-between"
+						>
+							<div
+								class="w-full md:py-10 my-10 px-2 text-center flex flex-col md:gap-6 gap-4"
+							>
+								<h1
+									class="md:text-5xl text-3xl max-w-[500px] mx-auto font-semibold"
+								>
+									Get 3% Daily Cash back with Apple Card.
+								</h1>
+								<p class="font-light md:text-lg text-md max-w-[290px] mx-auto">
+									And pay over time, interest‑free when you choose to check out
+									with Apple Card Monthly Installments.*
+								</p>
+								<a
+									href="#"
+									class="text-blue-500 md:text-lg text-md hover:underline"
+									>Learn more ></a
+								>
+							</div>
 							<img
-								src="https://www.apple.com/v/ipad/home/ci/images/overview/compare-features/icon_camera_front_portrait__zyhtkvd2biay_large.png"
+								class="w-full object-contain"
+								src="https://www.apple.com/v/ipad/home/ci/images/overview/apple_card_banner/acmi/apple_card_monthly_installments__fhqbbrc4alm6_large.jpg"
 								alt=""
 							/>
-							<p>M2 chip</p>
 						</div>
-						<!-- Front Cam -->
-						<div>
+						<!-- Card -->
+						<div
+							class="overflow-hidden bg-white w-full md:h-[750px] flex flex-col justify-between"
+						>
+							<div
+								class="w-full md:py-10 my-10 px-2 text-center flex flex-col md:gap-6 gap-4"
+							>
+								<h1
+									class="md:text-5xl text-3xl max-w-[500px] mx-auto font-semibold"
+								>
+									Get 3% Daily Cash back with Apple Card.
+								</h1>
+								<p class="font-light md:text-lg text-md max-w-[290px] mx-auto">
+									And pay over time, interest‑free when you choose to check out
+									with Apple Card Monthly Installments.*
+								</p>
+								<a
+									href="#"
+									class="text-blue-500 md:text-lg text-md hover:underline"
+									>Learn more ></a
+								>
+							</div>
 							<img
-								src="https://www.apple.com/v/ipad/home/ci/images/overview/compare-features/icon_chip_m2__c17adphgllsi_large.jpg"
+								class="md:max-w-[330px] max-w-[280px] mx-auto object-contain"
+								src="https://www.apple.com/v/ipad/home/ci/images/overview/trade_in__ejwkdm497no2_large.jpg"
 								alt=""
 							/>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-								non mollitia, iste est animi deserunt consequatur.
-							</p>
-						</div>
-						<!-- Back Cam -->
-						<div>
-							<img
-								src="https://www.apple.com/v/ipad/home/ci/images/overview/compare-features/icon_camera_front_portrait__zyhtkvd2biay_large.png"
-								alt=""
-							/>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-								non mollitia, iste est animi deserunt consequatur.
-							</p>
-						</div>
-						<!-- Charger -->
-						<div>
-							<img
-								src="https://www.apple.com/v/ipad/home/ci/images/overview/compare-features/icon_camera_front_portrait__zyhtkvd2biay_large.png"
-								alt=""
-							/>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
-								atque?
-							</p>
-						</div>
-						<!-- Internet -->
-						<div>
-							<img
-								src="https://www.apple.com/v/ipad/home/ci/images/overview/compare-features/icon_camera_front_portrait__zyhtkvd2biay_large.png"
-								alt=""
-							/>
-							<p>5G cellular</p>
-						</div>
-						<!-- Pencil -->
-						<div>
-							<img
-								src="https://www.apple.com/v/ipad/home/ci/images/overview/compare-features/icon_camera_front_portrait__zyhtkvd2biay_large.png"
-								alt=""
-							/>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae
-								totam animi aliquid reprehenderit excepturi saepe!
-							</p>
-						</div>
-						<!-- Keyboard -->
-						<div>
-							<img
-								src="https://www.apple.com/v/ipad/home/ci/images/overview/compare-features/icon_camera_front_portrait__zyhtkvd2biay_large.png"
-								alt=""
-							/>
-							<p>Supports Magic Keyboard</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- <which-ipad-is-right-for-you></which-ipad-is-right-for-you> -->
+
+		<!--Sevices -->
+		<section>
+			<div
+				class="max-w-[1200px] mx-auto flex flex-wrap md:gap-8 gap-12 justify-center items-start"
+			>
+				<!-- Card -->
+				<div class="flex flex-col items-center gap-2">
+					<img
+						src="https://www.apple.com/v/ipad/home/ci/images/overview/icon_delivery__bs8f0g1fv0eu_large.png"
+						alt=""
+						class="w-14 object-contain"
+					/>
+					<div class="text-center">
+						<h2 class="text-lg md:text-xl font-semibold">
+							Fast, free delivery
+						</h2>
+						<h2 class="max-w-[300px] text-md md:text-lg text-gray-700">
+							Or pick up available items at an Apple Store.
+						</h2>
+						<a
+							href="#"
+							class="mt-4 text-lg md:text-xl hover:underline text-blue-500"
+							>Learn more ></a
+						>
+					</div>
+				</div>
+
+				<!-- Card -->
+				<div class="flex flex-col items-center gap-2">
+					<img
+						src="https://www.apple.com/v/ipad/home/ci/images/overview/icon_financing__ctvbzjuwg02u_medium.png"
+						alt=""
+						class="w-14 object-contain"
+					/>
+					<div class="text-center">
+						<h2 class="text-lg md:text-xl font-semibold">
+							Pay monthly at 0% APR
+						</h2>
+						<h2 class="max-w-[300px] text-md md:text-lg text-gray-700">
+							You can pay over time when you choose to check out with Apple Card
+							Monthly Installments.*
+						</h2>
+						<a
+							href="#"
+							class="mt-4 text-lg md:text-xl hover:underline text-blue-500"
+							>Learn more ></a
+						>
+					</div>
+				</div>
+
+				<!-- Card -->
+				<div class="flex flex-col items-center gap-2">
+					<img
+						src="https://www.apple.com/v/ipad/home/ci/images/overview/icon_engraving__cv9oecgi9r0i_medium.png"
+						alt=""
+						class="w-14 object-contain"
+					/>
+					<div class="text-center">
+						<h2 class="text-lg md:text-xl font-semibold">
+							Add that personal touch.
+						</h2>
+						<h2 class="max-w-[300px] text-md md:text-lg text-gray-700">
+							Engrave a mix of emoji, names, initials and numbers. All for free.
+						</h2>
+						<a
+							href="#"
+							class="mt-4 text-lg md:text-xl hover:underline text-blue-500"
+							>Learn more ></a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- iPad essentials -->
+		<section class="">
+			<h1
+				class="md:text-[56px] text-4xl mb-14 mt-24 text-gray-800 font-semibold text-center md:max-w-full max-w-[300px] mx-auto"
+			>
+				iPad essentials
+			</h1>
+			<div class="md:mx-8">
+				<div
+					class="w-full max-w-[1380px] mx-auto flex flex-col md:flex-row gap-8"
+				>
+					<!-- Card -->
+					<div class="flex flex-col justify-between gap-2 bg-white">
+						<div
+							class="px-2 py-10 text-center flex flex-col items-center gap-4"
+						>
+							<h2 class="md:text-5xl text-4xl font-semibold">Apple Pencil</h2>
+							<p class="text-lg md:text-xl">Dream it up. Jot it down.</p>
+							<div class="flex gap-6 items-center">
+								<a
+									href="#"
+									class="text-blue-500 md:text-lg text-md hover:underline"
+									>Shop ></a
+								>
+								<a
+									href="#"
+									class="text-blue-500 md:text-lg text-md hover:underline"
+									>Learn more ></a
+								>
+							</div>
+						</div>
+						<img
+							class="w-full object-contain md:block hidden"
+							src="https://www.apple.com/v/ipad/home/ci/images/overview/apple_pencil__ekq506kmmys2_large.jpg"
+							alt=""
+						/>
+						<img
+							class="w-full object-contain md:hidden"
+							src="https://www.apple.com/v/ipad/home/ci/images/overview/apple_pencil__ekq506kmmys2_small.jpg "
+							alt=""
+						/>
+					</div>
+
+					<!-- Card -->
+					<div
+						class="flex md:flex-col-reverse flex-col items-center justify-between bg-white"
+					>
+						<div
+							class="px-2 py-10 text-center flex flex-col items-center gap-4"
+						>
+							<h2 class="md:text-5xl text-4xl font-semibold">
+								Keyboards for iPad
+							</h2>
+							<p class="text-lg md:text-xl">Keyboards that have you covered.</p>
+							<div class="flex gap-6 items-center">
+								<a
+									href="#"
+									class="text-blue-500 md:text-lg text-md hover:underline"
+									>Shop ></a
+								>
+								<a
+									href="#"
+									class="text-blue-500 md:text-lg text-md hover:underline"
+									>Learn more ></a
+								>
+							</div>
+						</div>
+						<img
+							class="w-full object-contain md:block hidden"
+							src="https://www.apple.com/v/ipad/home/ci/images/overview/smart_keyboard_folio__b8j0ydqvjq2q_large.jpg"
+							alt=""
+						/>
+						<img
+							class="w-full max-w-[300px] mx-auto object-contain md:hidden"
+							src="https://www.apple.com/v/ipad/home/ci/images/overview/smart_keyboard_folio__b8j0ydqvjq2q_small.jpg"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Accessories -->
+		<section class="w-full">
+			<div class="flex md:px-8 mt-8 w-full justify-center">
+				<div
+					class="w-full max-w-[1380px] flex flex-col text-center gap-8 bg-white"
+				>
+					<div class="flex flex-col gap-4 py-10 max-w-sm mx-auto">
+						<h2 class="md:text-5xl text-4xl font-semibold">Accessories</h2>
+						<p class="md:text-xl text-lg font-light text-gray-800">
+							Explore cases, covers, keyboards, Apple Pencil, AirPods, and more.
+						</p>
+
+						<a href="#" class="text-blue-500 md:text-lg text-md hover:underline"
+							>Shop iPad accessories ></a
+						>
+					</div>
+
+					<img
+						class="w-full object-contain h-auto"
+						src="https://www.apple.com/v/ipad/home/ci/images/overview/accessories__gdpezee1naai_large.jpg"
+						alt=""
+					/>
+				</div>
+			</div>
+		</section>
+
+		<!-- What makes an iPad an iPad? -->
+		<section>
+			<h1
+				class="md:text-[56px] text-4xl mb-14 mt-24 text-gray-800 font-semibold text-center md:max-w-full max-w-[300px] mx-auto"
+			>
+				What makes an iPad an iPad?
+			</h1>
+
+			<div class="md:mx-8">
+				<div class="w-full max-w-[1380px] mx-auto flex flex-col gap-8">
+					<!-- Card -->
+					<div
+						class="flex flex-col md:flex-row items-center gap-2 w-full bg-white"
+					>
+						<div
+							class="text-center flex flex-col items-center gap-4 py-10 max-w-sm mx-auto"
+						>
+							<h2 class="lg:text-5xl text-3xl font-semibold">Why iPad</h2>
+							<p class="lg:text-xl text-lg font-light text-gray-800">
+								Yes, it does that. And then some.
+							</p>
+
+							<a
+								href="#"
+								class="text-blue-500 lg:text-lg text-md hover:underline"
+								>Learn more ></a
+							>
+						</div>
+
+						<img
+							class="md:max-w-[50%] max-w-[400px] h-auto object-contain md:pt-10 md:pr-10"
+							src="https://www.apple.com/v/ipad/home/ci/images/overview/why_ipad__fyckwbl8w5u2_large.jpg"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Final Cut Pro and Logic Pro for iPad -->
+		<section>
+			<div class="md:mx-8 mt-8">
+				<div class="w-full max-w-[1380px] mx-auto">
+					<!-- Card -->
+					<div
+						class="relative w-full text-white flex items-center justify-center h-[643px] overflow-hidden"
+					>
+						<div
+							class="absolute h-full items-center justify-center z-1 flex flex-col gap-6"
+						>
+							<h2
+								class="text-center max-w-[300px] text-[40px] md:text-[50px] leading-[1.2]"
+							>
+								Final Cut Pro and Logic Pro for iPad
+							</h2>
+							<div class="flex flex-col gap-1.5 items-center">
+								<a
+									href="#"
+									class="text-blue-500 lg:text-lg text-md hover:underline"
+									>Learn more about Final Cut Pro for iPad ></a
+								>
+								<a
+									href="#"
+									class="text-blue-500 lg:text-lg text-md hover:underline"
+									>Learn more about Logic Pro for iPad ></a
+								>
+								<a
+									href="#"
+									class="text-blue-500 lg:text-lg text-md hover:underline"
+									>Watch the film ></a
+								>
+							</div>
+						</div>
+						<div class="bg-black z-[-1] flex items-center h-full">
+							<img
+								src="https://www.apple.com/v/ipad/home/ci/images/overview/hero/fcp_ipad_hero__e663fdl2htea_large.png"
+								alt=""
+								class="absolute w-full -left-40"
+							/>
+							<img
+								class="w-full -right-40"
+								src="https://www.apple.com/v/ipad/home/ci/images/overview/hero/lp_ipad_hero__ec9vtoqzs0a6_large.png"
+								alt=""
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<!-- Footer -->
 		<footer-component></footer-component>
 	</body>
