@@ -2,8 +2,8 @@ const createChapterNavItem = (itemComponents, bgColor, textColor) => {
 	return `
       <!-- Chapter Nav Items -->
       <div class="w-full h-auto bg-${bgColor} text-${textColor}">
-         <div class="w-full max-w-[1000px] mx-auto py-6 px-4">
-            <header class="mt-10 flex flex-wrap gap-8 items-center justify-center">
+         <div class="w-full max-w-[1200px] mx-auto py-6 px-4">
+            <header class="mt-10 flex flex-wrap gap-4 items-center justify-center">
                   <!-- card -->
                   ${itemComponents}
             </header>
@@ -16,7 +16,7 @@ const createItem = (name, svgIcon) => {
 	return `
       <!-- item -->
       <div class="w-full">
-         <div class="w-[50px] h-auto flex items-center">
+         <div class="w-[80px] h-auto flex items-center">
             <a href="#" class="flex flex-col gap-1 items-center">
                <img class="w-14 h-14" src="${svgIcon}" />
                <p class="text-xs text-center font-light">${name}</p>

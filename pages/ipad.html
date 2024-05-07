@@ -31,6 +31,29 @@
 
 		<!-- style -->
 		<link rel="stylesheet" href="../styles/style.css" />
+		<style>
+			@keyframes slide {
+				0% {
+					transform: translateX(0);
+				}
+				100% {
+					transform: translateX(-100%);
+				}
+			}
+
+			.animate-slide {
+				animation: slide 20s linear infinite;
+			}
+
+			.animate-slide-2 {
+				animation: slide 15s linear infinite;
+			}
+
+			.slide {
+				display: inline-block;
+				flex-shrink: 0;
+			}
+		</style>
 	</head>
 	<body class="bg-[#f5f5f7] overflow-x-hidden">
 		<!-- Navbar -->
@@ -534,10 +557,10 @@
 				<div class="w-full max-w-[1380px] mx-auto">
 					<!-- Card -->
 					<div
-						class="relative w-full text-white flex items-center justify-center h-[643px] overflow-hidden"
+						class="relative md:flex-row md:gap-0 gap-10 flex-col bg-black w-full text-white flex items-center justify-center md:py-0 py-20 md:h-[643px] overflow-hidden"
 					>
 						<div
-							class="absolute h-full items-center justify-center z-1 flex flex-col gap-6"
+							class="w-[500px] h-full items-center justify-center z-1 flex flex-col gap-6"
 						>
 							<h2
 								class="text-center max-w-[300px] text-[40px] md:text-[50px] leading-[1.2]"
@@ -562,14 +585,15 @@
 								>
 							</div>
 						</div>
-						<div class="bg-black z-[-1] flex items-center h-full">
+
+						<div class="flex flex-col gap-4">
 							<img
+								class="md:w-[400px] w-[300px] object-contain ml-40"
 								src="https://www.apple.com/v/ipad/home/ci/images/overview/hero/fcp_ipad_hero__e663fdl2htea_large.png"
 								alt=""
-								class="absolute w-full -left-40"
 							/>
 							<img
-								class="w-full -right-40"
+								class="md:w-[400px] w-[300px] object-contain"
 								src="https://www.apple.com/v/ipad/home/ci/images/overview/hero/lp_ipad_hero__ec9vtoqzs0a6_large.png"
 								alt=""
 							/>
@@ -578,6 +602,785 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- iPadOS 17 -->
+		<section>
+			<div class="md:mx-8 mt-8">
+				<div
+					class="relative w-full max-w-[1380px] mx-auto bg-white md:h-[638px]"
+				>
+					<div
+						class="flex flex-col items-center text-center gap-2 md:absolute py-10 w-full"
+					>
+						<h2
+							class="text-center max-w-[300px] text-[40px] md:text-[50px] leading-[1.2]"
+						>
+							iPadOS 17
+						</h2>
+						<p class="md:text-xl text-lg text-black/80">
+							Even more capable. <br />
+							Even more you.
+						</p>
+						<a href="#" class="text-blue-500 lg:text-lg text-md hover:underline"
+							>Learn more ></a
+						>
+					</div>
+					<img
+						src="https://www.apple.com/v/ipad/home/ci/images/overview/ipados17__fbavkgtxnxyu_small.jpg"
+						alt=""
+						class="md:hidden w-full h-full object-cover"
+					/>
+					<img
+						src="https://www.apple.com/v/ipad/home/ci/images/overview/ipados17__fbavkgtxnxyu_large.jpg"
+						alt=""
+						class="md:block hidden w-full h-full object-cover"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<!-- iCloud and iPay -->
+		<section>
+			<div class="md:mx-8 mt-8">
+				<div
+					class="w-full max-w-[1380px] mx-auto flex md:flex-row flex-col gap-8"
+				>
+					<!-- Card -->
+					<div
+						class="w-full bg-white md:h-[600px] pb-10 pr-6 overflow-hidden flex flex-col md:gap-10"
+					>
+						<div
+							class="flex flex-col items-center text-center gap-2 py-10 w-full"
+						>
+							<h2
+								class="text-center max-w-[300px] text-[40px] md:text-[50px] leading-[1.2]"
+							>
+								iCloud
+							</h2>
+							<p class="md:text-xl text-lg text-black/80">
+								The best place for all your <br />
+								photos, files, and more.
+							</p>
+							<a
+								href="#"
+								class="text-blue-500 lg:text-lg text-md hover:underline"
+								>Learn more ></a
+							>
+						</div>
+						<img
+							src="https://www.apple.com/v/ipad/home/ci/images/overview/icloud__czqjzr040qc2_large.jpg"
+							alt=""
+							class="max-w-[600px] mx-auto w-full object-contain"
+						/>
+					</div>
+
+					<!-- Card -->
+					<div
+						class="relative w-full bg-white md:h-[600px] pb-10 overflow-hidden flex flex-col md:gap-10"
+					>
+						<div
+							class="flex flex-col items-center text-center gap-2 py-10 w-full"
+						>
+							<h2
+								class="text-center max-w-[300px] text-[40px] md:text-[50px] leading-[1.2]"
+							>
+								<img
+									src="https://www.apple.com/v/ipad/home/ci/images/overview/apple_pay_logo__0afgonu1cya6_large.png"
+									alt=""
+								/>
+							</h2>
+							<p class="md:text-xl text-lg text-black/80">
+								The safer way to make secure, <br />
+								Even more you.
+							</p>
+							<a
+								href="#"
+								class="text-blue-500 lg:text-lg text-md hover:underline"
+								>Learn more ></a
+							>
+						</div>
+						<img
+							src="	https://www.apple.com/v/ipad/home/ci/images/overview/apple_pay__u03k08osmwy2_large.jpg	"
+							alt=""
+							class="max-w-[400px] w-full mx-auto object-contain px-8"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Get more out of your iPad -->
+		<section>
+			<h1
+				class="md:text-[56px] text-4xl mb-14 md:mt-32 mt-24 text-gray-800 font-semibold text-center md:max-w-full max-w-[500px] mx-auto"
+			>
+				Get more out of your iPad
+			</h1>
+			<div class="md:mx-8 mt-8">
+				<div
+					class="w-full max-w-[1380px] mx-auto flex md:flex-row flex-col gap-8"
+				>
+					<!-- Card -->
+					<div
+						class="w-full bg-white lg:h-[550px] md:h-[335px] flex items-center md:pb-0 pb-10"
+					>
+						<div
+							class="w-full px-4 flex md:flex-row flex-col-reverse items-center justify-evenly gap-2"
+						>
+							<img
+								class="lg:w-auto w-[350px]"
+								src="https://www.apple.com/v/ipad/home/ci/images/overview/apple_one/bundle__ftof8h1r4jiy_large.jpg"
+								alt=""
+							/>
+
+							<div class="text-center flex flex-col gap-2 items-center py-10">
+								<h1>
+									<img
+										src="https://www.apple.com/v/ipad/home/ci/images/overview/apple_one/apple_one__dl47zojjyfe6_large.jpg"
+										alt=""
+										class="lg:w-auto md:w-[150px] w-[100px]"
+									/>
+								</h1>
+								<h2 class="text-xl lg:text-2xl font-semibold">
+									Bundle up to six Apple services. <br />
+									And enjoy more for less.
+								</h2>
+								<span class="flex items-center space-x-4">
+									<a
+										href="#"
+										class="text-blue-500 lg:text-lg text-md hover:underline"
+										>Try it free></a
+									>
+									<a
+										href="#"
+										class="text-blue-500 lg:text-lg text-md hover:underline"
+										>Learn more ></a
+									>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Six Card -->
+		<section>
+			<div class="md:mx-8 mt-8">
+				<div
+					class="w-full max-w-[1380px] mx-auto grid grid-cols-1 md:grid-cols-2 flex-col gap-8"
+				>
+					<!-- Card animate-->
+					<div
+						class="bg-black text-white md:h-[628px] h-[446px] w-full flex flex-col gap-3"
+					>
+						<div
+							class="px-10 md:py-14 py-8 flex flex-col items-center text-center justify-center gap-4"
+						>
+							<img
+								src="https://www.apple.com/v/ipad/home/ci/images/overview/router_river/apple_tv_plus_logo__ghwovsdrknyy_large.png"
+								alt="Apple TV+"
+								class="w-24 mb-2"
+							/>
+							<p class="md:text-lg max-w-[300px]">
+								Get 3 months of Apple TV+ free when you buy an iPad.
+							</p>
+							<div class="flex space-x-4">
+								<a href="#" class="text-blue-500 md:text-xl hover:underline"
+									>Try it free ></a
+								>
+								<a href="#" class="text-blue-500 md:text-xl hover:underline"
+									>Learn more ></a
+								>
+							</div>
+						</div>
+
+						<!-- Slider 1 -->
+						<div class="overflow-hidden w-full flex flex-col gap-3">
+							<div class="flex animate-slide whitespace-nowrap gap-3 w-full">
+								<!-- Card -->
+								<div
+									class="slide relative md:w-[238px] w-[171px] md:h-[135px] h-[97px] rounded-xl overflow-hidden"
+								>
+									<img
+										src="https://is1-ssl.mzstatic.com/image/thumb/VS95PyZVhEGvjTo5f-DtPQ/738x416.webp"
+										alt="Masters of the Air"
+										class="w-full h-full object-cover"
+									/>
+									<div
+										class="bg-black/30 absolute flex items-center justify-center left-0 top-0 w-full h-full opacity-0 hover:opacity-100 group transition-all duration-300 cursor-pointer"
+									>
+										<button
+											class="w-[134px] h-[40px] px-4 flex items-center gap-1 hover:opacity-90 bg-white text-black rounded-full text-sm font-semibold translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+										>
+											Stream now
+											<span>
+												<img
+													class="w-[10px]"
+													src="https://static.thenounproject.com/png/2389249-200.png"
+													alt=""
+												/>
+											</span>
+										</button>
+									</div>
+								</div>
+
+								<!-- Card -->
+								<div
+									class="slide relative md:w-[238px] w-[171px] md:h-[135px] h-[97px] rounded-xl overflow-hidden"
+								>
+									<img
+										src="https://is1-ssl.mzstatic.com/image/thumb/9-STKmUyHD55XHv8cZ7s-Q/738x416.webp"
+										alt="Masters of the Air"
+										class="w-full h-full object-cover"
+									/>
+									<div
+										class="bg-black/30 absolute flex items-center justify-center left-0 top-0 w-full h-full opacity-0 hover:opacity-100 group transition-all duration-300 cursor-pointer"
+									>
+										<button
+											class="w-[134px] h-[40px] px-4 flex items-center gap-1 hover:opacity-90 bg-white text-black rounded-full text-sm font-semibold translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+										>
+											Stream now
+											<span>
+												<img
+													class="w-[10px]"
+													src="https://static.thenounproject.com/png/2389249-200.png"
+													alt=""
+												/>
+											</span>
+										</button>
+									</div>
+								</div>
+
+								<!-- Card -->
+								<div
+									class="slide relative md:w-[238px] w-[171px] md:h-[135px] h-[97px] rounded-xl overflow-hidden"
+								>
+									<img
+										src="https://is1-ssl.mzstatic.com/image/thumb/VqqiLX2wq-nrosmMfEVUXw/738x416.webp"
+										alt="Masters of the Air"
+										class="w-full h-full object-cover"
+									/>
+									<div
+										class="bg-black/30 absolute flex items-center justify-center left-0 top-0 w-full h-full opacity-0 hover:opacity-100 group transition-all duration-300 cursor-pointer"
+									>
+										<button
+											class="w-[134px] h-[40px] px-4 flex items-center gap-1 hover:opacity-90 bg-white text-black rounded-full text-sm font-semibold translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+										>
+											Stream now
+											<span>
+												<img
+													class="w-[10px]"
+													src="https://static.thenounproject.com/png/2389249-200.png"
+													alt=""
+												/>
+											</span>
+										</button>
+									</div>
+								</div>
+
+								<!-- Card -->
+								<div
+									class="slide relative md:w-[238px] w-[171px] md:h-[135px] h-[97px] rounded-xl overflow-hidden"
+								>
+									<img
+										src="https://is1-ssl.mzstatic.com/image/thumb/44dJzkosAhD0-ugRepvsfw/738x416.webp"
+										alt="Masters of the Air"
+										class="w-full h-full object-cover"
+									/>
+									<div
+										class="bg-black/30 absolute flex items-center justify-center left-0 top-0 w-full h-full opacity-0 hover:opacity-100 group transition-all duration-300 cursor-pointer"
+									>
+										<button
+											class="w-[134px] h-[40px] px-4 flex items-center gap-1 hover:opacity-90 bg-white text-black rounded-full text-sm font-semibold translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+										>
+											Stream now
+											<span>
+												<img
+													class="w-[10px]"
+													src="https://static.thenounproject.com/png/2389249-200.png"
+													alt=""
+												/>
+											</span>
+										</button>
+									</div>
+								</div>
+
+								<!-- Card -->
+								<div
+									class="slide relative md:w-[238px] w-[171px] md:h-[135px] h-[97px] rounded-xl overflow-hidden"
+								>
+									<img
+										src="https://is1-ssl.mzstatic.com/image/thumb/dGQnmrXQqSe_YJJV1kcudQ/738x416.webp"
+										alt="Masters of the Air"
+										class="w-full h-full object-cover"
+									/>
+									<div
+										class="bg-black/30 absolute flex items-center justify-center left-0 top-0 w-full h-full opacity-0 hover:opacity-100 group transition-all duration-300 cursor-pointer"
+									>
+										<button
+											class="w-[134px] h-[40px] px-4 flex items-center gap-1 hover:opacity-90 bg-white text-black rounded-full text-sm font-semibold translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+										>
+											Stream now
+											<span>
+												<img
+													class="w-[10px]"
+													src="https://static.thenounproject.com/png/2389249-200.png"
+													alt=""
+												/>
+											</span>
+										</button>
+									</div>
+								</div>
+
+								<!-- Card -->
+								<div
+									class="slide relative md:w-[238px] w-[171px] md:h-[135px] h-[97px] rounded-xl overflow-hidden"
+								>
+									<img
+										src="https://is1-ssl.mzstatic.com/image/thumb/e8pByK295xcA6sVJEP-R5g/738x416.webp"
+										alt="Masters of the Air"
+										class="w-full h-full object-cover"
+									/>
+									<div
+										class="bg-black/30 absolute flex items-center justify-center left-0 top-0 w-full h-full opacity-0 hover:opacity-100 group transition-all duration-300 cursor-pointer"
+									>
+										<button
+											class="w-[134px] h-[40px] px-4 flex items-center gap-1 hover:opacity-90 bg-white text-black rounded-full text-sm font-semibold translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+										>
+											Stream now
+											<span>
+												<img
+													class="w-[10px]"
+													src="https://static.thenounproject.com/png/2389249-200.png"
+													alt=""
+												/>
+											</span>
+										</button>
+									</div>
+								</div>
+
+								<!-- Card -->
+								<div
+									class="slide relative md:w-[238px] w-[171px] md:h-[135px] h-[97px] rounded-xl overflow-hidden"
+								>
+									<img
+										src="https://is1-ssl.mzstatic.com/image/thumb/EubK_TDtQfyCj_ibM2KR3A/738x416.webp"
+										alt="Masters of the Air"
+										class="w-full h-full object-cover"
+									/>
+									<div
+										class="bg-black/30 absolute flex items-center justify-center left-0 top-0 w-full h-full opacity-0 hover:opacity-100 group transition-all duration-300 cursor-pointer"
+									>
+										<button
+											class="w-[134px] h-[40px] px-4 flex items-center gap-1 hover:opacity-90 bg-white text-black rounded-full text-sm font-semibold translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+										>
+											Stream now
+											<span>
+												<img
+													class="w-[10px]"
+													src="https://static.thenounproject.com/png/2389249-200.png"
+													alt=""
+												/>
+											</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Slider 2 -->
+						<div class="overflow-hidden w-full flex flex-col gap-3">
+							<div class="flex animate-slide-2 whitespace-nowrap gap-3 w-full">
+								<!-- Card -->
+								<div
+									class="slide relative md:w-[238px] w-[171px] md:h-[135px] h-[97px] rounded-xl overflow-hidden"
+								>
+									<img
+										src="https://is1-ssl.mzstatic.com/image/thumb/NiE5O1VJSoiqX0NncVphuQ/738x416.webp"
+										alt="Masters of the Air"
+										class="w-full h-full object-cover"
+									/>
+									<div
+										class="bg-black/30 absolute flex items-center justify-center left-0 top-0 w-full h-full opacity-0 hover:opacity-100 group transition-all duration-300 cursor-pointer"
+									>
+										<button
+											class="w-[134px] h-[40px] px-4 flex items-center gap-1 hover:opacity-90 bg-white text-black rounded-full text-sm font-semibold translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+										>
+											Stream now
+											<span>
+												<img
+													class="w-[10px]"
+													src="https://static.thenounproject.com/png/2389249-200.png"
+													alt=""
+												/>
+											</span>
+										</button>
+									</div>
+								</div>
+
+								<!-- Card -->
+								<div
+									class="slide relative md:w-[238px] w-[171px] md:h-[135px] h-[97px] rounded-xl overflow-hidden"
+								>
+									<img
+										src="https://is1-ssl.mzstatic.com/image/thumb/i5y5PDuv51g6bV48moKF_Q/738x416.webp"
+										alt="Masters of the Air"
+										class="w-full h-full object-cover"
+									/>
+									<div
+										class="bg-black/30 absolute flex items-center justify-center left-0 top-0 w-full h-full opacity-0 hover:opacity-100 group transition-all duration-300 cursor-pointer"
+									>
+										<button
+											class="w-[134px] h-[40px] px-4 flex items-center gap-1 hover:opacity-90 bg-white text-black rounded-full text-sm font-semibold translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+										>
+											Stream now
+											<span>
+												<img
+													class="w-[10px]"
+													src="https://static.thenounproject.com/png/2389249-200.png"
+													alt=""
+												/>
+											</span>
+										</button>
+									</div>
+								</div>
+
+								<!-- Card -->
+								<div
+									class="slide relative md:w-[238px] w-[171px] md:h-[135px] h-[97px] rounded-xl overflow-hidden"
+								>
+									<img
+										src="https://is1-ssl.mzstatic.com/image/thumb/DKBDegpJ7j574QqprDbMzw/738x416.webp"
+										alt="Masters of the Air"
+										class="w-full h-full object-cover"
+									/>
+									<div
+										class="bg-black/30 absolute flex items-center justify-center left-0 top-0 w-full h-full opacity-0 hover:opacity-100 group transition-all duration-300 cursor-pointer"
+									>
+										<button
+											class="w-[134px] h-[40px] px-4 flex items-center gap-1 hover:opacity-90 bg-white text-black rounded-full text-sm font-semibold translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+										>
+											Stream now
+											<span>
+												<img
+													class="w-[10px]"
+													src="https://static.thenounproject.com/png/2389249-200.png"
+													alt=""
+												/>
+											</span>
+										</button>
+									</div>
+								</div>
+
+								<!-- Card -->
+								<div
+									class="slide relative md:w-[238px] w-[171px] md:h-[135px] h-[97px] rounded-xl overflow-hidden"
+								>
+									<img
+										src="https://is1-ssl.mzstatic.com/image/thumb/1VPmrMjrbWeSCcTFIbxMog/738x416.webp"
+										alt="Masters of the Air"
+										class="w-full h-full object-cover"
+									/>
+									<div
+										class="bg-black/30 absolute flex items-center justify-center left-0 top-0 w-full h-full opacity-0 hover:opacity-100 group transition-all duration-300 cursor-pointer"
+									>
+										<button
+											class="w-[134px] h-[40px] px-4 flex items-center gap-1 hover:opacity-90 bg-white text-black rounded-full text-sm font-semibold translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+										>
+											Stream now
+											<span>
+												<img
+													class="w-[10px]"
+													src="https://static.thenounproject.com/png/2389249-200.png"
+													alt=""
+												/>
+											</span>
+										</button>
+									</div>
+								</div>
+
+								<!-- Card -->
+								<div
+									class="slide relative md:w-[238px] w-[171px] md:h-[135px] h-[97px] rounded-xl overflow-hidden"
+								>
+									<img
+										src="https://is1-ssl.mzstatic.com/image/thumb/Video126/v4/a6/39/6c/a6396ce1-5505-c762-a411-83b86194a631/pr_source.jpg/738x416.webp"
+										alt="Masters of the Air"
+										class="w-full h-full object-cover"
+									/>
+									<div
+										class="bg-black/30 absolute flex items-center justify-center left-0 top-0 w-full h-full opacity-0 hover:opacity-100 group transition-all duration-300 cursor-pointer"
+									>
+										<button
+											class="w-[134px] h-[40px] px-4 flex items-center gap-1 hover:opacity-90 bg-white text-black rounded-full text-sm font-semibold translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+										>
+											Stream now
+											<span>
+												<img
+													class="w-[10px]"
+													src="https://static.thenounproject.com/png/2389249-200.png"
+													alt=""
+												/>
+											</span>
+										</button>
+									</div>
+								</div>
+
+								<!-- Card -->
+								<div
+									class="slide relative md:w-[238px] w-[171px] md:h-[135px] h-[97px] rounded-xl overflow-hidden"
+								>
+									<img
+										src="https://is1-ssl.mzstatic.com/image/thumb/ageP1PYyLi7UlNiWMva32Q/738x416.webp"
+										alt="Masters of the Air"
+										class="w-full h-full object-cover"
+									/>
+									<div
+										class="bg-black/30 absolute flex items-center justify-center left-0 top-0 w-full h-full opacity-0 hover:opacity-100 group transition-all duration-300 cursor-pointer"
+									>
+										<button
+											class="w-[134px] h-[40px] px-4 flex items-center gap-1 hover:opacity-90 bg-white text-black rounded-full text-sm font-semibold translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+										>
+											Stream now
+											<span>
+												<img
+													class="w-[10px]"
+													src="https://static.thenounproject.com/png/2389249-200.png"
+													alt=""
+												/>
+											</span>
+										</button>
+									</div>
+								</div>
+
+								<!-- Card -->
+								<div
+									class="slide relative md:w-[238px] w-[171px] md:h-[135px] h-[97px] rounded-xl overflow-hidden"
+								>
+									<img
+										src="https://is1-ssl.mzstatic.com/image/thumb/canoqvu3Hzg4sLVO2U4TQw/738x416.webp"
+										alt="Masters of the Air"
+										class="w-full h-full object-cover"
+									/>
+									<div
+										class="bg-black/30 absolute flex items-center justify-center left-0 top-0 w-full h-full opacity-0 hover:opacity-100 group transition-all duration-300 cursor-pointer"
+									>
+										<button
+											class="w-[134px] h-[40px] px-4 flex items-center gap-1 hover:opacity-90 bg-white text-black rounded-full text-sm font-semibold translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+										>
+											Stream now
+											<span>
+												<img
+													class="w-[10px]"
+													src="https://static.thenounproject.com/png/2389249-200.png"
+													alt=""
+												/>
+											</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Music Card -->
+					<div
+						class="w-full flex flex-col items-center gap-3 overflow-hidden bg-white"
+					>
+						<div
+							class="py-8 md:py-14 w-full flex flex-col items-center gap-3 text-center"
+						>
+							<h2 class="lg:text-5xl text-4xl">Music</h2>
+							<p class="max-w-[300px] mx-auto md:text-lg">
+								Over 100 million songs. Start listening for free today.
+							</p>
+							<div class="flex space-x-4">
+								<a href="#" class="text-blue-500 md:text-xl hover:underline"
+									>Try it free ></a
+								>
+								<a href="#" class="text-blue-500 md:text-xl hover:underline"
+									>Learn more ></a
+								>
+							</div>
+						</div>
+
+						<div
+							class="flex items-center justify-center gap-4 relative w-full pb-8"
+						>
+							<img
+								src="https://www.apple.com/v/ipad/home/ci/images/overview/music/music_album_left__cicp4maxraoi_large.jpg"
+								alt=""
+								class="shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] rounded-xl"
+							/>
+							<img
+								src="https://www.apple.com/v/ipad/home/ci/images/overview/music/music_album_middle__eji3gwe8792e_large.jpg"
+								alt=""
+								class="shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] rounded-xl"
+							/>
+							<img
+								src="https://www.apple.com/v/ipad/home/ci/images/overview/music/music_album_right__f5cuqbitxb6m_large.jpg"
+								alt=""
+								class="shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] rounded-xl"
+							/>
+						</div>
+					</div>
+
+					<!-- Fitness Card -->
+					<div
+						class="w-full flex flex-col items-center gap-3 overflow-hidden bg-[#e6e6e6ee]"
+					>
+						<div
+							class="py-8 md:py-12 w-full flex flex-col gap-4 items-center text-center"
+						>
+							<h2 class="lg:text-5xl text-4xl">Fitness+</h2>
+							<p class="max-w-[300px] mx-auto md:text-lg">
+								From HIIT to Meditation, there’s something for everyone.
+							</p>
+							<div class="flex space-x-4">
+								<a href="#" class="text-blue-500 md:text-xl hover:underline"
+									>Try it free ></a
+								>
+								<a href="#" class="text-blue-500 md:text-xl hover:underline"
+									>Learn more ></a
+								>
+							</div>
+						</div>
+
+						<div class="px-4 pb-6">
+							<img
+								src="https://www.apple.com/v/ipad/home/ci/images/overview/apple_fitness_plus/promo_apple_fitness_ipad__bg6qwl7c698i_large.jpg"
+								alt=""
+								class="rounded-3xl"
+							/>
+						</div>
+					</div>
+
+					<!-- Arcade Card -->
+					<div
+						class="w-full flex flex-col justify-between items-center gap-3 overflow-hidden bg-white"
+					>
+						<div
+							class="py-8 md:py-12 w-full flex flex-col gap-4 items-center text-center"
+						>
+							<h2 class="lg:text-5xl text-4xl">Arcade+</h2>
+							<p class="max-w-[300px] mx-auto md:text-lg">
+								Get 3 months of Apple Arcade free when you buy an iPad.
+							</p>
+							<div class="flex space-x-4">
+								<a href="#" class="text-blue-500 md:text-xl hover:underline"
+									>Try it free ></a
+								>
+								<a href="#" class="text-blue-500 md:text-xl hover:underline"
+									>Learn more ></a
+								>
+							</div>
+						</div>
+
+						<img class="w-full" src="../assets/apple-acade.png" alt="" />
+					</div>
+
+					<!-- News Card -->
+					<div
+						class="relative w-full pt-10 flex flex-col justify-between items-center gap-3 overflow-hidden bg-white"
+					>
+						<div
+							class="absolute w-full flex flex-col gap-4 items-center text-center"
+						>
+							<h2 class="lg:text-5xl text-4xl">News+</h2>
+							<p class="max-w-[300px] mx-auto md:text-lg">
+								Get 3 months of Apple News+ free when you buy an iPad.9
+							</p>
+							<div class="flex space-x-4">
+								<a href="#" class="text-blue-500 md:text-xl hover:underline"
+									>Learn more ></a
+								>
+							</div>
+						</div>
+
+						<img
+							class="w-full h-full object-cover mt-10"
+							src="https://www.apple.com/v/ipad/home/ci/images/overview/news-plus-update/apple_news_plus_tile_x__iki0db8cqw66_large.jpg"
+							alt=""
+						/>
+					</div>
+
+					<!-- Gift Card -->
+					<div
+						class="relative w-full pt-10 flex flex-col justify-between items-center gap-3 overflow-hidden bg-[#FAFAFA]"
+					>
+						<div class="w-full flex flex-col gap-4 items-center text-center">
+							<h2 class="lg:text-5xl text-4xl">Gift Card+</h2>
+							<p class="max-w-[300px] mx-auto md:text-lg">
+								For everything and everyone.
+							</p>
+							<div class="flex space-x-4">
+								<a href="#" class="text-blue-500 md:text-xl hover:underline"
+									>Learn more ></a
+								>
+								<a href="#" class="text-blue-500 md:text-xl hover:underline"
+									>Buy ></a
+								>
+							</div>
+						</div>
+
+						<img
+							class="w-full h-full object-cover mt-10"
+							src="https://www.apple.com/v/ipad/home/ci/images/overview/gift_card/apple_gift_card_tile__cytpkh5opjqu_large.jpg"
+							alt=""
+						/>
+					</div>
+
+					<!-- Apple and education Card -->
+					<div
+						class="relative md:h-[600px] h-[490px] w-full flex flex-col justify-between items-center gap-3 overflow-hidden bg-[#FAFAFA]"
+					>
+						<div
+							class="absolute text-white w-full flex flex-col gap-4 md:py-14 py-8 items-center text-center"
+						>
+							<h2 class="lg:text-5xl text-4xl">Apple and Education</h2>
+							<p class="max-w-[300px] mx-auto md:text-lg">
+								Empowering educators and students to move the world forward.
+							</p>
+							<div class="flex space-x-4">
+								<a href="#" class="text-white md:text-xl hover:underline"
+									>Learn more ></a
+								>
+							</div>
+						</div>
+
+						<img
+							class="w-full h-full object-cover"
+							src="https://www.apple.com/v/ipad/home/ci/images/overview/ipad_for_education__rvh8drp6mfma_large.jpg"
+							alt=""
+						/>
+					</div>
+
+					<!-- Apple at work Card -->
+					<div
+						class="relative md:h-[600px] h-[490px] w-full flex flex-col justify-between items-center gap-3 overflow-hidden"
+					>
+						<div
+							class="absolute text-white w-full flex flex-col gap-4 md:py-14 py-8 items-center text-center"
+						>
+							<h2 class="lg:text-5xl text-4xl">Apple at Work</h2>
+							<div class="flex space-x-4">
+								<a href="#" class="text-white md:text-xl hover:underline"
+									>Learn more ></a
+								>
+							</div>
+						</div>
+
+						<img
+							class="w-full h-full object-cover"
+							src="https://www.apple.com/v/ipad/home/ci/images/overview/ipad_for_business__dg81h7gvgbyq_large.jpg"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<!-- Footer -->
 		<footer-component></footer-component>
 	</body>
@@ -592,4 +1395,5 @@
 	<script src="../components/chapter-nav-items.js"></script>
 	<script src="../components/promotion-bar.js"></script>
 	<script src="../components/which-ipad-is-right-for-you.js"></script>
+	<script src="../components/eight-cards.js"></script>
 </html>

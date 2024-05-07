@@ -10,7 +10,7 @@ const createCardHtml = (
 		case '1':
 			return `
                <div class="${cardDesignClass} ${card} flex-[0_0_${cardWidth}px] h-[${cardHeight}px] ">
-                   <!-- Card content here for carousel 1 -->
+                   <!-- Card content here for carousel 1 ipad -->
                    <img
                        src="${item.imgUrl}"
                        class="w-full h-full object-cover"
@@ -34,10 +34,18 @@ const createCardHtml = (
            `;
 		case '3':
 			return `
-               <div class="${cardDesignClass} ${card} flex-[0_0_${cardWidth}px] h-[${cardHeight}px] ">
-                   <!-- Card content here for carousel 3 -->
-                   <!-- Include any specific content for carousel 3 -->
-               </div>
+				<div class="${cardDesignClass} ${card} flex-[0_0_${cardWidth}px] h-[${cardHeight}px] ">
+					<!-- Card content here for carousel 1 iphone -->
+					<img
+						src="${item.imgUrl}"
+						class="w-full h-full object-cover"
+						alt=""
+					/>
+					<div class="p-8 absolute left-0 top-0 text-${item.textColor}">
+						<p class="text-xs tracking-wider font-semibold">${item.subTitle}</p>
+						<h2 class="mt-2 font-semibold text-[26px]">${item.title}</h2>
+					</div>
+				</div>
            `;
 		default:
 			return '';
@@ -223,7 +231,7 @@ const carouselConfigs = [
 		cardWidth: '344',
 		cardHeight: '628',
 		cardDesignClass:
-			' relative rounded-2xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] bg-[#fff] hover:scale-[101%] duration-500 cursor-pointer overflow-hidden',
+			'relative rounded-2xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] bg-[#fff] hover:scale-[101%] duration-500 cursor-pointer overflow-hidden',
 	},
 	{
 		carouselId: '2',
@@ -286,6 +294,78 @@ const carouselConfigs = [
 			'relative flex flex-col items-start gap-4 bg-white rounded-2xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] bg-[#fff] hover:scale-[101%] duration-500 cursor-pointer overflow-hidden p-6 ',
 	},
 	// Add more carousel configurations here...
+	// IPHONE PAGE
+	{
+		carouselId: '3',
+		carouselTitle: 'Carousel 3',
+		cardArray: [
+			{
+				textColor: 'white',
+				subTitle: 'Advanced Cameras',
+				title: 'Selfie-takers. Movie-makers. Boundary-breakers.',
+				imgUrl:
+					'https://www.apple.com/v/iphone/home/bu/images/overview/consider/camera__cerpczobiwwi_large.jpg',
+			},
+			{
+				textColor: 'white',
+				subTitle: 'Apple-Designed Chips',
+				title: 'The kind of fast you can feel.',
+				imgUrl:
+					'https://www.apple.com/v/iphone/home/bu/images/overview/consider/chip__cpj93oio1oya_large.jpg',
+			},
+			{
+				textColor: 'white',
+				subTitle: 'Battery',
+				title: 'The power of great battery life.',
+				imgUrl:
+					'https://www.apple.com/v/iphone/home/bu/images/overview/consider/battery__f9km4l6jlv6u_large.jpg',
+			},
+			{
+				textColor: 'white',
+				subTitle: 'Innovation',
+				title: 'Beautiful and durable, by design.',
+				imgUrl:
+					'https://www.apple.com/v/iphone/home/bu/images/overview/consider/innovation__b03hhgj3xx9e_large.jpg',
+			},
+			{
+				textColor: 'white',
+				subTitle: 'Personalize Your iPhone',
+				title: 'Make it you. Through and through.',
+				imgUrl:
+					'https://www.apple.com/v/iphone/home/bu/images/overview/consider/personalize__f51wh6aiosya_large.jpg',
+			},
+			{
+				textColor: 'white',
+				subTitle: 'Peace of Mind',
+				title: 'Helpful safety features. Just in case.',
+				imgUrl:
+					'https://www.apple.com/v/iphone/home/bu/images/overview/consider/safety__d9zsvrorjfcm_large.jpg',
+			},
+			{
+				textColor: 'white',
+				subTitle: 'Privacy',
+				title: 'Just where you want it.',
+				imgUrl:
+					'https://www.apple.com/v/iphone/home/bu/images/overview/consider/privacy__cum61s425o6e_large.jpg',
+			},
+			{
+				textColor: 'black',
+				subTitle: 'Environment',
+				title: 'Recycle. Reuse. Repeat.',
+				imgUrl:
+					'https://www.apple.com/v/iphone/home/bu/images/overview/consider/environment__d1g8uhlvrccy_large.jpg',
+			},
+		],
+		sliderContainer: 'slider-container-1',
+		slider: 'slider-1',
+		card: 'card-1',
+		prevBtn: 'prev-btn-1',
+		nextBtn: 'next-btn-1',
+		cardWidth: '405',
+		cardHeight: '775',
+		cardDesignClass:
+			' relative rounded-2xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] bg-[#fff] hover:scale-[101%] duration-500 cursor-pointer overflow-hidden',
+	},
 ];
 
 // Render carousel components
