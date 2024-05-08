@@ -2,8 +2,8 @@ const createChapterNavItem = (itemComponents, bgColor, textColor) => {
 	return `
       <!-- Chapter Nav Items -->
       <div class="w-full h-auto bg-${bgColor} text-${textColor}">
-         <div class="w-full max-w-[1200px] mx-auto py-6 px-4">
-            <header class="mt-10 flex flex-wrap gap-4 items-center justify-center">
+         <div class="w-full max-w-[1200px] mx-auto py-6 px-4 ">
+            <header class="mt-10 flex gap-4 items-center overflow-x-scroll ">
                   <!-- card -->
                   ${itemComponents}
             </header>

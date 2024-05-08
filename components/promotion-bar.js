@@ -1,7 +1,7 @@
 const createPromotionBarComponent = (text, link, href, bgColor, textColor) => {
 	return `
       <div
-         class="w-full text-center bg-[${bgColor}] text-[${textColor}] md:text-sm text-xs flex items-center py-4 justify-center px-6"
+         class="w-full gap-1 flex-wrap text-center bg-[${bgColor}] text-[${textColor}] md:text-sm text-xs flex items-center py-4 justify-center px-6"
       >
       ${text}
       <a href="${href}" class="text-blue-500 flex items-center">

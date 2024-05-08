@@ -47,6 +47,23 @@ const createCardHtml = (
 					</div>
 				</div>
            `;
+		case '4':
+			return `
+				<div class="${cardDesignClass} ${card} flex-[0_0_${cardWidth}px] h-[${cardHeight}px] ">
+					<!-- Card content here for carousel 1 iphone -->
+					<img
+						src="${item.imgUrl}"
+						class="w-full h-full object-cover"
+						alt=""
+					/>
+					<div class="p-8 absolute left-0 top-0 text-${item.textColor}">
+						<p class="text-xs tracking-wider font-semibold">${item.subTitle}</p>
+						<h2 class="mt-2 font-semibold text-[26px]">${item.title}</h2>
+						<p class="mt-2 font-semibold text-[16px]">${item.description}</p>
+						
+					</div>
+				</div>
+           `;
 		default:
 			return '';
 	}
@@ -73,7 +90,7 @@ const createCarouselComponent = (
 	const container = document.getElementById(containerId);
 
 	container.innerHTML = `
-        <div class='mt-10'>
+        <div class='mt-10 '>
           <div class="flex items-center relative w-full group">
             <div class="${sliderContainer} relative w-full">
               <div
@@ -99,7 +116,7 @@ const createCarouselComponent = (
 
             <button
               id="${prevBtn}"
-              class="absolute hidden z-10 scale-[90%] group-hover:scale-[115%] opacity-0 group-hover:opacity-100 duration-500 bg-[#d6d6d68e] hover:bg-[#e3e3e380] text-[white] cursor-pointer w-12 h-12 rounded-full left-[-3%] flex items-center justify-center"
+              class="absolute hidden z-10 scale-[90%] group-hover:scale-[115%] opacity-0 group-hover:opacity-100 duration-500 bg-[#d6d6d68e] hover:bg-[#e3e3e380] text-[white] cursor-pointer w-12 h-12 rounded-full left-[0px] flex items-center justify-center"
             >
               <img
                 src="https://uxwing.com/wp-content/themes/uxwing/download/arrow-direction/chevron-right-icon.png"
@@ -109,7 +126,7 @@ const createCarouselComponent = (
             </button>
             <button
               id="${nextBtn}"
-              class="absolute  z-10 scale-[90%] group-hover:scale-[115%] opacity-0 group-hover:opacity-100 duration-500 bg-[#d6d6d68e] hover:bg-[#e3e3e380] text-[white] cursor-pointer w-12 h-12 rounded-full  right-[-3%] flex items-center justify-center"
+              class="absolute  z-10 scale-[90%] group-hover:scale-[115%] opacity-0 group-hover:opacity-100 duration-500 bg-[#d6d6d68e] hover:bg-[#e3e3e380] text-[white] cursor-pointer w-12 h-12 rounded-full  right-[0px] flex items-center justify-center"
             >
               <img
                 src="https://uxwing.com/wp-content/themes/uxwing/download/arrow-direction/chevron-right-icon.png"
@@ -356,13 +373,166 @@ const carouselConfigs = [
 					'https://www.apple.com/v/iphone/home/bu/images/overview/consider/environment__d1g8uhlvrccy_large.jpg',
 			},
 		],
-		sliderContainer: 'slider-container-1',
-		slider: 'slider-1',
-		card: 'card-1',
-		prevBtn: 'prev-btn-1',
-		nextBtn: 'next-btn-1',
+		sliderContainer: 'slider-container-3',
+		slider: 'slider-3',
+		card: 'card-3',
+		prevBtn: 'prev-btn-3',
+		nextBtn: 'next-btn-3',
 		cardWidth: '405',
 		cardHeight: '775',
+		cardDesignClass:
+			' relative rounded-2xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] bg-[#fff] hover:scale-[101%] duration-500 cursor-pointer overflow-hidden',
+	},
+	{
+		carouselId: '4',
+		carouselTitle: 'Carousel 4',
+		cardArray: [
+			{
+				textColor: 'black',
+				subTitle: 'Apple Trade In',
+				title: 'Save With Apple Trade In',
+				description:
+					'Get $170-$630 in credit toward iPhone 15 or iPhone 15 Pro when you trade in iPhone 11 or higher.',
+				imgUrl:
+					'https://www.apple.com/v/iphone/home/bu/images/overview/incentive/apple_trade_in__cyu6hvjcoxqq_large.jpg',
+			},
+			{
+				textColor: 'black',
+				subTitle: 'Apple Card',
+				title: 'Pay over time, interest-free.',
+				description:
+					'When you choose to check out with Apple Card Monthly Installments.',
+				imgUrl:
+					'https://www.apple.com/v/iphone/home/bu/images/overview/incentive/apple_card__bkmaxfjg05ua_large.jpg',
+			},
+			{
+				textColor: 'black',
+				subTitle: 'Battery',
+				title: 'iPhone carrier deals. Right here at Apple. For as low as $0.',
+				description:
+					'Includes trade-in and carrier credits. AT&T: up to $700. T-Mobile: up to $500. Verizon: up to $500. Sprint: up to $400.',
+				imgUrl:
+					'https://www.apple.com/v/iphone/home/bu/images/overview/incentive/carrier_deals__fhry3uquobqm_large.jpg',
+			},
+			{
+				textColor: 'black',
+				subTitle: 'Innovation',
+				title: 'Beautiful and durable, by design.',
+				description:
+					'Get $170-$630 in credit toward iPhone 15 or iPhone 15 Pro when you trade in iPhone 11 or higher.',
+				imgUrl:
+					'https://www.apple.com/v/iphone/home/bu/images/overview/incentive/delivery__fzf6y3qyc7u6_large.jpg',
+			},
+
+			{
+				textColor: 'black',
+				subTitle: 'Peace of Mind',
+				title: 'Helpful safety features. Just in case.',
+				description:
+					'Get $170-$630 in credit toward iPhone 15 or iPhone 15 Pro when you trade in iPhone 11 or higher.',
+				imgUrl:
+					'https://www.apple.com/v/iphone/home/bu/images/overview/incentive/support__fqabq872w8q6_large.jpg',
+			},
+			{
+				textColor: 'white',
+				subTitle: 'Privacy',
+				title: 'Just where you want it.',
+				description:
+					'Get $170-$630 in credit toward iPhone 15 or iPhone 15 Pro when you trade in iPhone 11 or higher.',
+				imgUrl:
+					'https://www.apple.com/v/iphone/home/bu/images/overview/consider/privacy__cum61s425o6e_large.jpg',
+			},
+			{
+				textColor: 'black',
+				subTitle: 'Environment',
+				title: 'Recycle. Reuse. Repeat.',
+				description:
+					'Get $170-$630 in credit toward iPhone 15 or iPhone 15 Pro when you trade in iPhone 11 or higher.',
+				imgUrl:
+					'https://www.apple.com/v/iphone/home/bu/images/overview/incentive/personal_session__lzxzvh66vuq2_large.jpg',
+			},
+		],
+		sliderContainer: 'slider-container-4',
+		slider: 'slider-4',
+		card: 'card-4',
+		prevBtn: 'prev-btn-4',
+		nextBtn: 'next-btn-4',
+		cardWidth: '372',
+		cardHeight: '480',
+		cardDesignClass:
+			' relative rounded-2xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] bg-[#fff] hover:scale-[101%] duration-500 cursor-pointer overflow-hidden',
+	},
+
+	// Watch page
+	{
+		carouselId: '3',
+		carouselTitle: 'Carousel 5',
+		cardArray: [
+			{
+				textColor: 'white',
+				subTitle: 'Fitness',
+				title: 'Every move counts',
+
+				imgUrl:
+					'https://www.apple.com/v/watch/bl/images/overview/consider/feature_fitness__bqrhzxk45liu_large.jpg',
+			},
+			{
+				textColor: 'white',
+				subTitle: 'Healh',
+				title: 'Pay over time, internet-free.',
+
+				imgUrl:
+					'https://www.apple.com/v/watch/bl/images/overview/consider/feature_health__b8l8jg8aa0b6_large.jpg',
+			},
+			{
+				textColor: 'black',
+				subTitle: 'Connectivity',
+				title: 'The right call for staying in touch.',
+
+				imgUrl:
+					'https://www.apple.com/v/watch/bl/images/overview/consider/feature_connectivity__k68bkgj3a6ie_large.jpg',
+			},
+			{
+				textColor: 'black',
+				subTitle: 'Safty',
+				title: 'Good help is easy to find.',
+
+				imgUrl:
+					'https://www.apple.com/v/watch/bl/images/overview/consider/feature_safety__c5gr3nzfh20y_large.jpg',
+			},
+
+			{
+				textColor: 'black',
+				subTitle: 'Apple Watch + iPhone',
+				title: 'Dynamic duo.',
+
+				imgUrl:
+					'https://www.apple.com/v/watch/bl/images/overview/consider/feature_watch_and_iphone__co3lxacgl3qu_large.jpg',
+			},
+			{
+				textColor: 'white',
+				subTitle: 'Personalization',
+				title: 'Make it you-nique.',
+
+				imgUrl:
+					'https://www.apple.com/v/watch/bl/images/overview/consider/feature_personalization__fdz9dgc5afma_large.jpg',
+			},
+			{
+				textColor: 'black',
+				subTitle: 'Family Setup for Apple Watch',
+				title: "Great for kids who don't have an iPhone yet.",
+
+				imgUrl:
+					'https://www.apple.com/v/watch/bl/images/overview/consider/feature_family_setup__ghz0t0it1hay_large.jpg',
+			},
+		],
+		sliderContainer: 'slider-container-5',
+		slider: 'slider-5',
+		card: 'card-5',
+		prevBtn: 'prev-btn',
+		nextBtn: 'next-btn',
+		cardWidth: '372',
+		cardHeight: '680',
 		cardDesignClass:
 			' relative rounded-2xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] bg-[#fff] hover:scale-[101%] duration-500 cursor-pointer overflow-hidden',
 	},

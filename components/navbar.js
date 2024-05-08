@@ -1,10 +1,467 @@
+let dropdownIndex = 0;
 class NavbarComponent extends HTMLElement {
 	connectedCallback() {
 		let bgColor = this.getAttribute('bgColor');
 		let textColor = this.getAttribute('textColor');
-		this.innerHTML = `
-         
 
+		const navItems = [
+			{
+				name: 'Store',
+				url: 'store.html',
+				dropdown: [
+					{
+						category: 'Shop',
+						items: [
+							'Shop the Latest',
+							'Mac',
+							'iPad',
+							'iPhone',
+							'Apple Watch',
+							'Apple Vision Pro',
+							'Accessories',
+						],
+						compare: 'Compare your Mac',
+						why: 'Why not Mac',
+					},
+					{
+						category: 'Quick Links',
+						items: [
+							'Find a Store',
+							'Order Status',
+							'Apple Trade In',
+							'Financing',
+						],
+					},
+					{
+						category: 'Shop Special Stores',
+						items: [
+							'Certified Refurbished',
+							'Education',
+							'Business',
+							'Veterans and Military',
+							'Government',
+						],
+					},
+				],
+			},
+			{
+				name: 'Mac',
+				url: 'mac.html',
+				dropdown: [
+					{
+						category: 'Shop',
+						items: [
+							'Shop the Latest',
+							'Mac',
+							'iPad',
+							'iPhone',
+							'Apple Watch',
+							'Apple Vision Pro',
+							'Accessories',
+						],
+						compare: 'Compare Mac',
+						why: 'What Mac Does?',
+					},
+					{
+						category: 'Quick Links',
+						items: [
+							'Find a Store',
+							'Order Status',
+							'Apple Trade In',
+							'Financing',
+						],
+					},
+					{
+						category: 'Shop Special Stores',
+						items: [
+							'Certified Refurbished',
+							'Education',
+							'Business',
+							'Veterans and Military',
+							'Government',
+						],
+					},
+				],
+			},
+			{
+				name: 'iPad',
+				url: 'ipad.html',
+				dropdown: [
+					{
+						category: 'Shop',
+						items: [
+							'Shop the Latest',
+							'Mac',
+							'iPad',
+							'iPhone',
+							'Apple Watch',
+							'Apple Vision Pro',
+							'Accessories',
+						],
+					},
+					{
+						category: 'Quick Links',
+						items: [
+							'Find a Store',
+							'Order Status',
+							'Apple Trade In',
+							'Financing',
+						],
+					},
+					{
+						category: 'Shop Special Stores',
+						items: [
+							'Certified Refurbished',
+							'Education',
+							'Business',
+							'Veterans and Military',
+							'Government',
+						],
+					},
+				],
+			},
+			{
+				name: 'iPhone',
+				url: 'iphone.html',
+				dropdown: [
+					{
+						category: 'Shop',
+						items: [
+							'Shop the Latest',
+							'Mac',
+							'iPad',
+							'iPhone',
+							'Apple Watch',
+							'Apple Vision Pro',
+							'Accessories',
+						],
+					},
+					{
+						category: 'Quick Links',
+						items: [
+							'Find a Store',
+							'Order Status',
+							'Apple Trade In',
+							'Financing',
+						],
+					},
+					{
+						category: 'Shop Special Stores',
+						items: [
+							'Certified Refurbished',
+							'Education',
+							'Business',
+							'Veterans and Military',
+							'Government',
+						],
+					},
+				],
+			},
+			{
+				name: 'Watch',
+				url: 'watch.html',
+				dropdown: [
+					{
+						category: 'Shop',
+						items: [
+							'Shop the Latest',
+							'Mac',
+							'iPad',
+							'iPhone',
+							'Apple Watch',
+							'Apple Vision Pro',
+							'Accessories',
+						],
+					},
+					{
+						category: 'Quick Links',
+						items: [
+							'Find a Store',
+							'Order Status',
+							'Apple Trade In',
+							'Financing',
+						],
+					},
+					{
+						category: 'Shop Special Stores',
+						items: [
+							'Certified Refurbished',
+							'Education',
+							'Business',
+							'Veterans and Military',
+							'Government',
+						],
+					},
+				],
+			},
+			{
+				name: 'Vision',
+				url: 'vision.html',
+				dropdown: [
+					{
+						category: 'Shop',
+						items: [
+							'Shop the Latest',
+							'Mac',
+							'iPad',
+							'iPhone',
+							'Apple Watch',
+							'Apple Vision Pro',
+							'Accessories',
+						],
+					},
+					{
+						category: 'Quick Links',
+						items: [
+							'Find a Store',
+							'Order Status',
+							'Apple Trade In',
+							'Financing',
+						],
+					},
+					{
+						category: 'Shop Special Stores',
+						items: [
+							'Certified Refurbished',
+							'Education',
+							'Business',
+							'Veterans and Military',
+							'Government',
+						],
+					},
+				],
+			},
+			{
+				name: 'AirPods',
+				url: 'airpods.html',
+				dropdown: [
+					{
+						category: 'Shop',
+						items: [
+							'Shop the Latest',
+							'Mac',
+							'iPad',
+							'iPhone',
+							'Apple Watch',
+							'Apple Vision Pro',
+							'Accessories',
+						],
+					},
+					{
+						category: 'Quick Links',
+						items: [
+							'Find a Store',
+							'Order Status',
+							'Apple Trade In',
+							'Financing',
+						],
+					},
+					{
+						category: 'Shop Special Stores',
+						items: [
+							'Certified Refurbished',
+							'Education',
+							'Business',
+							'Veterans and Military',
+							'Government',
+						],
+					},
+				],
+			},
+			{
+				name: 'TV & Home',
+				url: 'tvhome.html',
+				dropdown: [
+					{
+						category: 'Shop',
+						items: [
+							'Shop the Latest',
+							'Mac',
+							'iPad',
+							'iPhone',
+							'Apple Watch',
+							'Apple Vision Pro',
+							'Accessories',
+						],
+					},
+					{
+						category: 'Quick Links',
+						items: [
+							'Find a Store',
+							'Order Status',
+							'Apple Trade In',
+							'Financing',
+						],
+					},
+					{
+						category: 'Shop Special Stores',
+						items: [
+							'Certified Refurbished',
+							'Education',
+							'Business',
+							'Veterans and Military',
+							'Government',
+						],
+					},
+				],
+			},
+			{
+				name: 'Entertainment',
+				url: 'entertainment.html',
+				dropdown: [
+					{
+						category: 'Shop',
+						items: [
+							'Shop the Latest',
+							'Mac',
+							'iPad',
+							'iPhone',
+							'Apple Watch',
+							'Apple Vision Pro',
+							'Accessories',
+						],
+					},
+					{
+						category: 'Quick Links',
+						items: [
+							'Find a Store',
+							'Order Status',
+							'Apple Trade In',
+							'Financing',
+						],
+					},
+					{
+						category: 'Shop Special Stores',
+						items: [
+							'Certified Refurbished',
+							'Education',
+							'Business',
+							'Veterans and Military',
+							'Government',
+						],
+					},
+				],
+			},
+			{
+				name: 'Accessories',
+				url: 'accessories.html',
+				dropdown: [
+					{
+						category: 'Shop',
+						items: [
+							'Shop the Latest',
+							'Mac',
+							'iPad',
+							'iPhone',
+							'Apple Watch',
+							'Apple Vision Pro',
+							'Accessories',
+						],
+					},
+					{
+						category: 'Quick Links',
+						items: [
+							'Find a Store',
+							'Order Status',
+							'Apple Trade In',
+							'Financing',
+						],
+					},
+					{
+						category: 'Shop Special Stores',
+						items: [
+							'Certified Refurbished',
+							'Education',
+							'Business',
+							'Veterans and Military',
+							'Government',
+						],
+					},
+				],
+			},
+			{
+				name: 'Support',
+				url: 'support.html',
+				dropdown: [
+					{
+						category: 'Shop',
+						items: [
+							'Shop the Latest',
+							'Mac',
+							'iPad',
+							'iPhone',
+							'Apple Watch',
+							'Apple Vision Pro',
+							'Accessories',
+						],
+					},
+					{
+						category: 'Quick Links',
+						items: [
+							'Find a Store',
+							'Order Status',
+							'Apple Trade In',
+							'Financing',
+						],
+					},
+					{
+						category: 'Shop Special Stores',
+						items: [
+							'Certified Refurbished',
+							'Education',
+							'Business',
+							'Veterans and Military',
+							'Government',
+						],
+					},
+				],
+			},
+		];
+
+		let dropdownHTML = '';
+
+		if (navItems.length > 0) {
+			let firstNavItem = navItems[dropdownIndex];
+			dropdownHTML = firstNavItem.dropdown
+				.map((item, index) => {
+					if (index === 0) {
+						return `
+							<ul class="text-xl font-semibold flex flex-col gap-2">
+								<li class="font-light text-xs text-gray-500 my-1">${item.category}</li>
+								${item.items
+									.map(
+										(link) => `<li class=""><a href="${link}">${link}</a></li>`
+									)
+									.join('')}
+								<li class="mt-3 text-xs ">${item.compare}</li>
+								<li class="text-xs ">${item.why}</li>
+							</ul>
+						`;
+					} else {
+						return `
+							<div class="flex items-start gap-8">
+								<ul class="text-xs font-semibold flex flex-col gap-2">
+									<li class="font-light text-gray-500 my-3">${item.category}</li>
+									${item.items.map((link) => `<li><a href="${link}">${link}</a></li>`).join('')}
+								</ul>
+							</div>
+						`;
+					}
+				})
+				.join('');
+		}
+
+		let navHTML = navItems
+			.map(
+				(item) => `
+            <li id="hover-btn">
+                  <a class="py-3 text-${textColor}/80 hover:text-${textColor}" href="${item.url}">${item.name}</a>
+            </li>
+         `
+			)
+			.join('');
+
+		this.innerHTML = `
          <nav id="navbar-container"
 			class=" w-full fixed   py-2 top-0 left-0 bg-${bgColor}/90 text-black backdrop-blur-sm z-[99] border-b shadow-sm border-${bgColor} duration-500 transition-all ease-in-out overflow-hidden text-${textColor} ">
             <div
@@ -12,7 +469,7 @@ class NavbarComponent extends HTMLElement {
             >
                <div class="flex items-center justify-between w-full text-xs gap-6">
                  <div>
-                     <a href="home.html">
+                     <a href="index.html">
                      <svg class="size-5" width="800px" height="800px" viewBox="-1.5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     
                      <title>apple [#173]</title>
@@ -32,62 +489,8 @@ class NavbarComponent extends HTMLElement {
                  </svg>
                      </a>
                   </div>
-                  <ul class="md:flex justify-between items-center w-full hidden">
-                     <li id="hover-btn">
-                        <a class="py-3 text-${textColor}/80 hover:text-${textColor}" href="store.html"
-                           >Store</a
-                        >
-                     </li>
-                     <li>
-                        <a class="py-3 text-${textColor}/80 hover:text-${textColor}" href="mac.html"
-                           >Mac</a
-                        >
-                     </li>
-                     <li>
-                        <a class="py-3 text-${textColor}/80 hover:text-${textColor}" href="ipad.html"
-                           >iPad</a
-                        >
-                     </li>
-                     <li>
-                        <a class="py-3 text-${textColor}/80 hover:text-${textColor}" href="iphone.html"
-                           >iPhone</a
-                        >
-                     </li>
-                     <li>
-                        <a class="py-3 text-${textColor}/80 hover:text-${textColor}" href="store.html"
-                           >Watch</a
-                        >
-                     </li>
-                     <li>
-                        <a class="py-3 text-${textColor}/80 hover:text-${textColor}" href="store.html"
-                           >Vision</a
-                        >
-                     </li>
-                     <li>
-                        <a class="py-3 text-${textColor}/80 hover:text-${textColor}" href="store.html"
-                           >AirPods</a
-                        >
-                     </li>
-                     <li>
-                        <a class="py-3 text-${textColor}/80 hover:text-${textColor}" href="store.html"
-                           >TV & Home</a
-                        >
-                     </li>
-                     <li>
-                        <a class="py-3 text-${textColor}/80 hover:text-${textColor}" href="store.html"
-                           >Entertainment</a
-                        >
-                     </li>
-                     <li>
-                        <a class="py-3 text-${textColor}/80 hover:text-${textColor}" href="store.html"
-                           >Accessories</a
-                        >
-                     </li>
-                     <li>
-                        <a class="py-3 text-${textColor}/80 hover:text-${textColor}" href="store.html"
-                           >Support</a
-                        >
-                     </li>
+                  <ul class="md:flex justify-between items-center mt-1 w-full hidden">
+                     ${navHTML}
                   </ul>
                   <div class="flex gap-4">
                      <button>
@@ -127,47 +530,9 @@ class NavbarComponent extends HTMLElement {
             
 
             <!-- Store dropdown container -->
-            <div
-               id="dropdown-list"
-               class="w-full fixed opacity-0 pointer-events-none top-9 pt-8 pb-16 -translate-y-4 duration-300"
-            >
-               <div
-                  class="max-w-[1100px] px-6 mx-auto flex flex-wrap gap-x-20 gap-y-10 text-${textColor}/80"
-               >
-                  <ul class="text-xl font-semibold flex flex-col gap-2">
-                     <li class="font-light text-xs text-gray-500">Explore Mac</li>
-                     <li><a href="#">Explore All Mac</a></li>
-                     <li><a href="#">MacBook Air</a></li>
-                     <li><a href="#">MacBook Pro</a></li>
-                     <li><a href="#">iMac</a></li>
-                     <li><a href="#">Mac mini</a></li>
-                     <li><a href="#">Mac Pro</a></li>
-                     <li><a href="#">Displays</a></li>
-                     <li><a href="#" class="text-xs">Compare Mac</a></li>
-                     <li><a href="#" class="text-xs">Mac Does That</a></li>
-                  </ul>
-
-                  <div class="flex items-start gap-8">
-                     <ul class="text-xs font-semibold flex flex-col gap-3">
-                        <li class="font-light text-gray-500">Shop Mac</li>
-                        <li><a href="#">Shop Mac</a></li>
-                        <li><a href="#">Mac Accessories</a></li>
-                        <li><a href="#">Apple Trade In</a></li>
-                        <li><a href="#">Financing</a></li>
-                     </ul>
-
-                     <ul class="text-xs font-semibold flex flex-col gap-3">
-                        <li class="font-light text-gray-500">More from Mac</li>
-                        <li><a href="#">Mac Support</a></li>
-                        <li><a href="#">AppleCare+ for Mac</a></li>
-                        <li><a href="#">macOS Sonoma</a></li>
-                        <li><a href="#">Apps by Apple</a></li>
-                        <li><a href="#">Continuity</a></li>
-                        <li><a href="#">iCloud+</a></li>
-                        <li><a href="#">Mac for Business</a></li>
-                        <li><a href="#">Education</a></li>
-                     </ul>
-                  </div>
+            <div id="dropdown-list" class="w-full  fixed opacity-0 pointer-events-none top-9 pt-8 pb-16 -translate-y-4 duration-300">
+               <div class="max-w-[1100px] px-6 mx-auto flex flex-wrap gap-x-20 gap-y-10 text-${textColor}/80">
+                  ${dropdownHTML}
                </div>
             </div>
          </nav>
@@ -187,103 +552,18 @@ class NavbarComponent extends HTMLElement {
 								class="text-${textColor} px-12 flex flex-col mt-14 text-2xl gap-3 font-semibold opacity-0 pointer-events-none duration-500"
 								id="list-container"
 							>
-								<a href="" class="flex items-center justify-between group"
-									>Store
-									<span
-										class="material-symbols-outlined group-hover:block hidden"
-									>
-										chevron_right
-									</span></a
-								>
-
-								<a href="" class="flex items-center justify-between group"
-									>Store
-									<span
-										class="material-symbols-outlined group-hover:block hidden"
-									>
-										chevron_right
-									</span></a
-								>
-
-								<a href="" class="flex items-center justify-between group"
-									>Store
-									<span
-										class="material-symbols-outlined group-hover:block hidden"
-									>
-										chevron_right
-									</span></a
-								>
-
-								<a href="" class="flex items-center justify-between group"
-									>Store
-									<span
-										class="material-symbols-outlined group-hover:block hidden"
-									>
-										chevron_right
-									</span></a
-								>
-
-								<a href="" class="flex items-center justify-between group"
-									>Store
-									<span
-										class="material-symbols-outlined group-hover:block hidden"
-									>
-										chevron_right
-									</span></a
-								>
-
-								<a href="" class="flex items-center justify-between group"
-									>Store
-									<span
-										class="material-symbols-outlined group-hover:block hidden"
-									>
-										chevron_right
-									</span></a
-								>
-
-								<a href="" class="flex items-center justify-between group"
-									>Store
-									<span
-										class="material-symbols-outlined group-hover:block hidden"
-									>
-										chevron_right
-									</span></a
-								>
-
-								<a href="" class="flex items-center justify-between group"
-									>Store
-									<span
-										class="material-symbols-outlined group-hover:block hidden"
-									>
-										chevron_right
-									</span></a
-								>
-								<a href="" class="flex items-center justify-between group"
-									>Store
-									<span
-										class="material-symbols-outlined group-hover:block hidden"
-									>
-										chevron_right
-									</span></a
-								>
-
-								<a href="" class="flex items-center justify-between group"
-									>Store
-									<span
-										class="material-symbols-outlined group-hover:block hidden"
-									>
-										chevron_right
-									</span></a
-								>
-
-								<a href="" class="flex items-center justify-between group"
-									>Store
-									<span
-										class="material-symbols-outlined group-hover:block hidden"
-									>
-										chevron_right
-									</span></a
-								>
+								${navItems
+									.map(
+										(item) => `
+									<a href="${item.url}" class="flex items-center justify-between group">
+										${item.name}
+										<span class="material-symbols-outlined group-hover:block hidden">
+											chevron_right
+										</span>
+									</a>
+								`
+									)
+									.join('')}
 							</div>
 						</div>
 
@@ -292,7 +572,6 @@ class NavbarComponent extends HTMLElement {
 }
 
 customElements.define('navbar-component', NavbarComponent);
-
 let menuBtn = document.getElementById('menu-btn');
 let menuList = document.getElementById('menu-list');
 let listContainer = document.getElementById('list-container');
@@ -308,14 +587,16 @@ menuBtn.addEventListener('click', () => {
 });
 
 let hoverMenuBtns = document.querySelectorAll('#hover-btn');
+
 let navbarContainer = document.querySelector('#navbar-container');
 let dropdownList = document.querySelector('#dropdown-list');
 let overlayBg = document.querySelector('#overlay-bg');
 
-hoverMenuBtns.forEach((hoverBtn) => {
+hoverMenuBtns.forEach((hoverBtn, index) => {
 	hoverBtn.addEventListener('mouseenter', () => {
 		navbarContainer.classList.remove('h-10');
 		navbarContainer.classList.add('h-[500px]');
+		dropdownIndex = index;
 
 		overlayBg.classList.add('pointer-events-auto');
 		overlayBg.classList.add('opacity-100');

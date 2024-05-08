@@ -15,3 +15,4 @@ class PrimaryBtnComponent extends HTMLElement {
 }
 
 customElements.define('primary-btn-component', PrimaryBtnComponent);
+

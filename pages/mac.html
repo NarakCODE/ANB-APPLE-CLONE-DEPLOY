@@ -201,526 +201,536 @@
 				<a href="#" class="text-blue-600">Learn more ></a>
 			</p>
 		</div>
-		<!-- Mac -->
-		<section class="bg-white md:pt-20 md:pb-40 py-12">
-			<div class="md:w-10/12 w-11/12 md:px-8 mx-auto">
-				<!-- Title -->
-				<div
-					class="flex md:items-center md:flex-row flex-col justify-between gap-2"
-				>
-					<h1 class="md:text-6xl text-5xl font-semibold">Mac</h1>
-					<h2 class="md:max-w-[250px] max-w-[200px] md:text-3xl text-2xl">
-						If you can dream it, Mac can do it.
-					</h2>
-				</div>
-
-				<!-- Video -->
-				<header
-					class="relative md:my-16 my-10 w-full h-[80vh] flex items-center justify-center rounded-[26px] overflow-hidden"
-				>
+		<div class="overflow-x-hidden">
+			<!-- Mac -->
+			<section class="bg-white md:pt-20 md:pb-40 py-12">
+				<div class="md:w-10/12 w-11/12 md:px-8 mx-auto">
+					<!-- Title -->
 					<div
-						class="absolute z-[22] bottom-20 text-white flex flex-col items-center gap-4 px-4 text-center"
-					></div>
-
-					<div
-						class="relative w-full flex items-center justify-center h-full overflow-hidden"
+						class="flex md:items-center md:flex-row flex-col justify-between gap-2"
 					>
-						<video
-							autoplay
-							loop
-							muted
-							class="absolute z-10 w-auto min-w-full min-h-full object-cover"
-						>
-							<source src="../video/large (1).mp4" type="video/mp4" />
-						</video>
+						<h1 class="md:text-6xl text-5xl font-semibold">Mac</h1>
+						<h2 class="md:max-w-[250px] max-w-[200px] md:text-3xl text-2xl">
+							If you can dream it, Mac can do it.
+						</h2>
 					</div>
-				</header>
 
-				<!-- Get to know Mac. -->
-				<div class="mt-40">
-					<h1 class="md:text-6xl text-5xl font-semibold">Get to know Mac.</h1>
-					<!-- Carousel Slider -->
-					<div id="carouselContainer1"></div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Explore the lineup. -->
-		<section class="md:pt-20 md:pb-40 py-12 bg-[#fafafa]">
-			<div class="md:w-10/12 w-11/12 mx-auto">
-				<header
-					class="flex md:items-center gap-2 justify-between md:flex-row flex-col"
-				>
-					<h1 class="md:text-6xl text-5xl font-semibold">
-						Explore the lineup.
-					</h1>
-					<a href="#" class="text-blue-500 hover:underline"
-						>Compare all models ></a
+					<!-- Video -->
+					<header
+						class="relative md:my-16 my-10 w-full h-[80vh] flex items-center justify-center rounded-[26px] overflow-hidden"
 					>
-				</header>
+						<div
+							class="absolute z-[22] bottom-20 text-white flex flex-col items-center gap-4 px-4 text-center"
+						></div>
 
-				<section class="md:pt-20 md:pb-40 py-12">
-					<div class="w-full flex flex-col items-start">
-						<div class="bg-white flex items-center gap-4 rounded-full my-20">
-							<button
-								id="laptop-btn"
-								class="px-6 py-3 bg-black rounded-full text-white"
+						<div
+							class="relative w-full flex items-center justify-center h-full overflow-hidden"
+						>
+							<video
+								autoplay
+								loop
+								muted
+								class="absolute z-10 w-auto min-w-full min-h-full object-cover"
 							>
-								Laptops
-							</button>
-							<button id="desktop-btn" class="px-6 py-3 rounded-full">
-								Desktops
-							</button>
-							<button class="px-6 py-3 rounded-full">Displays</button>
+								<source src="../video/large (1).mp4" type="video/mp4" />
+							</video>
 						</div>
+					</header>
 
-						<!-- Laptop Component -->
-						<section id="laptop-container">
-							<div
-								class="my-20 flex md:flex-row flex-col md:gap-10 gap-20 max-w-[700px] w-full"
-							>
-								<laptop-card
-									imgUrl="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_mba_13_15__fx2g3qlubdym_large.png"
-									colors='["black", "gray", "silver", "blue"]'
-									newModel="New M3 models"
-									productTitle="MacBook Air 13” and 15”"
-									productInfo="M2 or M3 chip"
-									productDescription="Strikingly thin and fast so you can work, play, or create anywhere."
-									productPrice="From $999 or $83.25/mo. for 12 mo.*"
-									productLink="#"
-								></laptop-card>
-								<laptop-card
-									imgUrl="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_mbp_14_16__bkl8zusnkpw2_large.png"
-									colors='["black", "gray", "silver", "blue"]'
-									newModel=""
-									productTitle="MacBook Pro 14” and 16”"
-									productInfo="M3, M3 Pro, or M3 Max chip"
-									productDescription="The most advanced Mac laptops for demanding workflows."
-									productPrice="From $1599 or $133.25/mo. for 12 mo.*"
-									productLink="#"
-								></laptop-card>
-							</div>
-							<hr class="w-full" />
-							<div
-								class="my-20 flex md:justify-center flex-row md:gap-20 gap-10 max-w-[700px] w-full"
-							>
-								<!-- Detail -->
-								<div
-									class="max-w-[300px] flex flex-col text-center md:gap-10 gap-6"
-								>
-									<div class="flex flex-col items-center gap-2">
-										<h2 class="md:text-2xl text-xl font-semibold">
-											13.6” or 15.3”
-										</h2>
-										<p class="text-xs font-light text-gray-700">
-											Liquid Retina display with 500 nits of brightness and
-											support for 1 billion colors5
-										</p>
-									</div>
-
-									<div class="flex flex-col items-center gap-2">
-										<div class="flex items-center gap-1">
-											<img
-												src="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_icon_m2_m3__jo6w8mbgmmye_large.png"
-												alt=""
-											/>
-										</div>
-										<p class="text-xs font-light text-gray-700">
-											Liquid Retina display with 500 nits of brightness and
-											support for 1 billion colors5
-										</p>
-									</div>
-
-									<div class="flex flex-col items-center gap-2">
-										<p class="text-xs font-light text-gray-700">Up to</p>
-										<h2 class="md:text-2xl text-xl font-semibold">18 hours</h2>
-										<p class="text-xs font-light text-gray-700">battery life</p>
-									</div>
-
-									<div class="flex flex-col items-center gap-2">
-										<h2 class="md:text-2xl text-xl font-semibold">4 ports</h2>
-										<p class="text-xs font-light text-gray-700">
-											2x Thunderbolt / USB 4, headphone jack, MagSafe
-										</p>
-									</div>
-
-									<div class="flex flex-col items-center gap-2">
-										<h2 class="md:text-2xl text-xl font-semibold">
-											2.7 lb. or 3.3 lb.
-										</h2>
-										<p class="text-xs font-light text-gray-700">Weight</p>
-									</div>
-								</div>
-
-								<!-- Detail -->
-								<div
-									class="max-w-[300px] flex flex-col text-center md:gap-10 gap-6"
-								>
-									<div class="flex flex-col items-center gap-2">
-										<h2 class="md:text-2xl text-xl font-semibold">
-											13.6” or 15.3”
-										</h2>
-										<p class="text-xs font-light text-gray-700">
-											Liquid Retina display with 500 nits of brightness and
-											support for 1 billion colors5
-										</p>
-									</div>
-
-									<div class="flex flex-col items-center gap-2">
-										<div class="flex items-center gap-1">
-											<img
-												src="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_icon_m2_m3__jo6w8mbgmmye_large.png"
-												alt=""
-											/>
-										</div>
-										<p class="text-xs font-light text-gray-700">
-											Liquid Retina display with 500 nits of brightness and
-											support for 1 billion colors5
-										</p>
-									</div>
-
-									<div class="flex flex-col items-center gap-2">
-										<p class="text-xs font-light text-gray-700">Up to</p>
-										<h2 class="md:text-2xl text-xl font-semibold">18 hours</h2>
-										<p class="text-xs font-light text-gray-700">battery life</p>
-									</div>
-
-									<div class="flex flex-col items-center gap-2">
-										<h2 class="md:text-2xl text-xl font-semibold">4 ports</h2>
-										<p class="text-xs font-light text-gray-700">
-											2x Thunderbolt / USB 4, headphone jack, MagSafe
-										</p>
-									</div>
-
-									<div class="flex flex-col items-center gap-2">
-										<h2 class="md:text-2xl text-xl font-semibold">
-											2.7 lb. or 3.3 lb.
-										</h2>
-										<p class="text-xs font-light text-gray-700">Weight</p>
-									</div>
-								</div>
-							</div>
-						</section>
-
-						<!-- Desktop Component -->
-						<section
-							id="desktop-container"
-							class="w-full overflow-x-scroll pb-10 hidden"
-						>
-							<div class="max-w-[1548px] flex md:gap-20 gap-10">
-								<!-- card -->
-								<desktop-card
-									imgUrl="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_imac_24__inq0od011wuq_large.png"
-									colors='["black", "gray", "silver", "blue"]'
-									productTitle="Mac mini"
-									productInfo="M2 or M2 Pro chip"
-									productDescription="The most affordable Mac desktop with outsized performance."
-									productPrice="From $599 or $49.91/mo. for 12 mo.*"
-									productLink="#"
-									inches="24'"
-									inchesDetail="4.5K Retina display with 500 nits of brightness delivers sharp and vibrant detail8"
-									chipImgUrl="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_icon_m2_pro__c5ftjeskmwuq_large.png"
-									chipDetail="Apple M2 or M2 Pro chip"
-									ports="9 ports"
-									portsDetail="Up to 4x Thunderbolt 4, 2x USB‑A, HDMI, Gigabit Ethernet, headphone jack"
-								>
-								</desktop-card>
-								<!-- card -->
-								<desktop-card
-									imgUrl="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_mac_mini__c4284n3j25w2_large.png"
-									colors='["black", "gray", "silver", "blue"]'
-									productTitle="Mac mini"
-									productInfo="M2 or M2 Pro chip"
-									productDescription="The most affordable Mac desktop with outsized performance."
-									productPrice="From $599 or $49.91/mo. for 12 mo.*"
-									productLink="#"
-									inches="."
-									inchesDetail="4.5K Retina display with 500 nits of brightness delivers sharp and vibrant detail8"
-									chipImgUrl="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_icon_m2_pro__c5ftjeskmwuq_large.png"
-									chipDetail="Apple M2 or M2 Pro chip"
-									ports="9 ports"
-									portsDetail="Up to 4x Thunderbolt 4, 2x USB‑A, HDMI, Gigabit Ethernet, headphone jack"
-								>
-								</desktop-card>
-								<!-- card -->
-								<desktop-card
-									imgUrl="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_mac_studio__c24lhkuq4vee_large.png"
-									colors='["black", "gray", "silver", "blue"]'
-									productTitle="Mac mini"
-									productInfo="M2 or M2 Pro chip"
-									productDescription="The most affordable Mac desktop with outsized performance."
-									productPrice="From $599 or $49.91/mo. for 12 mo.*"
-									productLink="#"
-									inches=". "
-									inchesDetail="4.5K Retina display with 500 nits of brightness delivers sharp and vibrant detail8"
-									chipImgUrl="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_icon_m2_pro__c5ftjeskmwuq_large.png"
-									chipDetail="Apple M2 or M2 Pro chip"
-									ports="9 ports"
-									portsDetail="Up to 4x Thunderbolt 4, 2x USB‑A, HDMI, Gigabit Ethernet, headphone jack"
-								>
-								</desktop-card>
-							</div>
-						</section>
+					<!-- Get to know Mac. -->
+					<div class="mt-40">
+						<h1 class="md:text-6xl text-5xl font-semibold">Get to know Mac.</h1>
+						<!-- Carousel Slider -->
+						<div id="carouselContainer1"></div>
 					</div>
-				</section>
+				</div>
+			</section>
 
-				<header
-					class="flex md:items-center gap-2 justify-between md:flex-row flex-col"
-				>
+			<!-- Explore the lineup. -->
+			<section class="md:pt-20 md:pb-40 py-12 bg-[#fafafa]">
+				<div class="md:w-10/12 w-11/12 mx-auto">
+					<header
+						class="flex md:items-center gap-2 justify-between md:flex-row flex-col"
+					>
+						<h1 class="md:text-6xl text-5xl font-semibold">
+							Explore the lineup.
+						</h1>
+						<a href="#" class="text-blue-500 hover:underline"
+							>Compare all models ></a
+						>
+					</header>
+
+					<section class="md:pt-20 md:pb-40 py-12">
+						<div class="w-full flex flex-col items-start">
+							<div class="bg-white flex items-center gap-4 rounded-full my-20">
+								<button
+									id="laptop-btn"
+									class="px-6 py-3 bg-black rounded-full text-white"
+								>
+									Laptops
+								</button>
+								<button id="desktop-btn" class="px-6 py-3 rounded-full">
+									Desktops
+								</button>
+								<button class="px-6 py-3 rounded-full">Displays</button>
+							</div>
+
+							<!-- Laptop Component -->
+							<section id="laptop-container">
+								<div
+									class="my-20 flex md:flex-row flex-col md:gap-10 gap-20 max-w-[700px] w-full"
+								>
+									<laptop-card
+										imgUrl="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_mba_13_15__fx2g3qlubdym_large.png"
+										colors='["black", "gray", "silver", "blue"]'
+										newModel="New M3 models"
+										productTitle="MacBook Air 13” and 15”"
+										productInfo="M2 or M3 chip"
+										productDescription="Strikingly thin and fast so you can work, play, or create anywhere."
+										productPrice="From $999 or $83.25/mo. for 12 mo.*"
+										productLink="#"
+									></laptop-card>
+									<laptop-card
+										imgUrl="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_mbp_14_16__bkl8zusnkpw2_large.png"
+										colors='["black", "gray", "silver", "blue"]'
+										newModel=""
+										productTitle="MacBook Pro 14” and 16”"
+										productInfo="M3, M3 Pro, or M3 Max chip"
+										productDescription="The most advanced Mac laptops for demanding workflows."
+										productPrice="From $1599 or $133.25/mo. for 12 mo.*"
+										productLink="#"
+									></laptop-card>
+								</div>
+								<hr class="w-full" />
+								<div
+									class="my-20 flex md:justify-center flex-row md:gap-20 gap-10 max-w-[700px] w-full"
+								>
+									<!-- Detail -->
+									<div
+										class="max-w-[300px] flex flex-col text-center md:gap-10 gap-6"
+									>
+										<div class="flex flex-col items-center gap-2">
+											<h2 class="md:text-2xl text-xl font-semibold">
+												13.6” or 15.3”
+											</h2>
+											<p class="text-xs font-light text-gray-700">
+												Liquid Retina display with 500 nits of brightness and
+												support for 1 billion colors5
+											</p>
+										</div>
+
+										<div class="flex flex-col items-center gap-2">
+											<div class="flex items-center gap-1">
+												<img
+													src="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_icon_m2_m3__jo6w8mbgmmye_large.png"
+													alt=""
+												/>
+											</div>
+											<p class="text-xs font-light text-gray-700">
+												Liquid Retina display with 500 nits of brightness and
+												support for 1 billion colors5
+											</p>
+										</div>
+
+										<div class="flex flex-col items-center gap-2">
+											<p class="text-xs font-light text-gray-700">Up to</p>
+											<h2 class="md:text-2xl text-xl font-semibold">
+												18 hours
+											</h2>
+											<p class="text-xs font-light text-gray-700">
+												battery life
+											</p>
+										</div>
+
+										<div class="flex flex-col items-center gap-2">
+											<h2 class="md:text-2xl text-xl font-semibold">4 ports</h2>
+											<p class="text-xs font-light text-gray-700">
+												2x Thunderbolt / USB 4, headphone jack, MagSafe
+											</p>
+										</div>
+
+										<div class="flex flex-col items-center gap-2">
+											<h2 class="md:text-2xl text-xl font-semibold">
+												2.7 lb. or 3.3 lb.
+											</h2>
+											<p class="text-xs font-light text-gray-700">Weight</p>
+										</div>
+									</div>
+
+									<!-- Detail -->
+									<div
+										class="max-w-[300px] flex flex-col text-center md:gap-10 gap-6"
+									>
+										<div class="flex flex-col items-center gap-2">
+											<h2 class="md:text-2xl text-xl font-semibold">
+												13.6” or 15.3”
+											</h2>
+											<p class="text-xs font-light text-gray-700">
+												Liquid Retina display with 500 nits of brightness and
+												support for 1 billion colors5
+											</p>
+										</div>
+
+										<div class="flex flex-col items-center gap-2">
+											<div class="flex items-center gap-1">
+												<img
+													src="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_icon_m2_m3__jo6w8mbgmmye_large.png"
+													alt=""
+												/>
+											</div>
+											<p class="text-xs font-light text-gray-700">
+												Liquid Retina display with 500 nits of brightness and
+												support for 1 billion colors5
+											</p>
+										</div>
+
+										<div class="flex flex-col items-center gap-2">
+											<p class="text-xs font-light text-gray-700">Up to</p>
+											<h2 class="md:text-2xl text-xl font-semibold">
+												18 hours
+											</h2>
+											<p class="text-xs font-light text-gray-700">
+												battery life
+											</p>
+										</div>
+
+										<div class="flex flex-col items-center gap-2">
+											<h2 class="md:text-2xl text-xl font-semibold">4 ports</h2>
+											<p class="text-xs font-light text-gray-700">
+												2x Thunderbolt / USB 4, headphone jack, MagSafe
+											</p>
+										</div>
+
+										<div class="flex flex-col items-center gap-2">
+											<h2 class="md:text-2xl text-xl font-semibold">
+												2.7 lb. or 3.3 lb.
+											</h2>
+											<p class="text-xs font-light text-gray-700">Weight</p>
+										</div>
+									</div>
+								</div>
+							</section>
+
+							<!-- Desktop Component -->
+							<section
+								id="desktop-container"
+								class="w-full overflow-x-scroll pb-10 hidden"
+							>
+								<div class="max-w-[1548px] flex md:gap-20 gap-10">
+									<!-- card -->
+									<desktop-card
+										imgUrl="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_imac_24__inq0od011wuq_large.png"
+										colors='["black", "gray", "silver", "blue"]'
+										productTitle="Mac mini"
+										productInfo="M2 or M2 Pro chip"
+										productDescription="The most affordable Mac desktop with outsized performance."
+										productPrice="From $599 or $49.91/mo. for 12 mo.*"
+										productLink="#"
+										inches="24'"
+										inchesDetail="4.5K Retina display with 500 nits of brightness delivers sharp and vibrant detail8"
+										chipImgUrl="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_icon_m2_pro__c5ftjeskmwuq_large.png"
+										chipDetail="Apple M2 or M2 Pro chip"
+										ports="9 ports"
+										portsDetail="Up to 4x Thunderbolt 4, 2x USB‑A, HDMI, Gigabit Ethernet, headphone jack"
+									>
+									</desktop-card>
+									<!-- card -->
+									<desktop-card
+										imgUrl="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_mac_mini__c4284n3j25w2_large.png"
+										colors='["black", "gray", "silver", "blue"]'
+										productTitle="Mac mini"
+										productInfo="M2 or M2 Pro chip"
+										productDescription="The most affordable Mac desktop with outsized performance."
+										productPrice="From $599 or $49.91/mo. for 12 mo.*"
+										productLink="#"
+										inches="."
+										inchesDetail="4.5K Retina display with 500 nits of brightness delivers sharp and vibrant detail8"
+										chipImgUrl="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_icon_m2_pro__c5ftjeskmwuq_large.png"
+										chipDetail="Apple M2 or M2 Pro chip"
+										ports="9 ports"
+										portsDetail="Up to 4x Thunderbolt 4, 2x USB‑A, HDMI, Gigabit Ethernet, headphone jack"
+									>
+									</desktop-card>
+									<!-- card -->
+									<desktop-card
+										imgUrl="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_mac_studio__c24lhkuq4vee_large.png"
+										colors='["black", "gray", "silver", "blue"]'
+										productTitle="Mac mini"
+										productInfo="M2 or M2 Pro chip"
+										productDescription="The most affordable Mac desktop with outsized performance."
+										productPrice="From $599 or $49.91/mo. for 12 mo.*"
+										productLink="#"
+										inches=". "
+										inchesDetail="4.5K Retina display with 500 nits of brightness delivers sharp and vibrant detail8"
+										chipImgUrl="https://www.apple.com/v/mac/home/bz/images/overview/select/product_tile_icon_m2_pro__c5ftjeskmwuq_large.png"
+										chipDetail="Apple M2 or M2 Pro chip"
+										ports="9 ports"
+										portsDetail="Up to 4x Thunderbolt 4, 2x USB‑A, HDMI, Gigabit Ethernet, headphone jack"
+									>
+									</desktop-card>
+								</div>
+							</section>
+						</div>
+					</section>
+
+					<header
+						class="flex md:items-center gap-2 justify-between md:flex-row flex-col"
+					>
+						<h1 class="md:text-6xl text-5xl font-semibold max-w-[700px]">
+							Why Apple is the best place to buy Mac.
+						</h1>
+						<a href="#" class="text-blue-500 hover:underline">Shop Mac ></a>
+					</header>
+
+					<div id="carouselContainer2"></div>
+				</div>
+			</section>
+
+			<!-- Accordion -->
+			<section class="w-full bg-white py-40">
+				<div class="md:w-10/12 w-11/12 mx-auto">
 					<h1 class="md:text-6xl text-5xl font-semibold max-w-[700px]">
-						Why Apple is the best place to buy Mac.
+						Significant others.
 					</h1>
-					<a href="#" class="text-blue-500 hover:underline">Shop Mac ></a>
-				</header>
+					<!-- Accordion Container -->
+					<div
+						class="mt-20 w-full md:p-24 p-10 overflow-hidden bg-[#fafafa] duration-300 transition-all h-auto rounded-3xl flex lg:flex-row flex-col items-center"
+					>
+						<!-- left -->
+						<div class="max-w-[700px] h-full">
+							<div class="accordion w-full flex flex-col gap-2 divide-y-2">
+								<div class="w-full accordion-item">
+									<div
+										class="accordion-item-header w-full cursor-pointer p-2.5 flex items-center justify-between lg:text-[30px] text-2xl"
+									>
+										Mac and iPhone
+										<img
+											src="https://cdn-icons-png.flaticon.com/512/9923/9923748.png"
+											id="arrow-icon"
+											alt=""
+											class="w-6"
+										/>
+									</div>
 
-				<div id="carouselContainer2"></div>
-			</div>
-		</section>
-
-		<!-- Accordion -->
-		<section class="w-full bg-white py-40">
-			<div class="md:w-10/12 w-11/12 mx-auto">
-				<h1 class="md:text-6xl text-5xl font-semibold max-w-[700px]">
-					Significant others.
-				</h1>
-				<!-- Accordion Container -->
-				<div
-					class="mt-20 w-full md:p-24 p-10 overflow-hidden bg-[#fafafa] duration-300 transition-all h-auto rounded-3xl flex lg:flex-row flex-col items-center"
-				>
-					<!-- left -->
-					<div class="max-w-[700px] h-full">
-						<div class="accordion w-full flex flex-col gap-2 divide-y-2">
-							<div class="w-full accordion-item">
-								<div
-									class="accordion-item-header w-full cursor-pointer p-2.5 flex items-center justify-between lg:text-[30px] text-2xl"
-								>
-									Mac and iPhone
-									<img
-										src="https://cdn-icons-png.flaticon.com/512/9923/9923748.png"
-										id="arrow-icon"
-										alt=""
-										class="w-6"
-									/>
+									<div
+										class="accordion-item-body collapsed h-0 overflow-hidden transition-[height] duration-[0.3s] ease-[ease] p-0"
+									>
+										<p
+											class="m-0 px-4 py-2 text-[17px] text-gray-600 max-w-[90%]"
+										>
+											You can answer calls or messages from your iPhone directly
+											on your Mac. Copy images, video, or text on your iPhone,
+											then paste into another app on your nearby Mac. With
+											iCloud, you can access your favorite files from either
+											your iPhone or your Mac. And so much more.
+										</p>
+									</div>
 								</div>
 
-								<div
-									class="accordion-item-body collapsed h-0 overflow-hidden transition-[height] duration-[0.3s] ease-[ease] p-0"
-								>
-									<p
-										class="m-0 px-4 py-2 text-[17px] text-gray-600 max-w-[90%]"
+								<div class="w-full accordion-item">
+									<div
+										class="accordion-item-header w-full cursor-pointer p-2.5 flex items-center justify-between lg:text-[30px] text-2xl"
 									>
-										You can answer calls or messages from your iPhone directly
-										on your Mac. Copy images, video, or text on your iPhone,
-										then paste into another app on your nearby Mac. With iCloud,
-										you can access your favorite files from either your iPhone
-										or your Mac. And so much more.
-									</p>
+										Mac and iPad
+										<img
+											src="https://cdn-icons-png.flaticon.com/512/9923/9923748.png"
+											id="arrow-icon"
+											alt=""
+											class="w-6"
+										/>
+									</div>
+
+									<div
+										class="accordion-item-body collapsed h-0 overflow-hidden transition-[height] duration-[0.3s] ease-[ease] p-0"
+									>
+										<p
+											class="m-0 px-4 py-2 text-[17px] text-gray-600 max-w-[90%]"
+										>
+											Sketch on your iPad and have it appear instantly on your
+											Mac. Or use your iPad as a second display, so you can work
+											on one screen while you reference the other. You can even
+											start a Final Cut Pro project on your iPad and continue it
+											on your Mac.
+										</p>
+									</div>
+								</div>
+
+								<div class="w-full accordion-item">
+									<div
+										class="accordion-item-header w-full cursor-pointer p-2.5 flex items-center justify-between lg:text-[30px] text-2xl"
+									>
+										Mac and Apple Watch
+										<img
+											src="https://cdn-icons-png.flaticon.com/512/9923/9923748.png"
+											id="arrow-icon"
+											alt=""
+											class="w-6"
+										/>
+									</div>
+
+									<div
+										class="accordion-item-body w-full collapsed h-0 overflow-hidden transition-[height] duration-[0.3s] ease-[ease] p-0"
+									>
+										<p
+											class="m-0 px-4 py-2 text-[17px] text-gray-600 max-w-[90%]"
+										>
+											Automatically log in to your Mac when you’re wearing your
+											Apple Watch with Auto Unlock. No password typing required.
+										</p>
+									</div>
 								</div>
 							</div>
+						</div>
 
-							<div class="w-full accordion-item">
-								<div
-									class="accordion-item-header w-full cursor-pointer p-2.5 flex items-center justify-between lg:text-[30px] text-2xl"
-								>
-									Mac and iPad
-									<img
-										src="https://cdn-icons-png.flaticon.com/512/9923/9923748.png"
-										id="arrow-icon"
-										alt=""
-										class="w-6"
-									/>
-								</div>
-
-								<div
-									class="accordion-item-body collapsed h-0 overflow-hidden transition-[height] duration-[0.3s] ease-[ease] p-0"
-								>
-									<p
-										class="m-0 px-4 py-2 text-[17px] text-gray-600 max-w-[90%]"
-									>
-										Sketch on your iPad and have it appear instantly on your
-										Mac. Or use your iPad as a second display, so you can work
-										on one screen while you reference the other. You can even
-										start a Final Cut Pro project on your iPad and continue it
-										on your Mac.
-									</p>
-								</div>
+						<!-- right -->
+						<div class="lg:pl-40 lg:pt-0 pt-10 xl:w-[1000px] w-full">
+							<div
+								class="h-full xl:w-full w-full accordion-picture"
+								id="accordion-picture-1"
+							>
+								<img
+									src="../assets/mac/mac-and-iphone.jpeg"
+									alt=""
+									class="h-full w-full object-cover"
+								/>
 							</div>
 
-							<div class="w-full accordion-item">
-								<div
-									class="accordion-item-header w-full cursor-pointer p-2.5 flex items-center justify-between lg:text-[30px] text-2xl"
-								>
-									Mac and Apple Watch
-									<img
-										src="https://cdn-icons-png.flaticon.com/512/9923/9923748.png"
-										id="arrow-icon"
-										alt=""
-										class="w-6"
-									/>
-								</div>
+							<div
+								class="h-full xl:w-full w-full accordion-picture"
+								id="accordion-picture-2"
+							>
+								<img
+									src="../assets/mac/mac-and-ipad.jpeg"
+									alt=""
+									class="h-full w-full object-cover"
+								/>
+							</div>
 
-								<div
-									class="accordion-item-body w-full collapsed h-0 overflow-hidden transition-[height] duration-[0.3s] ease-[ease] p-0"
-								>
-									<p
-										class="m-0 px-4 py-2 text-[17px] text-gray-600 max-w-[90%]"
-									>
-										Automatically log in to your Mac when you’re wearing your
-										Apple Watch with Auto Unlock. No password typing required.
-									</p>
-								</div>
+							<div
+								class="h-full xl:w-full w-full accordion-picture"
+								id="accordion-picture-3"
+							>
+								<img
+									src="../assets/mac/mac-and-watch.jpeg"
+									alt=""
+									class="h-full w-full object-cover"
+								/>
 							</div>
 						</div>
 					</div>
+				</div>
+			</section>
 
-					<!-- right -->
-					<div class="lg:pl-40 lg:pt-0 pt-10 xl:w-[1000px] w-full">
-						<div
-							class="h-full xl:w-full w-full accordion-picture"
-							id="accordion-picture-1"
+			<!-- Mac essentials -->
+			<section class="md:pt-10 md:pb-40 py-12 bg-white">
+				<div class="md:w-10/12 w-11/12 mx-auto">
+					<header
+						class="flex md:items-center gap-2 justify-between md:flex-row flex-col"
+					>
+						<h1 class="md:text-6xl text-5xl font-semibold">Mac essentials.</h1>
+						<a href="#" class="text-blue-500 hover:underline"
+							>All Mac accessories ></a
 						>
+					</header>
+
+					<div class="mt-10 w-full grid md:grid-cols-2 grid-cols-1 gap-6">
+						<div
+							class="relative pt-52 w-full bg-[#fafafa] rounded-3xl overflow-hidden"
+						>
+							<div
+								class="absolute left-0 w-full top-0 text-center flex flex-col gap-2 text-gray-600 px-6 pt-14"
+							>
+								<h2 class="text-2xl md:text-3xl">Mac accessories</h2>
+								<p class="text-sm lg:text-lg">
+									Explore keyboards, mice, and other essentials.
+								</p>
+								<a
+									href="#"
+									class="text-sm lg:text-lg text-blue-500 hover:underline"
+									>Shop Mac accessories ></a
+								>
+							</div>
 							<img
-								src="../assets/mac/mac-and-iphone.jpeg"
+								src="https://www.apple.com/v/mac/home/bz/images/overview/essentials/essentials_accessories__dglhsic54owi_xlarge.jpg"
 								alt=""
-								class="h-full w-full object-cover"
+								class="w-full h-full object-contain"
 							/>
 						</div>
 
 						<div
-							class="h-full xl:w-full w-full accordion-picture"
-							id="accordion-picture-2"
+							class="relative pt-52 w-ful bg-[#fafafa] rounded-3xl overflow-hidden"
 						>
+							<div
+								class="absolute left-0 w-full top-0 text-center flex flex-col gap-2 text-gray-600 px-6 pt-14"
+							>
+								<h2 class="text-2xl md:text-3xl">Studio Display</h2>
+								<p class="text-sm lg:text-lg">
+									The 27-inch 5K Retina display pairs beautifully with any Mac.
+								</p>
+								<a
+									href="#"
+									class="text-sm lg:text-lg text-blue-500 hover:underline"
+									>Learn more ></a
+								>
+							</div>
 							<img
-								src="../assets/mac/mac-and-ipad.jpeg"
+								src="https://www.apple.com/v/mac/home/bz/images/overview/essentials/essentials_display__bk3i351qm0c2_medium.jpg"
 								alt=""
-								class="h-full w-full object-cover"
-							/>
-						</div>
-
-						<div
-							class="h-full xl:w-full w-full accordion-picture"
-							id="accordion-picture-3"
-						>
-							<img
-								src="../assets/mac/mac-and-watch.jpeg"
-								alt=""
-								class="h-full w-full object-cover"
+								class="w-full h-full object-contain"
 							/>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Mac essentials -->
-		<section class="md:pt-10 md:pb-40 py-12 bg-white">
-			<div class="md:w-10/12 w-11/12 mx-auto">
-				<header
-					class="flex md:items-center gap-2 justify-between md:flex-row flex-col"
-				>
-					<h1 class="md:text-6xl text-5xl font-semibold">Mac essentials.</h1>
-					<a href="#" class="text-blue-500 hover:underline"
-						>All Mac accessories ></a
+			<!-- Shop All Mac -->
+			<section class="md:pt-10 md:pb-40 py-12 bg-[#fafafa]">
+				<div class="md:w-10/12 w-11/12 mx-auto">
+					<header
+						class="flex md:items-center gap-2 justify-between md:flex-row flex-col"
 					>
-				</header>
+						<h1 class="md:text-6xl text-5xl font-semibold">Mac</h1>
+					</header>
 
-				<div class="mt-10 w-full grid md:grid-cols-2 grid-cols-1 gap-6">
-					<div
-						class="relative pt-52 w-full bg-[#fafafa] rounded-3xl overflow-hidden"
-					>
-						<div
-							class="absolute left-0 w-full top-0 text-center flex flex-col gap-2 text-gray-600 px-6 pt-14"
-						>
-							<h2 class="text-2xl md:text-3xl">Mac accessories</h2>
-							<p class="text-sm lg:text-lg">
-								Explore keyboards, mice, and other essentials.
-							</p>
-							<a
-								href="#"
-								class="text-sm lg:text-lg text-blue-500 hover:underline"
-								>Shop Mac accessories ></a
-							>
-						</div>
-						<img
-							src="https://www.apple.com/v/mac/home/bz/images/overview/essentials/essentials_accessories__dglhsic54owi_xlarge.jpg"
-							alt=""
-							class="w-full h-full object-contain"
-						/>
-					</div>
-
-					<div
-						class="relative pt-52 w-ful bg-[#fafafa] rounded-3xl overflow-hidden"
-					>
-						<div
-							class="absolute left-0 w-full top-0 text-center flex flex-col gap-2 text-gray-600 px-6 pt-14"
-						>
-							<h2 class="text-2xl md:text-3xl">Studio Display</h2>
-							<p class="text-sm lg:text-lg">
-								The 27-inch 5K Retina display pairs beautifully with any Mac.
-							</p>
-							<a
-								href="#"
-								class="text-sm lg:text-lg text-blue-500 hover:underline"
-								>Learn more ></a
-							>
-						</div>
-						<img
-							src="https://www.apple.com/v/mac/home/bz/images/overview/essentials/essentials_display__bk3i351qm0c2_medium.jpg"
-							alt=""
-							class="w-full h-full object-contain"
-						/>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Shop All Mac -->
-		<section class="md:pt-10 md:pb-40 py-12 bg-[#fafafa]">
-			<div class="md:w-10/12 w-11/12 mx-auto">
-				<header
-					class="flex md:items-center gap-2 justify-between md:flex-row flex-col"
-				>
-					<h1 class="md:text-6xl text-5xl font-semibold">Mac</h1>
-				</header>
-
-				<div class="flex flex-wrap gap-x-20 gap-y-10 mt-10 text-gray-700">
-					<ul class="text-xl font-semibold flex flex-col gap-2">
-						<li class="font-light text-sm text-gray-500">Explore Mac</li>
-						<li><a href="#">Explore All Mac</a></li>
-						<li><a href="#">MacBook Air</a></li>
-						<li><a href="#">MacBook Pro</a></li>
-						<li><a href="#">iMac</a></li>
-						<li><a href="#">Mac mini</a></li>
-						<li><a href="#">Mac Pro</a></li>
-						<li><a href="#">Displays</a></li>
-						<li><a href="#" class="text-sm">Compare Mac</a></li>
-						<li><a href="#" class="text-sm">Mac Does That</a></li>
-					</ul>
-
-					<div class="flex items-start gap-8">
-						<ul class="text-sm font-semibold flex flex-col gap-4">
-							<li class="font-light text-gray-500">Shop Mac</li>
-							<li><a href="#">Shop Mac</a></li>
-							<li><a href="#">Mac Accessories</a></li>
-							<li><a href="#">Apple Trade In</a></li>
-							<li><a href="#">Financing</a></li>
+					<div class="flex flex-wrap gap-x-20 gap-y-10 mt-10 text-gray-700">
+						<ul class="text-xl font-semibold flex flex-col gap-2">
+							<li class="font-light text-sm text-gray-500">Explore Mac</li>
+							<li><a href="#">Explore All Mac</a></li>
+							<li><a href="#">MacBook Air</a></li>
+							<li><a href="#">MacBook Pro</a></li>
+							<li><a href="#">iMac</a></li>
+							<li><a href="#">Mac mini</a></li>
+							<li><a href="#">Mac Pro</a></li>
+							<li><a href="#">Displays</a></li>
+							<li><a href="#" class="text-sm">Compare Mac</a></li>
+							<li><a href="#" class="text-sm">Mac Does That</a></li>
 						</ul>
 
-						<ul class="text-sm font-semibold flex flex-col gap-4">
-							<li class="font-light text-gray-500">More from Mac</li>
-							<li><a href="#">Mac Support</a></li>
-							<li><a href="#">AppleCare+ for Mac</a></li>
-							<li><a href="#">macOS Sonoma</a></li>
-							<li><a href="#">Apps by Apple</a></li>
-							<li><a href="#">Continuity</a></li>
-							<li><a href="#">iCloud+</a></li>
-							<li><a href="#">Mac for Business</a></li>
-							<li><a href="#">Education</a></li>
-						</ul>
+						<div class="flex items-start gap-8">
+							<ul class="text-sm font-semibold flex flex-col gap-4">
+								<li class="font-light text-gray-500">Shop Mac</li>
+								<li><a href="#">Shop Mac</a></li>
+								<li><a href="#">Mac Accessories</a></li>
+								<li><a href="#">Apple Trade In</a></li>
+								<li><a href="#">Financing</a></li>
+							</ul>
+
+							<ul class="text-sm font-semibold flex flex-col gap-4">
+								<li class="font-light text-gray-500">More from Mac</li>
+								<li><a href="#">Mac Support</a></li>
+								<li><a href="#">AppleCare+ for Mac</a></li>
+								<li><a href="#">macOS Sonoma</a></li>
+								<li><a href="#">Apps by Apple</a></li>
+								<li><a href="#">Continuity</a></li>
+								<li><a href="#">iCloud+</a></li>
+								<li><a href="#">Mac for Business</a></li>
+								<li><a href="#">Education</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</div>
 		<!-- Footer -->
 		<footer-component></footer-component>
 	</body>
