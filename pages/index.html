@@ -197,54 +197,16 @@
 				</div>
 			</section>
 
-			<!-- Carousel Slider -->
-			<div class="relative w-full glide-01 mt-4">
-				<!-- Slides -->
-				<div class="overflow-hidden" data-glide-el="track">
-					<ul
-						class="relative w-full lg:h-[600px] h-full overflow-hidden p-0 flex [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]"
-					>
-						<li class="w-full h-full">
-							<img
-								src="../assets/apple-movie-1.jpg"
-								class="w-full m-auto h-full object-cover"
-							/>
-						</li>
-						<li class="w-full h-full">
-							<img
-								src="../assets/apple-movie-2.jpg"
-								class="w-[full] m-auto h-full object-cover"
-							/>
-						</li>
-						<li class="w-full h-full">
-							<img
-								src="../assets/apple-movie-3.webp"
-								class="w-full m-auto h-full object-cover"
-							/>
-						</li>
-						<li class="w-full h-full">
-							<img
-								src="../assets/apple-movie-4.avif"
-								class="w-full m-auto h-full object-cover"
-							/>
-						</li>
-						<li class="w-full h-full">
-							<img
-								src="../assets/apple-movie-5.webp"
-								class="w-full m-auto h-full object-cover"
-							/>
-						</li>
-					</ul>
-				</div>
-				<!-- Controls -->
+			<!-- Carousel container -->
+			<main
+				class="w-full flex flex-col items-center justify-between md:px-24 px-14 mt-3 overflow-x-hidden"
+			>
 				<div
-					class="absolute left-0 flex items-center justify-between w-full h-0 px-4 top-1/2"
-					data-glide-el="controls"
+					class="relative w-full max-w-[1500px] flex items-center justify-center group"
 				>
 					<button
-						class="inline-flex items-center justify-center w-8 h-8 transition duration-300 border rounded-full lg:w-12 lg:h-12 text-slate-700 border-slate-700 hover:text-slate-900 hover:border-slate-900 focus-visible:outline-none bg-white/20"
-						data-glide-dir="<"
-						aria-label="prev slide"
+						class="absolute left-2 z-10 text-white opacity-0 group-hover:opacity-100 duration-300 ease-in-out"
+						onclick="onPrevClick()"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -252,20 +214,18 @@
 							viewBox="0 0 24 24"
 							stroke-width="1.5"
 							stroke="currentColor"
-							class="w-5 h-5"
+							class="md:w-16 md:h-16 w-8 h-8 text-[#ccc] hover:text-white"
 						>
-							<title>prev slide</title>
 							<path
 								stroke-linecap="round"
 								stroke-linejoin="round"
-								d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
+								d="M15.75 19.5 8.25 12l7.5-7.5"
 							/>
 						</svg>
 					</button>
 					<button
-						class="inline-flex items-center justify-center w-8 h-8 transition duration-300 border rounded-full lg:w-12 lg:h-12 text-slate-700 border-slate-700 hover:text-slate-900 hover:border-slate-900 focus-visible:outline-none bg-white/20"
-						data-glide-dir=">"
-						aria-label="next slide"
+						class="absolute right-2 z-10 text-white opacity-0 group-hover:opacity-100 duration-300 ease-in-out"
+						onclick="onNextClick()"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -273,18 +233,29 @@
 							viewBox="0 0 24 24"
 							stroke-width="1.5"
 							stroke="currentColor"
-							class="w-5 h-5"
+							class="md:w-16 md:h-16 w-8 h-8 text-[#ccc] hover:text-white"
 						>
-							<title>next slide</title>
 							<path
 								stroke-linecap="round"
 								stroke-linejoin="round"
-								d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+								d="m8.25 4.5 7.5 7.5-7.5 7.5"
 							/>
 						</svg>
 					</button>
+
+					<div
+						class="carousel-container flex gap-3 flex-nowrap duration-1000 ease-[cubic-bezier(0.87_0_0.13_1)] md:aspect-[12/6] aspect-square"
+					>
+						<!-- Render carousel here -->
+					</div>
 				</div>
-			</div>
+
+				<div
+					class="pill-container flex justify-center md:bottom-10 bottom-4 items-center space-x-3 px-3 my-4 rounded-full z-10"
+				>
+					<!-- Render pill btn here -->
+				</div>
+			</main>
 
 			<!-- Auto Slider -->
 			<div class="slider">
@@ -469,6 +440,148 @@
 	<script src="../components/outline-btn.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
 	<script>
+		const cardArray = [
+			{
+				btnText: 'Watch now',
+				description:
+					'Argylle, Mad Max: Fury Road,',
+				imgUrl:
+					'https://www.apple.com/tv-pr/articles/2023/11/apple-original-films-the-family-plan-a-new-action-comedy-starring-mark-wahlberg-and-michelle-monaghan-to-premiere-globally-december-15-on-apple-tv/images/all-news-images/110123_The_Family_Plan_Dec_15_news_16_9_regular.jpg.latest_news_og.jpg',
+			},
+			{
+				btnText: 'Stream now',
+				description:
+					'By now, thousands of pop music fans ',
+				imgUrl:
+					'https://www.apple.com/tv-pr/shows-and-films/b/blush/images/thumbnail/key_art_01/Apple_TV_Blush_key_Art_main_16_9.jpg',
+			},
+			{
+				btnText: 'Stream now',
+				description: 'Do you remember the 2020 documentary ',
+				imgUrl:
+					'https://img.pastemagazine.com/wp-content/uploads/2022/06/21014831/wolfwalkers-header-678.jpg',
+			},
+			{
+				btnText: 'Watch now',
+				description: 'When Mad Max: Fury Road came out in 2015.',
+				imgUrl:
+					'https://www.lifewire.com/thmb/Uc3s3XyadY2pBTJ3QiVOX5J5XYo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/001_the-best-movies-on-apple-tv-right-now-november-2022-5087222-3752402e2b3542aea6890ac700de1bdc.jpg',
+			},
+			{
+				btnText: 'Watch now',
+				description:
+					'Martin Scorsese’s epic film is based on David Grann’s 2017',
+				imgUrl:
+					'https://img.pastemagazine.com/wp-content/uploads/2022/06/21014831/wolfwalkers-header-678.jpg',
+			},
+		];
+
+		let current = 0;
+		let carouselContainer = document.querySelector('.carousel-container');
+		let pillContainer = document.querySelector('.pill-container');
+		let autoSlideInterval;
+
+		function addImage(card, index) {
+			const container = document.createElement('div');
+			container.className = `carousel md:aspect-[12/6] aspect-square relative ${
+				index === current ? 'opacity-100' : 'opacity-50'
+			}`;
+
+			const img = document.createElement('img');
+			img.src = card.imgUrl;
+			img.alt = '';
+			img.className = 'object-cover w-full h-full';
+
+			const overlay = document.createElement('div');
+			overlay.className = `absolute bottom-0 px-14 py-10 flex flex-col lg:flex-row items-center gap-4 text-white `;
+			overlay.innerHTML = `
+			<button class=" rounded-full inline-block bg-white text-black hover:opacity-80 text-white font-light py-2 px-4">${card.btnText}</button>
+			<p class="text-md lg:text-lg [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">${card.description}</p>
+   `;
+
+			container.appendChild(img);
+			container.appendChild(overlay);
+			carouselContainer.appendChild(container);
+		}
+
+		function addPills() {
+			cardArray.forEach((_, index) => {
+				const btn = document.createElement('button');
+				btn.className = `w-2 h-2 rounded-full ${
+					index === current ? 'bg-[#666]' : 'bg-[#ccc]'
+				}`;
+				btn.dataset.index = index;
+				btn.addEventListener('click', () => {
+					current = index;
+					updateCarousels();
+					updateTransform();
+				});
+				pillContainer.appendChild(btn);
+			});
+		}
+
+		function updateCarousels() {
+			const carousels = document.querySelectorAll('.carousel');
+			const pills = document.querySelectorAll('.pill-container button');
+
+			carousels.forEach((carousel, index) => {
+				carousel.className = `carousel md:aspect-[12/6] aspect-square relative duration-300 ${
+					index === current ? 'opacity-100' : 'opacity-50'
+				}`;
+			});
+
+			pills.forEach((pill, index) => {
+				pill.className = `w-2 h-2 rounded-full ${
+					index === current ? 'bg-[#666]' : 'bg-[#ccc]'
+				}`;
+			});
+		}
+
+		function updateTransform() {
+			carouselContainer.style.transform = `translateX(calc(-${current} * 100% - ${current}rem))`;
+		}
+
+		function onPrevClick() {
+			if (current > 0) {
+				current--;
+				updateCarousels();
+				updateTransform();
+			}
+		}
+
+		function onNextClick() {
+			if (current < cardArray.length - 1) {
+				current++;
+				updateCarousels();
+				updateTransform();
+			}
+		}
+
+		function startAutoSlide() {
+			autoSlideInterval = setInterval(() => {
+				if (current < cardArray.length - 1) {
+					current++;
+				} else {
+					current = 0;
+				}
+				updateCarousels();
+				updateTransform();
+			}, 5000); // Change slide every 3 seconds
+		}
+
+		function stopAutoSlide() {
+			clearInterval(autoSlideInterval);
+		}
+
+		carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+		carouselContainer.addEventListener('mouseleave', startAutoSlide);
+
+		// Initialize the carousel
+		cardArray.forEach((card, index) => addImage(card, index));
+		addPills();
+		startAutoSlide(); // Start auto-slide on load
+	</script>
+	<script>
 		var video = document.getElementById('myVideo');
 		var loopDuration = 20;
 
@@ -477,28 +590,5 @@
 				video.currentTime = 1;
 			}
 		});
-	</script>
-	<script>
-		var glide01 = new Glide('.glide-01', {
-			type: 'carousel',
-			focusAt: 'center',
-			perView: 3,
-			autoplay: 3000,
-			animationDuration: 700,
-			gap: 24,
-			classes: {
-				activeNav: '[&>*]:bg-slate-700',
-			},
-			breakpoints: {
-				1024: {
-					perView: 2,
-				},
-				640: {
-					perView: 1,
-				},
-			},
-		});
-
-		glide01.mount();
 	</script>
 </html>

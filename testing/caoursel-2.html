@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+
+	<body>
+		<!-- Carousel container -->
+		<main
+			class="w-full flex flex-col items-center justify-between min-h-screen md:p-24 p-14 overflow-x-hidden"
+		>
+			<div
+				class="relative w-full max-w-[1500px] flex items-center justify-center group"
+			>
+				<div
+					class="absolute left-2 right-2 flex justify-between z-10 text-white opacity-0 group-hover:opacity-100 duration-300 ease-in-out"
+				>
+					<button onclick="onPrevClick()">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="md:w-16 md:h-16 w-8 h-8 text-[#ccc] hover:text-white"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M15.75 19.5 8.25 12l7.5-7.5"
+							/>
+						</svg>
+					</button>
+					<button onclick="onNextClick()">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="md:w-16 md:h-16 w-8 h-8 text-[#ccc] hover:text-white"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="m8.25 4.5 7.5 7.5-7.5 7.5"
+							/>
+						</svg>
+					</button>
+				</div>
+
+				<div
+					class="pill-container absolute flex justify-center md:bottom-10 bottom-4 items-center space-x-3 px-3 py-3 bg-[#111] rounded-full z-10"
+				>
+					<!-- Render pill btn here -->
+				</div>
+				<div
+					class="slider-container flex gap-4 flex-nowrap duration-1000 ease-[cubic-bezier(0.83, 0, 0.17, 1)]"
+				>
+					<!-- Render slide here -->
+				</div>
+			</div>
+		</main>
+	</body>
+	<script>
+		const cardArray = [
+			'https://cdn.mos.cms.futurecdn.net/hC67Z5uAEUGDRAyEcpyi8a.jpg',
+			'https://cdn.mos.cms.futurecdn.net/hC67Z5uAEUGDRAyEcpyi8a.jpg',
+			'https://cdn.mos.cms.futurecdn.net/hC67Z5uAEUGDRAyEcpyi8a.jpg',
+		];
+
+		let current = 0;
+		let sliderContainer = document.querySelector('.slider-container');
+		let pillContainer = document.querySelector('.pill-container');
+
+		function addImage(imageUrl, index) {
+			const img = document.createElement('img');
+			img.src = imageUrl;
+			img.alt = '';
+			img.className = `slide object-cover md:aspect-[16/9] aspect-square ${
+				index === current ? 'opacity-100' : 'opacity-50'
+			}`;
+			sliderContainer.appendChild(img);
+		}
+
+		function addPills() {
+			cardArray.forEach((_, index) => {
+				const btn = document.createElement('button');
+				btn.className = `w-2 h-2 rounded-full ${
+					index === current ? 'bg-[#ccc]' : 'bg-[#666]'
+				}`;
+				btn.dataset.index = index; // Assign index to dataset for identification
+				btn.addEventListener('click', () => {
+					current = index;
+					updateSlides();
+					sliderContainer.style.transform = `translateX(calc(-${current} * 100% - ${current}rem))`;
+				});
+				pillContainer.appendChild(btn);
+			});
+		}
+
+		function updateSlides() {
+			const slides = document.querySelectorAll('.slide');
+			const pills = document.querySelectorAll('.pill-container button');
+
+			slides.forEach((slide, index) => {
+				slide.className = `slide object-cover md:aspect-[16/9] aspect-square duration-300 ${
+					index === current ? 'opacity-100' : 'opacity-50'
+				}`;
+			});
+
+			pills.forEach((pill, index) => {
+				pill.className = `w-2 h-2 rounded-full ${
+					index === current ? 'bg-[#ccc]' : 'bg-[#666]'
+				}`;
+			});
+		}
+
+		const onPrevClick = () => {
+			if (current > 0) {
+				current--;
+				updateSlides();
+				sliderContainer.style.transform = `translateX(calc(-${current} * 100% - ${current}rem))`;
+			}
+		};
+
+		const onNextClick = () => {
+			if (current < cardArray.length - 1) {
+				current++;
+				updateSlides();
+				sliderContainer.style.transform = `translateX(calc(-${current} * 100% - ${current}rem))`;
+			}
+		};
+
+		// Initialize the carousel
+		cardArray.forEach((url, index) => addImage(url, index));
+		addPills(); // Call this function to create pills dynamically
+	</script>
+</html>

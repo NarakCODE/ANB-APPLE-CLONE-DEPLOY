@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Carousel</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<style>
+			.slider-container {
+				@apply flex overflow-hidden;
+				width: 300%; /* Adjust based on the number of slides */
+				@apply transition-transform duration-500 ease-in-out;
+			}
+			.slide-item {
+				@apply flex-none opacity-50 transition-opacity duration-500 ease-in-out;
+				width: 100%;
+			}
+			.active {
+				@apply opacity-100; /* Full opacity for the active slide */
+			}
+			.nav-pills {
+				@apply text-center pt-2.5;
+			}
+			.nav-pill {
+				@apply inline-block w-2.5 h-2.5 bg-white rounded-full mx-1 cursor-pointer;
+			}
+			.nav-pill.active {
+				@apply bg-black;
+			}
+		</style>
+	</head>
+	<body class="bg-[#f5f5f5]">
+		<div class="carousel max-w-[1500px] mx-auto px-10 my-10 relative">
+			<div class="slider-container flex overflow-hidden">
+				<!-- Slide items here -->
+				<div class="slide-item">
+					<img
+						src="https://www.slashgear.com/img/gallery/rumor-claims-11-inch-ipad-pro-due-next-year-will-rock-a-mini-led-display/intro-import.jpg"
+						alt=""
+						class="w-full"
+					/>
+				</div>
+				<div class="slide-item">
+					<img
+						src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-03/25/full/1711358133-5191.png?im=FeatureCrop,size=(826,465)"
+						alt=""
+						class="w-full"
+					/>
+				</div>
+				<div class="slide-item">
+					<img
+						src="https://m-cdn.phonearena.com/images/reviews/259208-image/ipad-pro-m4-apple-pencil-pro.jpg"
+						alt=""
+						class="w-full"
+					/>
+				</div>
+			</div>
+			<div class="nav-pills">
+				<!-- Navigation pills will be inserted here -->
+			</div>
+			<button
+				class="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-2 text-black"
+				onclick="prevSlide()"
+			>
+				Prev
+			</button>
+			<button
+				class="absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-2 text-black"
+				onclick="nextSlide()"
+			>
+				Next
+			</button>
+		</div>
+		<script>
+			let currentSlide = 0;
+			const slides = document.querySelectorAll('.slide-item');
+			const totalSlides = slides.length;
+			const navPillsContainer = document.querySelector('.nav-pills');
+
+			function setupPills() {
+				for (let i = 0; i < totalSlides; i++) {
+					const pill = document.createElement('div');
+					pill.classList.add('nav-pill');
+					pill.onclick = () => showSlide(i);
+					navPillsContainer.appendChild(pill);
+				}
+			}
+
+			function updatePills() {
+				const pills = document.querySelectorAll('.nav-pill');
+				pills.forEach((pill, index) => {
+					if (index === currentSlide) {
+						pill.classList.add('active');
+					} else {
+						pill.classList.remove('active');
+					}
+				});
+			}
+
+			function showSlide(slideIndex) {
+				const newSlideIndex = (slideIndex + totalSlides) % totalSlides;
+				const offset = newSlideIndex * -100;
+				const sliderContainer = document.querySelector('.slider-container');
+				sliderContainer.style.transform = `translateX(${offset}%)`;
+				slides.forEach((slide, index) => {
+					slide.style.opacity = index === newSlideIndex ? '1' : '0.5';
+				});
+				currentSlide = newSlideIndex;
+				updatePills();
+			}
+
+			function nextSlide() {
+				console.log('next');
+				showSlide(currentSlide + 1);
+			}
+
+			function prevSlide() {
+				console.log('prev');
+				showSlide(currentSlide - 1);
+			}
+
+			setupPills();
+			showSlide(0); // Initialize the slider
+		</script>
+	</body>
+</html>

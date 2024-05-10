@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Carousel repeat</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<style>
+			.carousel-container {
+				display: flex;
+				overflow-x: hidden;
+				position: relative;
+				width: 100%;
+				scroll-snap-type: x mandatory;
+			}
+			.carousel-item {
+				flex: 0 0 100%;
+				scroll-snap-align: start;
+				position: relative;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		</style>
+	</head>
+	<body>
+		<main
+			class="w-full flex flex-col items-center justify-between min-h-screen md:p-24 p-14 overflow-x-hidden"
+		>
+			<div
+				class="relative w-full max-w-[1500px] flex items-center justify-center group"
+			>
+				<!-- Navigation Buttons -->
+				<button onclick="onPrevClick()" class="absolute left-0 z-10">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="md:w-16 md:h-16 w-8 h-8 text-[#ccc] hover:text-white"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M15.75 19.5 8.25 12l7.5-7.5"
+						/>
+					</svg>
+				</button>
+				<button onclick="onNextClick()" class="absolute right-0 z-10">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="md:w-16 md:h-16 w-8 h-8 text-[#ccc] hover:text-white"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="m8.25 4.5 7.5 7.5-7.5 7.5"
+						/>
+					</svg>
+				</button>
+
+				<!-- Carousel Container -->
+				<div class="carousel-container">
+					<!-- Carousel items will be injected here -->
+				</div>
+
+				<!-- Pill Container -->
+				<div
+					class="pill-container absolute bottom-4 flex justify-center items-center space-x-3 px-3 py-3 bg-[#111] rounded-full z-10"
+				>
+					<!-- Pills will be injected here -->
+				</div>
+			</div>
+		</main>
+
+		<script>
+			const cardArray = [
+				{
+					btnText: 'Watch now',
+					info: 'Stream now Comedy · New season. 1',
+					imgUrl:
+						'https://cdn.mos.cms.futurecdn.net/hC67Z5uAEUGDRAyEcpyi8a.jpg',
+				},
+				{
+					btnText: 'Stream now',
+					info: 'Stream now Comedy · New season. 2',
+					imgUrl:
+						'https://cdn.mos.cms.futurecdn.net/hC67Z5uAEUGDRAyEcpyi8a.jpg',
+				},
+				{
+					btnText: 'Learn more',
+					info: 'Stream now Comedy · New season. 3',
+					imgUrl:
+						'https://cdn.mos.cms.futurecdn.net/hC67Z5uAEUGDRAyEcpyi8a.jpg',
+				},
+			];
+
+			let current = 0;
+			let carouselContainer = document.querySelector('.carousel-container');
+			let pillContainer = document.querySelector('.pill-container');
+
+			function initializeCarousel() {
+				// Add cloned last item
+				addCarouselItem(cardArray[cardArray.length - 1], -1);
+
+				// Add real items
+				cardArray.forEach((item, index) => {
+					addCarouselItem(item, index);
+				});
+
+				// Add cloned first item
+				addCarouselItem(cardArray[0], cardArray.length);
+
+				// Initialize pills
+				addPills();
+			}
+
+			function addCarouselItem(item, index) {
+				console.log('Adding item', index, item); // Debug log
+				const carouselItem = document.createElement('div');
+				carouselItem.className = 'carousel-item';
+				carouselItem.innerHTML = `
+               <img src="${item.imgUrl}" alt="" class="object-cover w-full h-full md:aspect-[16/9] aspect-square">
+               <div class="absolute bottom-0 left-0 w-full p-10 text-white  flex items-center space-x-4">
+                  <button class="bg-white text-sm md:text-md text-black font-light">${item.btnText}</button>
+                  <p class="text-md md:text-lg">${item.info}</p>
+               </div>
+         `;
+				carouselContainer.appendChild(carouselItem);
+			}
+
+			function addPills() {
+				cardArray.forEach((_, index) => {
+					const pill = document.createElement('button');
+					pill.className = `w-2 h-2 rounded-full ${
+						index === current ? 'bg-[#666]' : 'bg-[#eee]'
+					}`;
+					pill.addEventListener('click', () => {
+						current = index;
+						updateCarousels();
+						updateTransform();
+					});
+					pillContainer.appendChild(pill);
+				});
+			}
+
+			function updateCarousels() {
+				const carousels = document.querySelectorAll('.carousel-item');
+				const pills = document.querySelectorAll('.pill-container button');
+
+				carousels.forEach((carousel, index) => {
+					carousel.style.opacity = index === current ? '1' : '0.5';
+				});
+
+				pills.forEach((pill, index) => {
+					pill.className = `w-2 h-2 rounded-full ${
+						index === current ? 'bg-[#666]' : 'bg-[#eee]'
+					}`;
+				});
+			}
+
+			function updateTransform() {
+				const offset = -current * 100; // Assuming each image takes 100% of the carousel width
+				carouselContainer.style.transition = 'transform 0.5s ease';
+				carouselContainer.style.transform = `translateX(${offset}%)`;
+			}
+
+			function onPrevClick() {
+				current = (current - 1 + cardArray.length) % cardArray.length;
+				updateTransform();
+				updateCarousels();
+			}
+
+			function onNextClick() {
+				current = (current + 1) % cardArray.length;
+				updateTransform();
+				updateCarousels();
+			}
+
+			function startAutoSlide() {
+				autoSlideInterval = setInterval(onNextClick, 3000); // Change slide every 3 seconds
+			}
+
+			function stopAutoSlide() {
+				clearInterval(autoSlideInterval);
+			}
+
+			carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+			carouselContainer.addEventListener('mouseleave', startAutoSlide);
+
+			// Initialize the carousel
+			document.addEventListener('DOMContentLoaded', initializeCarousel);
+		</script>
+	</body>
+</html>
