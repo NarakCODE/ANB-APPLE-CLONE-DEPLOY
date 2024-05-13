@@ -463,7 +463,7 @@ class NavbarComponent extends HTMLElement {
 
 		this.innerHTML = `
          <nav id="navbar-container"
-			class=" w-full fixed   py-2 top-0 left-0 bg-${bgColor}/90 text-black backdrop-blur-sm z-[99] border-b shadow-sm border-${bgColor} duration-500 transition-all ease-in-out overflow-hidden text-${textColor} ">
+			class=" w-full fixed py-2 top-0 left-0 bg-${bgColor}/90 text-black backdrop-blur-sm z-[99] border-b shadow-sm border-${bgColor} duration-500 transition-all ease-in-out overflow-hidden text-${textColor} ">
             <div
                class="max-w-[1100px] mx-auto px-6 flex items-center justify-between"
             >
@@ -546,7 +546,7 @@ class NavbarComponent extends HTMLElement {
                   <!-- Responsive hamburger list -->
 						<div
 							id="menu-list"
-							class="fixed md:hidden   top-0 left-0 w-full h-0 bg-${bgColor} z-[60]  origin-top duration-500 backdrop-blur-md"
+							class="fixed md:hidden  top-0 left-0 w-full h-0 bg-${bgColor} z-[10]  origin-top duration-500 backdrop-blur-md"
 						>
 							<div
 								class="text-${textColor} px-12 flex flex-col mt-14 text-2xl gap-3 font-semibold opacity-0 pointer-events-none duration-500"
