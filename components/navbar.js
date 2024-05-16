@@ -466,7 +466,7 @@ class NavbarComponent extends HTMLElement {
          <nav id="navbar-container"
 			class=" w-full  ${
 				fixed ? fixed : 'fixed'
-			} py-2 top-0 left-0 bg-${bgColor}/90 text-black backdrop-blur-sm z-[99] border-b shadow-sm border-${bgColor} duration-500 transition-all ease-in-out overflow-hidden text-${textColor} ">
+			} py-2 top-0 left-0 bg-${bgColor}/90 text-black backdrop-blur-sm z-[999] border-b shadow-sm border-${bgColor} duration-500 transition-all ease-in-out overflow-hidden text-${textColor} ">
             <div
                class="max-w-[1100px] mx-auto px-6 flex items-center justify-between"
             >
