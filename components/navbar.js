@@ -3,6 +3,7 @@ class NavbarComponent extends HTMLElement {
 	connectedCallback() {
 		let bgColor = this.getAttribute('bgColor');
 		let textColor = this.getAttribute('textColor');
+		let fixed = this.getAttribute('fixed');
 
 		const navItems = [
 			{
@@ -463,7 +464,9 @@ class NavbarComponent extends HTMLElement {
 
 		this.innerHTML = `
          <nav id="navbar-container"
-			class=" w-full fixed py-2 top-0 left-0 bg-${bgColor}/90 text-black backdrop-blur-sm z-[99] border-b shadow-sm border-${bgColor} duration-500 transition-all ease-in-out overflow-hidden text-${textColor} ">
+			class=" w-full  ${
+				fixed ? fixed : 'fixed'
+			} py-2 top-0 left-0 bg-${bgColor}/90 text-black backdrop-blur-sm z-[99] border-b shadow-sm border-${bgColor} duration-500 transition-all ease-in-out overflow-hidden text-${textColor} ">
             <div
                class="max-w-[1100px] mx-auto px-6 flex items-center justify-between"
             >
