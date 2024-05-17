@@ -235,29 +235,303 @@
 			</div>
 		</header>
 
-      <!-- Inner Width -->
-		<div class="max-w-[1100px] px-6 mx-auto overflow-x-hidden">
-			<!-- Banner -->
-			<div class="w-full bg-[#f5f5f7] h-[480px]">
-				<div class="relative flex items-center justify-between w-full h-full">
-					<img
-						src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/aalp-magsafe-header-09-202403?wid=1440&hei=480&fmt=png-alpha&.v=1709153439355"
-						alt=""
-						class="max-w-[1400px] absolute ml-40 object-cover h-full"
-					/>
+		<!-- Banner -->
+		<section
+			class="max-w-[1100px] px-6 mx-auto overflow-x-hidden w-full bg-[#f5f5f7] h-[480px]"
+		>
+			<div class="relative flex items-center justify-between w-full h-full">
+				<img
+					src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/aalp-magsafe-header-09-202403?wid=1440&hei=480&fmt=png-alpha&.v=1709153439355"
+					alt=""
+					class="max-w-[1400px] absolute ml-40 object-cover h-full"
+				/>
 
-					<div
-						class="absolute max-w-[250px] left-0 flex flex-col gap-5 text-[#333]"
+				<div
+					class="absolute max-w-[250px] left-0 flex flex-col gap-5 text-[#333]"
+				>
+					<h1 class="font-semibold text-5xl">Mix. Match. <br />MagSafe.</h1>
+					<p class="text-xl">Snap on a case, wallet, or wireless charger.</p>
+					<a href="" class="text-lg font-light text-blue-500 hover:underline"
+						>Shop MagSage ></a
 					>
-						<h1 class="font-semibold text-5xl">Mix. Match. <br />MagSafe.</h1>
-						<p class="text-xl">Snap on a case, wallet, or wireless charger.</p>
-						<a href="" class="text-lg font-light text-blue-500 hover:underline"
-							>Shop MagSage ></a
+				</div>
+			</div>
+		</section>
+
+		<!-- Find accessories -->
+		<section class="w-full bg-[#fff] py-20">
+			<!-- Inner width -->
+			<div class="max-w-[1000px] px-6 mx-auto w-full">
+				<!-- Input form -->
+				<div class="w-full flex items-center flex-col gap-5">
+					<h2 class="text-3xl text-center">
+						Find the accessories you’re looking for.
+					</h2>
+					<form
+						class="form relative max-w-[550px] mx-auto w-full flex justify-center"
+					>
+						<button class="absolute left-2 -translate-y-1/2 top-1/2 p-1">
+							<svg
+								width="17"
+								height="16"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								role="img"
+								aria-labelledby="search"
+								class="w-5 h-5 text-gray-700"
+							>
+								<path
+									d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+									stroke="currentColor"
+									stroke-width="1.333"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></path>
+							</svg>
+						</button>
+						<input
+							class="w-full max-w-[550px] mx-auto border-black/50 pl-10 input rounded-md px-8 py-3 border focus:border-blue-400 placeholder-gray-400 transition-all duration-300"
+							placeholder="Search accessories"
+							required=""
+							type="text"
+						/>
+					</form>
+				</div>
+
+				<!-- Category click -->
+				<div class="mt-20">
+					<div class="border-b flex justify-center md:space-x-14 space-x-6">
+						<button id="browse-category-btn" class="relative py-4 active-btn">
+							Browse by Product
+							<span
+								class="active-underline w-full h-0.5 bg-black absolute left-0 bottom-0"
+							></span>
+						</button>
+
+						<button id="browse-category-btn" class="relative py-4 active-btn">
+							Browse by Category
+							<span
+								class="active-underline w-full h-0.5 absolute left-0 bottom-0"
+							></span>
+						</button>
+					</div>
+
+					<!-- Items Product -->
+					<div
+						id="items-category-container"
+						class="flex flex-wrap gap-10 justify-center mt-8"
+					>
+						<div
+							class="text-center group md:w-[150px] w-[100px] h-[100px] md:h-[200px]"
 						>
+							<a
+								href="mac.html"
+								class="w-full h-full flex flex-col gap-4 justify-between items-center"
+							>
+								<div class="rounded-full border p-8">
+									<img
+										src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-mac?wid=112&hei=112&fmt=png-alpha&.v=1700067558508"
+										alt=""
+									/>
+								</div>
+								<p
+									class="text-gray-600 md:text-base text-xs group-hover:text-blue-500 group-hover:underline"
+								>
+									Mac
+								</p>
+							</a>
+						</div>
+						<div
+							class="text-center group md:w-[150px] w-[100px] h-[100px] md:h-[200px]"
+						>
+							<a
+								href="ipad.html"
+								class="h-full w-full flex flex-col gap-4 justify-between items-center"
+							>
+								<div class="rounded-full border p-8">
+									<img
+										src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-ipad?wid=112&hei=112&fmt=png-alpha&.v=1699474605227"
+										alt=""
+									/>
+								</div>
+								<p
+									class="text-gray-600 md:text-base text-xs group-hover:text-blue-500 group-hover:underline"
+								>
+									iPad
+								</p>
+							</a>
+						</div>
+						<div
+							class="text-center group md:w-[150px] w-[100px] h-[100px] md:h-[200px]"
+						>
+							<a
+								href="iphone.html"
+								class="h-full w-full flex flex-col gap-4 justify-between items-center"
+							>
+								<div class="rounded-full border p-8">
+									<img
+										src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-iphone?wid=112&hei=112&fmt=png-alpha&.v=1699474605231"
+										alt=""
+									/>
+								</div>
+								<p
+									class="text-gray-600 md:text-base text-xs group-hover:text-blue-500 group-hover:underline"
+								>
+									iPhone
+								</p>
+							</a>
+						</div>
+						<div
+							class="text-center group md:w-[150px] w-[100px] h-[100px] md:h-[200px]"
+						>
+							<a
+								href="watch.html"
+								class="h-full w-full flex flex-col gap-4 justify-between items-center"
+							>
+								<div class="rounded-full border p-8">
+									<img
+										src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-watch?wid=112&hei=112&fmt=png-alpha&.v=1699474605232"
+										alt=""
+									/>
+								</div>
+								<p
+									class="text-gray-600 md:text-base text-xs group-hover:text-blue-500 group-hover:underline"
+								>
+									Watch
+								</p>
+							</a>
+						</div>
+						<div
+							class="text-center group md:w-[150px] w-[100px] h-[100px] md:h-[200px]"
+						>
+							<a
+								href=""
+								class="w-full h-full flex flex-col gap-4 justify-between items-center"
+							>
+								<div class="rounded-full border p-8">
+									<img
+										src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-vision-pro?wid=75&hei=75&fmt=png-alpha&.v=1701991187606"
+										alt=""
+									/>
+								</div>
+								<p
+									class="text-gray-600 md:text-base text-xs group-hover:text-blue-500 group-hover:underline"
+								>
+									Apple Vision Pro
+								</p>
+							</a>
+						</div>
+					</div>
+
+					<!-- Items Category -->
+					<div
+						id="items-category-container"
+						class="hidden flex flex-wrap gap-10 justify-center mt-8"
+					>
+						<div
+							class="text-center group md:w-[150px] w-[100px] h-[100px] md:h-[200px]"
+						>
+							<a
+								href="mac.html"
+								class="w-full h-full flex flex-col gap-4 justify-between items-center"
+							>
+								<div class="rounded-full border p-8">
+									<img
+										src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-category-new-arrivals?wid=75&hei=75&fmt=png-alpha&.v=1699572503991"
+										alt=""
+									/>
+								</div>
+								<p
+									class="text-gray-600 md:text-base text-xs group-hover:text-blue-500 group-hover:underline"
+								>
+									New Arrivals
+								</p>
+							</a>
+						</div>
+						<div
+							class="text-center group md:w-[150px] w-[100px] h-[100px] md:h-[200px]"
+						>
+							<a
+								href="ipad.html"
+								class="h-full w-full flex flex-col gap-4 justify-between items-center"
+							>
+								<div class="rounded-full border p-8">
+									<img
+										src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-category-cases-protection?wid=75&hei=75&fmt=png-alpha&.v=1699561941827"
+										alt=""
+									/>
+								</div>
+								<p
+									class="text-gray-600 md:text-base text-xs group-hover:text-blue-500 group-hover:underline"
+								>
+									Cases & Protection
+								</p>
+							</a>
+						</div>
+						<div
+							class="text-center group md:w-[150px] w-[100px] h-[100px] md:h-[200px]"
+						>
+							<a
+								href="iphone.html"
+								class="h-full w-full flex flex-col gap-4 justify-between items-center"
+							>
+								<div class="rounded-full border p-8">
+									<img
+										src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-category-magsafe?wid=75&hei=75&fmt=png-alpha&.v=1699572503981"
+										alt=""
+									/>
+								</div>
+								<p
+									class="text-gray-600 md:text-base text-xs group-hover:text-blue-500 group-hover:underline"
+								>
+									MagSafe
+								</p>
+							</a>
+						</div>
+						<div
+							class="text-center group md:w-[150px] w-[100px] h-[100px] md:h-[200px]"
+						>
+							<a
+								href="watch.html"
+								class="h-full w-full flex flex-col gap-4 justify-between items-center"
+							>
+								<div class="rounded-full border p-8">
+									<img
+										src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-category-charging-essentials?wid=75&hei=75&fmt=png-alpha&.v=1699561941713"
+										alt=""
+									/>
+								</div>
+								<p
+									class="text-gray-600 md:text-base text-xs group-hover:text-blue-500 group-hover:underline"
+								>
+									Charging Essentials
+								</p>
+							</a>
+						</div>
+						<div
+							class="text-center group md:w-[150px] w-[100px] h-[100px] md:h-[200px]"
+						>
+							<a
+								href=""
+								class="w-full h-full flex flex-col gap-4 justify-between items-center"
+							>
+								<div class="rounded-full border p-8">
+									<img
+										src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-category-audio-music?wid=75&hei=75&fmt=png-alpha&.v=1699561939556"
+										alt=""
+									/>
+								</div>
+								<p
+									class="text-gray-600 md:text-base text-xs group-hover:text-blue-500 group-hover:underline"
+								>
+									Headphones & Speakers
+								</p>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 
 		<!-- Footer -->
 		<footer-component></footer-component>
@@ -288,6 +562,32 @@
 			chevronIcon.classList.toggle('rotate-180');
 			bgOverlay.classList.toggle('opacity-100');
 			bgOverlay.classList.toggle('pointer-events-auto');
+		});
+
+		let browseCategoryBtns = document.querySelectorAll('#browse-category-btn');
+		let itemsCategoryContainers = document.querySelectorAll(
+			'#items-category-container'
+		);
+		let activeBtns = document.querySelectorAll('.active-btn');
+		let activeUnderline = document.querySelectorAll('.active-underline');
+
+		browseCategoryBtns.forEach((btn, index) => {
+			btn.addEventListener('click', () => {
+				itemsCategoryContainers.forEach((container) => {
+					container.classList.add('hidden');
+				});
+
+				browseCategoryBtns.forEach((button) => {
+					button.classList.remove('text-black');
+					button.children[0].classList.remove('bg-black');
+				});
+
+				itemsCategoryContainers[index].classList.remove('hidden');
+
+				btn.classList.add('text-black');
+
+				btn.children[0].classList.add('bg-black');
+			});
 		});
 	</script>
 </html>
