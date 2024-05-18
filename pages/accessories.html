@@ -34,23 +34,16 @@
 	</head>
 	<body class="bg-[#F5F5F5]">
 		<!-- Navbar -->
-		<div class="relative z-[99]">
-			<navbar-component
-				fixed="false "
-				bgColor="white"
-				textColor="black"
-			></navbar-component>
+		<div class="sticky top-0 z-[99]">
+			<navbar-component bgColor="white" textColor="black"></navbar-component>
 		</div>
 
 		<!-- Header -->
 		<!-- Overlay background -->
-		<div
-			id="overlay-bg"
-			class="z-[10] fixed top-0 left-0 right-0 opacity-0 pointer-events-none bottom-0 w-full h-screen bg-black backdrop-blur-sm duration-500"
-		></div>
+
 		<header
 			id="browe-all-container"
-			class="w-full sticky z-[99] top-0 bg-white/50 backdrop-blur-sm md:h-[52px] h-[52px] py-3 flex justify-center items-start border-b border-gray-300 duration-300 overflow-hidden"
+			class="w-full sticky z-[60] top-8 bg-white/80 backdrop-blur-sm md:h-[52px] h-[52px] py-3 flex justify-center items-start border-b border-gray-300 duration-300 overflow-hidden"
 		>
 			<div
 				class="text-[#333] relative z-[100] flex items-center justify-between max-w-[1100px] w-full px-6 mx-auto"
@@ -533,20 +526,168 @@
 			</div>
 		</section>
 
+		<!-- Featured -->
+		<section class="w-full py-20 bg-white border-t flex flex-col gap-20">
+			<accessories-carousel-component
+				title="Featured iPad Accessories."
+				link-title="Shop all iPad accessories"
+				accessories-data='[
+         {
+            "swiperItems": [
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MX2D3?wid=266&hei=291&fmt=png-alpha&.v=1713841707336",
+                  "colors": [],
+                  "new": "New",
+                  "title": "Apple Pencil Pro",
+                  "price": "$129.00"
+               },
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWR43?wid=266&hei=291&fmt=png-alpha&.v=1713934214856",
+                  "colors": ["#f2f0ee", "#43403f"],
+                  "new": "New",
+                  "title": "Magic Keyboard for iPad Pro 13-inch (M4) - White",
+                  "price": "$349.00"
+               }
+            ]
+         },
+         {
+            "swiperItems": [
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWK43?wid=266&hei=291&fmt=png-alpha&.v=1713656833377",
+                  "colors": ["#f2f0ee", "#43403f", "#7f9cae"],
+                  "new": "New",
+                  "title": "Smart Folio for iPad Pro 13-inch (M4) - Denim",
+                  "price": "$99.00"
+               },
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXQT2?wid=266&hei=291&fmt=png-alpha&.v=1715371920487",
+                  "colors": ["#f2f0ee", "#43403f"],
+                  "new": "",
+                  "title": "Magic Keyboard for iPad Air 11-inch (M2) - Black",
+                  "price": "$299.00"
+               }
+            ]
+         },
+         {
+            "swiperItems": [
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWK73?wid=266&hei=291&fmt=png-alpha&.v=1715010528503",
+                  "colors": ["#cccce7", "#f2f0ee", "#43403f", "#b2b493"],
+                  "new": "New",
+                  "title": "Smart Folio for iPad Pro 13-inch (M4) - White",
+                  "price": "$79.00"
+               },
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQDP3?wid=266&hei=291&fmt=png-alpha&.v=1664481446939",
+                  "colors": [],
+                  "new": "",
+                  "title": "Magic Keyboard Folio for iPad (10th generation)",
+                  "price": "$249.00"
+               }
+            ]
+         },
+         {
+            "swiperItems": [
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU8F2?wid=266&hei=291&fmt=png-alpha&.v=1540596407165",
+                  "colors": [],
+                  "new": "Free Engraving",
+                  "title": "Apple Pencil (2nd generation)",
+                  "price": "$129.00"
+               }
+            ]
+         }
+      ]'
+			></accessories-carousel-component>
+
+			<accessories-carousel-component
+				title="Featured iPhone Accessories"
+				link-title="Shop all iPhone accessories"
+				accessories-data='[
+         {
+            "swiperItems": [
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWND3?wid=266&hei=291&fmt=png-alpha&.v=1708125477348",
+                  "colors": ["#deeadf", "#ffc650", "#aac1da", "#505a66", "#aaa196", "#fe86a2"],
+                  "new": "New",
+                  "title": "iPhone 15 Silicone Case",
+                  "price": "$129.00"
+               },
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MT223?wid=266&hei=291&fmt=png-alpha&.v=1693248280978",
+                  "colors": ["#f2f0ee", "#43403f"],
+                  "new": "New",
+                  "title": "Magic Keyboard for iPad Pro 13-inch (M4) - White",
+                  "price": "$349.00"
+               }
+            ]
+         },
+         {
+            "swiperItems": [
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU7T2_GEO_US?wid=266&hei=291&fmt=png-alpha&.v=1542406417329",
+                  "colors": ["#f2f0ee", "#43403f", "#7f9cae"],
+                  "new": "New",
+                  "title": "Smart Folio for iPad Pro 13-inch (M4) - Denim",
+                  "price": "$99.00"
+               },
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXQT2?wid=266&hei=291&fmt=png-alpha&.v=1715371920487",
+                  "colors": ["#f2f0ee", "#43403f"],
+                  "new": "",
+                  "title": "Magic Keyboard for iPad Air 11-inch (M2) - Black",
+                  "price": "$299.00"
+               }
+            ]
+         },
+         {
+            "swiperItems": [
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWK73?wid=266&hei=291&fmt=png-alpha&.v=1715010528503",
+                  "colors": ["#cccce7", "#f2f0ee", "#43403f", "#b2b493"],
+                  "new": "New",
+                  "title": "Smart Folio for iPad Pro 13-inch (M4) - White",
+                  "price": "$79.00"
+               },
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQDP3?wid=266&hei=291&fmt=png-alpha&.v=1664481446939",
+                  "colors": [],
+                  "new": "",
+                  "title": "Magic Keyboard Folio for iPad (10th generation)",
+                  "price": "$249.00"
+               }
+            ]
+         },
+         {
+            "swiperItems": [
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU8F2?wid=266&hei=291&fmt=png-alpha&.v=1540596407165",
+                  "colors": [],
+                  "new": "Free Engraving",
+                  "title": "Apple Pencil (2nd generation)",
+                  "price": "$129.00"
+               }
+            ]
+         }
+      ]'
+			></accessories-carousel-component>
+		</section>
+
 		<!-- Footer -->
 		<footer-component></footer-component>
 	</body>
 
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 	<script src="../components/navbar.js"></script>
 	<script src="../components/primary-btn.js"></script>
 	<script src="../components/header.js"></script>
 	<script src="../components/footer.js"></script>
 	<script src="../components/outline-btn.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+	<script src="../components/accessories-page-carousel.js"></script>
 	<script>
 		let browAllDropDown = document.querySelector('#browse-all-dropdown');
 		let browAllDropDownBtn = document.querySelector('#browse-all-dropdown-btn');
-		let bgOverlay = document.querySelector('#overlay-bg');
 		let broweAllContainer = document.querySelector('#browe-all-container');
 
 		let chevronIcon = document.querySelector('#chevron-icon');
@@ -560,8 +701,6 @@
 			broweAllContainer.classList.toggle('h-[550px]');
 
 			chevronIcon.classList.toggle('rotate-180');
-			bgOverlay.classList.toggle('opacity-100');
-			bgOverlay.classList.toggle('pointer-events-auto');
 		});
 
 		let browseCategoryBtns = document.querySelectorAll('#browse-category-btn');
