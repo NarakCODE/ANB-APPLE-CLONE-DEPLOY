@@ -25,7 +25,7 @@ const createCaourselDesign = (title, accessoriesData, linkTitle) => {
 																			.map((card) => {
 																				return `
                                              <div
-                                                class="h-[520px]  flex flex-col items-center gap-4  bg-[#f5f5f7] rounded-xl md:p-10 p-4"
+                                                class="h-[520px]  flex flex-col justify-between items-center gap-4  bg-[#f5f5f7] rounded-xl md:p-10 p-4"
                                              >
                                                 <img
                                                    src="${card.imgUrl}"
@@ -33,7 +33,7 @@ const createCaourselDesign = (title, accessoriesData, linkTitle) => {
                                                    class="w-full h-[266px] object-contain"
                                                 />
                                                 <!-- card content -->
-                                                <div class="max-w-[300px] flex flex-col items-center gap-4">
+                                                <div class="max-w-[300px] flex flex-col items-center justify-between gap-4">
                                                    <!-- card colors -->
                                                    <div class="flex justify-center space-x-1 ">
                                                      ${card.colors

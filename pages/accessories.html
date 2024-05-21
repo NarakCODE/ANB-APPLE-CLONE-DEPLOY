@@ -32,7 +32,7 @@
 		<!-- style -->
 		<link rel="stylesheet" href="../styles/style.css" />
 	</head>
-	<body class="bg-[#F5F5F5]">
+	<body class="bg-[#fbfbfb]">
 		<!-- Navbar -->
 		<div class="sticky top-0 z-[99]">
 			<navbar-component bgColor="white" textColor="black"></navbar-component>
@@ -43,7 +43,7 @@
 
 		<header
 			id="browe-all-container"
-			class="w-full sticky z-[60] top-8 bg-white/80 backdrop-blur-sm md:h-[52px] h-[52px] py-3 flex justify-center items-start border-b border-gray-300 duration-300 overflow-hidden"
+			class="w-full sticky z-[60] top-8 bg-white/80 backdrop-blur-sm md:h-[52px] h-[52px] py-3 flex justify-center items-start border-b duration-300 overflow-hidden"
 		>
 			<div
 				class="text-[#333] relative z-[100] flex items-center justify-between max-w-[1100px] w-full px-6 mx-auto"
@@ -229,24 +229,26 @@
 		</header>
 
 		<!-- Banner -->
-		<section
-			class="max-w-[1100px] px-6 mx-auto overflow-x-hidden w-full bg-[#f5f5f7] h-[480px]"
-		>
-			<div class="relative flex items-center justify-between w-full h-full">
-				<img
-					src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/aalp-magsafe-header-09-202403?wid=1440&hei=480&fmt=png-alpha&.v=1709153439355"
-					alt=""
-					class="max-w-[1400px] absolute ml-40 object-cover h-full"
-				/>
+		<section class="w-full bg-[#f5f5f7]">
+			<div
+				class="max-w-[1100px] px-6 mx-auto overflow-x-hidden w-full h-[480px]"
+			>
+				<div class="relative flex items-center justify-between w-full h-full">
+					<img
+						src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/aalp-magsafe-header-09-202403?wid=1440&hei=480&fmt=png-alpha&.v=1709153439355"
+						alt=""
+						class="max-w-[1400px] absolute ml-40 object-cover h-full"
+					/>
 
-				<div
-					class="absolute max-w-[250px] left-0 flex flex-col gap-5 text-[#333]"
-				>
-					<h1 class="font-semibold text-5xl">Mix. Match. <br />MagSafe.</h1>
-					<p class="text-xl">Snap on a case, wallet, or wireless charger.</p>
-					<a href="" class="text-lg font-light text-blue-500 hover:underline"
-						>Shop MagSage ></a
+					<div
+						class="absolute max-w-[250px] left-0 flex flex-col gap-5 text-[#333]"
 					>
+						<h1 class="font-semibold text-5xl">Mix. Match. <br />MagSafe.</h1>
+						<p class="text-xl">Snap on a case, wallet, or wireless charger.</p>
+						<a href="" class="text-lg font-light text-blue-500 hover:underline"
+							>Shop MagSage ></a
+						>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -528,6 +530,7 @@
 
 		<!-- Featured -->
 		<section class="w-full py-20 bg-white border-t flex flex-col gap-20">
+			<!-- ipad -->
 			<accessories-carousel-component
 				title="Featured iPad Accessories."
 				link-title="Shop all iPad accessories"
@@ -599,7 +602,7 @@
          }
       ]'
 			></accessories-carousel-component>
-
+			<!-- iphone -->
 			<accessories-carousel-component
 				title="Featured iPhone Accessories"
 				link-title="Shop all iPhone accessories"
@@ -671,6 +674,362 @@
          }
       ]'
 			></accessories-carousel-component>
+			<!-- watch -->
+			<accessories-carousel-component
+				title="Apple Watch Bands"
+				link-title="Shop all bands"
+				accessories-data='[
+         {
+            "swiperItems": [
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWMU3ref?wid=266&hei=291&fmt=png-alpha&.v=1707791911574",
+                  "colors": ["#deeadf", "#ffc650", "#aac1da", "#505a66", "#aaa196", "#fe86a2"],
+                  "new": "New",
+                  "title": "iPhone 15 Silicone Case",
+                  "price": "$49.00"
+               },
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MW4P3?wid=266&hei=291&fmt=png-alpha&.v=1707853693633",
+                  "colors": ["#f2f0ee", "#43403f"],
+                  "new": "New",
+                  "title": "Magic Keyboard for iPad Pro 13-inch (M4) - White",
+                  "price": "$49.00"
+               }
+            ]
+         },
+         {
+            "swiperItems": [
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWFH3ref?wid=266&hei=291&fmt=png-alpha&.v=1707791909054",
+                  "colors": ["#f2f0ee", "#43403f", "#7f9cae"],
+                  "new": "New",
+                  "title": "Smart Folio for iPad Pro 13-inch (M4) - Denim",
+                  "price": "$49.00"
+               },
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXQT2?wid=266&hei=291&fmt=png-alpha&.v=1715371920487",
+                  "colors": ["#f2f0ee", "#43403f"],
+                  "new": "",
+                  "title": "Magic Keyboard for iPad Air 11-inch (M2) - Black",
+                  "price": "$299.00"
+               }
+            ]
+         },
+         {
+            "swiperItems": [
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWK73?wid=266&hei=291&fmt=png-alpha&.v=1715010528503",
+                  "colors": ["#cccce7", "#f2f0ee", "#43403f", "#b2b493"],
+                  "new": "New",
+                  "title": "Smart Folio for iPad Pro 13-inch (M4) - White",
+                  "price": "$79.00"
+               },
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQDP3?wid=266&hei=291&fmt=png-alpha&.v=1664481446939",
+                  "colors": [],
+                  "new": "",
+                  "title": "Magic Keyboard Folio for iPad (10th generation)",
+                  "price": "$249.00"
+               }
+            ]
+         },
+         {
+            "swiperItems": [
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU8F2?wid=266&hei=291&fmt=png-alpha&.v=1540596407165",
+                  "colors": [],
+                  "new": "Free Engraving",
+                  "title": "Apple Pencil (2nd generation)",
+                  "price": "$129.00"
+               }
+            ]
+         }
+      ]'
+			></accessories-carousel-component>
+			<!-- sound -->
+			<accessories-carousel-component
+				title="Sound Essentials"
+				link-title="Shop Headphones and Speakers"
+				accessories-data='[
+         {
+            "swiperItems": [
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTJV3?wid=266&hei=291&fmt=png-alpha&.v=1694014871985",
+                  "colors": ["#deeadf", "#ffc650", "#aac1da", "#505a66", "#aaa196", "#fe86a2"],
+                  "new": "New",
+                  "title": "iPhone 15 Silicone Case",
+                  "price": "$49.00"
+               },
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MME73?wid=266&hei=291&fmt=png-alpha&.v=1632861342000",
+                  "colors": ["#f2f0ee", "#43403f"],
+                  "new": "New",
+                  "title": "Magic Keyboard for iPad Pro 13-inch (M4) - White",
+                  "price": "$49.00"
+               }
+            ]
+         },
+         {
+            "swiperItems": [
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/homepod-select-midnight-202210?wid=266&hei=291&fmt=png-alpha&.v=1670557210097",
+                  "colors": ["#f2f0ee", "#43403f", "#7f9cae"],
+                  "new": "New",
+                  "title": "Smart Folio for iPad Pro 13-inch (M4) - Denim",
+                  "price": "$49.00"
+               },
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXQT2?wid=266&hei=291&fmt=png-alpha&.v=1715371920487",
+                  "colors": ["#f2f0ee", "#43403f"],
+                  "new": "",
+                  "title": "Magic Keyboard for iPad Air 11-inch (M2) - Black",
+                  "price": "$299.00"
+               }
+            ]
+         },
+         {
+            "swiperItems": [
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWK73?wid=266&hei=291&fmt=png-alpha&.v=1715010528503",
+                  "colors": ["#cccce7", "#f2f0ee", "#43403f", "#b2b493"],
+                  "new": "New",
+                  "title": "Smart Folio for iPad Pro 13-inch (M4) - White",
+                  "price": "$79.00"
+               },
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQDP3?wid=266&hei=291&fmt=png-alpha&.v=1664481446939",
+                  "colors": [],
+                  "new": "",
+                  "title": "Magic Keyboard Folio for iPad (10th generation)",
+                  "price": "$249.00"
+               }
+            ]
+         },
+         {
+            "swiperItems": [
+               {
+                  "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU8F2?wid=266&hei=291&fmt=png-alpha&.v=1540596407165",
+                  "colors": [],
+                  "new": "Free Engraving",
+                  "title": "Apple Pencil (2nd generation)",
+                  "price": "$129.00"
+               }
+            ]
+         }
+      ]'
+			></accessories-carousel-component>
+			<!-- mac -->
+			<accessories-carousel-component
+				title="Featured Mac Accessories"
+				link-title="Shop all Mac Accessories"
+				accessories-data='[
+		{
+			"swiperItems": [
+				{
+					"imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK0U3?wid=266&hei=291&fmt=png-alpha&.v=1646446502337",
+					"colors": ["#deeadf", "#ffc650", "#aac1da", "#505a66", "#aaa196", "#fe86a2"],
+					"new": "New",
+					"title": "iPhone 15 Silicone Case",
+					"price": "$49.00"
+				},
+				{
+					"imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MMMR3?wid=266&hei=291&fmt=png-alpha&.v=1645719947833",
+					"colors": ["#f2f0ee", "#43403f"],
+					"new": "New",
+					"title": "Magic Keyboard for iPad Pro 13-inch (M4) - White",
+					"price": "$49.00"
+				}
+			]
+		},
+		{
+			"swiperItems": [
+				{
+					"imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MMMQ3?wid=266&hei=291&fmt=png-alpha&.v=1645138486301",
+					"colors": ["#f2f0ee", "#43403f", "#7f9cae"],
+					"new": "New",
+					"title": "Smart Folio for iPad Pro 13-inch (M4) - Denim",
+					"price": "$49.00"
+				},
+				{
+					"imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXQT2?wid=266&hei=291&fmt=png-alpha&.v=1715371920487",
+					"colors": ["#f2f0ee", "#43403f"],
+					"new": "",
+					"title": "Magic Keyboard for iPad Air 11-inch (M2) - Black",
+					"price": "$299.00"
+				}
+			]
+		},
+		{
+			"swiperItems": [
+				{
+					"imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWK73?wid=266&hei=291&fmt=png-alpha&.v=1715010528503",
+					"colors": ["#cccce7", "#f2f0ee", "#43403f", "#b2b493"],
+					"new": "New",
+					"title": "Smart Folio for iPad Pro 13-inch (M4) - White",
+					"price": "$79.00"
+				},
+				{
+					"imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQDP3?wid=266&hei=291&fmt=png-alpha&.v=1664481446939",
+					"colors": [],
+					"new": "",
+					"title": "Magic Keyboard Folio for iPad (10th generation)",
+					"price": "$249.00"
+				}
+			]
+		},
+		{
+			"swiperItems": [
+				{
+					"imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU8F2?wid=266&hei=291&fmt=png-alpha&.v=1540596407165",
+					"colors": [],
+					"new": "Free Engraving",
+					"title": "Apple Pencil (2nd generation)",
+					"price": "$129.00"
+				}
+			]
+		}
+	]'
+			></accessories-carousel-component>
+			<!-- airtag -->
+			<accessories-carousel-component
+				title="AirTag"
+				link-title="Shop AirTag"
+				accessories-data='[
+	{
+		"swiperItems": [
+			{
+				"imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airtag-single-select-202104?wid=266&hei=291&fmt=png-alpha&.v=1617761671000",
+				"colors": ["#deeadf", "#ffc650", "#aac1da", "#505a66", "#aaa196", "#fe86a2"],
+				"new": "New",
+				"title": "iPhone 15 Silicone Case",
+				"price": "$49.00"
+			},
+			{
+				"imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MT2M3?wid=266&hei=291&fmt=png-alpha&.v=1699644802878",
+				"colors": ["#f2f0ee", "#43403f"],
+				"new": "New",
+				"title": "Magic Keyboard for iPad Pro 13-inch (M4) - White",
+				"price": "$49.00"
+			}
+		]
+	},
+	{
+		"swiperItems": [
+			{
+				"imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MX4F2?wid=266&hei=291&fmt=png-alpha&.v=1618028908000",
+				"colors": ["#f2f0ee", "#43403f", "#7f9cae"],
+				"new": "New",
+				"title": "Smart Folio for iPad Pro 13-inch (M4) - Denim",
+				"price": "$49.00"
+			},
+			{
+				"imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXQT2?wid=266&hei=291&fmt=png-alpha&.v=1715371920487",
+				"colors": ["#f2f0ee", "#43403f"],
+				"new": "",
+				"title": "Magic Keyboard for iPad Air 11-inch (M2) - Black",
+				"price": "$299.00"
+			}
+		]
+	},
+	{
+		"swiperItems": [
+			{
+				"imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWK73?wid=266&hei=291&fmt=png-alpha&.v=1715010528503",
+				"colors": ["#cccce7", "#f2f0ee", "#43403f", "#b2b493"],
+				"new": "New",
+				"title": "Smart Folio for iPad Pro 13-inch (M4) - White",
+				"price": "$79.00"
+			},
+			{
+				"imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQDP3?wid=266&hei=291&fmt=png-alpha&.v=1664481446939",
+				"colors": [],
+				"new": "",
+				"title": "Magic Keyboard Folio for iPad (10th generation)",
+				"price": "$249.00"
+			}
+		]
+	},
+		{
+			"swiperItems": [
+				{
+					"imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU8F2?wid=266&hei=291&fmt=png-alpha&.v=1540596407165",
+					"colors": [],
+					"new": "Free Engraving",
+					"title": "Apple Pencil (2nd generation)",
+					"price": "$129.00"
+				}
+			]
+		}
+	]'
+			></accessories-carousel-component>
+		</section>
+
+		<!-- Dilivery -->
+		<section class="w-full bg-[#fbfbfb]">
+			<div
+				class="max-w-[1100px] mx-auto pt-20 grid grid-cols-1 md:grid-cols-3 gap-4"
+			>
+				<!-- item -->
+				<div class="px-10 flex flex-col gap-4 items-center text-center">
+					<img
+						src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-truck-2024?wid=56&hei=56&fmt=png-alpha&.v=1712954281047"
+						alt=""
+						class="w-[60px] object-contain opacity-70"
+					/>
+					<div class="text-black/80">
+						<h2 class="font-semibold text-lg">Fast delivery or pickup</h2>
+						<p class="text-sm text-gray-500 font-light">
+							Enjoy two-hour delivery from an Apple Store, free delivery, or
+							easy pickup.
+						</p>
+						<a
+							href="#"
+							class="text-blue-600 hover:underline tracking-wide md:text-sm text-xs"
+							>Learn more ></a
+						>
+					</div>
+				</div>
+
+				<!-- item -->
+				<div class="px-10 flex flex-col gap-4 items-center text-center">
+					<img
+						src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-return-2018?wid=44&hei=56&fmt=png-alpha&.v=1586396534892"
+						alt=""
+						class="w-[60px] object-contain opacity-70"
+					/>
+					<div class="text-black/80">
+						<h2 class="font-semibold text-lg">Free and easy returns</h2>
+						<p class="text-sm text-gray-500 font-light">
+							Complete your return online or take it to an Apple Store.
+						</p>
+						<a
+							href="#"
+							class="text-blue-600 hover:underline tracking-wide md:text-sm text-xs"
+							>Learn more ></a
+						>
+					</div>
+				</div>
+
+				<!-- item -->
+				<div class="px-10 flex flex-col gap-4 items-center text-center">
+					<img
+						src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-applecard-2024?wid=56&hei=56&fmt=png-alpha&.v=1712954281050"
+						alt=""
+						class="w-[60px] object-contain opacity-70"
+					/>
+					<div class="text-black/80">
+						<h2 class="font-semibold text-lg">Buy with Apple Card.</h2>
+						<p class="text-sm text-gray-500 font-light">
+							Get 3% Daily Cash back when you shop at Apple with Apple Card.
+						</p>
+						<a
+							href="#"
+							class="text-blue-600 hover:underline tracking-wide md:text-sm text-xs"
+							>Learn more ></a
+						>
+					</div>
+				</div>
+			</div>
 		</section>
 
 		<!-- Footer -->
