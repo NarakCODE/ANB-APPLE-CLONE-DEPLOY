@@ -32,7 +32,7 @@
 		<!-- style -->
 		<link rel="stylesheet" href="../styles/style.css" />
 	</head>
-	<body class="bg-[#fbfbfb]">
+	<body class="bg-[#f5f5f7]">
 		<!-- Navbar -->
 		<navbar-component bgColor="white" textColor="black"></navbar-component>
 
@@ -45,7 +45,7 @@
 			/>
 		</div>
 
-		<main class="w-full bg-white py-20">
+		<section class="w-full py-20 bg-white">
 			<!-- inner width -->
 			<div class="max-w-[980px] mx-auto px-8">
 				<!-- title -->
@@ -133,7 +133,7 @@
 				</div>
 
 				<!-- Card container -->
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
 					<!-- Card -->
 					<div
 						class="flex flex-col gap-8 hover hover:scale-[102%] duration-500 cursor-pointer px-10 py-6 bg-[#f5f5f7] rounded-2xl items-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.12)] group"
@@ -174,8 +174,101 @@
 						</p>
 					</div>
 				</div>
+
+				<div class="mt-20">
+					<!-- SEARCH FOR MORE TOPICS -->
+					<h2 class="text-center md:text-4xl text-3xl">
+						Search for more topics
+					</h2>
+					<form
+						class="form mt-10 relative max-w-[100%] mx-auto w-full flex justify-center"
+					>
+						<button class="absolute left-2 -translate-y-1/2 top-1/2 p-1">
+							<svg
+								width="17"
+								height="16"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								role="img"
+								aria-labelledby="search"
+								class="w-5 h-5 text-gray-700"
+							>
+								<path
+									d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+									stroke="currentColor"
+									stroke-width="1.333"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></path>
+							</svg>
+						</button>
+						<input
+							class="w-full max-w-[100%] mx-auto border-black/50 pl-10 input rounded-md px-8 py-3 border focus:border-blue-400 placeholder-gray-400 transition-all duration-300"
+							placeholder="Search Support"
+							required=""
+							type="text"
+						/>
+					</form>
+				</div>
 			</div>
-		</main>
+		</section>
+
+		<!-- APPLE SUPPORT ON YOUTUBE -->
+		<section>
+			<div class="my-6 max-w-[1000px] mx-auto px-4 flex flex-col gap-6">
+				<div
+					class="w-full bg-white rounded-2xl px-6 pt-10 flex flex-col gap-10"
+				>
+					<!-- TITLE -->
+					<div class="flex flex-col gap-3 items-center text-center">
+						<h2 class="text-center md:text-4xl text-3xl">
+							Apple Support on YouTube
+						</h2>
+						<p class="text-sm md:text-base text-black/80">
+							Check out our official YouTube channel to help you get the most
+							from your Apple devices and services.
+						</p>
+						<a
+							href="#"
+							class="text-blue-500 hover:underline text-sm md:text-base"
+							>Visit Aple Support on YouTube</a
+						>
+					</div>
+
+					<img
+						src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_content/tile-feature-AppleSupport-YouTube-promo.image.large_2x.png"
+						alt=""
+						class="w-full h-auto object-cover"
+					/>
+				</div>
+
+				<div
+					class="w-full bg-white rounded-2xl overflow-hidden pt-10 flex flex-col gap-10"
+				>
+					<!-- TITLE -->
+					<div class="flex flex-col gap-3 items-center text-center">
+						<h2 class="text-center md:text-4xl text-3xl">
+							Join free sessions at your Apple Store
+						</h2>
+						<p class="text-sm md:text-base text-black/80">
+							Learn about the latest features and how to go further with your
+							Apple devices.
+						</p>
+						<a
+							href="#"
+							class="text-blue-500 hover:underline text-sm md:text-base"
+							>Sign up ></a
+						>
+					</div>
+
+					<img
+						src="https://support.apple.com/content/dam/edam/applecare/images/en_US/psp_content/tile-feature-taa-fundamentals.image.large_2x.png"
+						alt=""
+						class="w-full h-auto object-cover"
+					/>
+				</div>
+			</div>
+		</section>
 
 		<!-- Footer -->
 		<footer-component></footer-component>
