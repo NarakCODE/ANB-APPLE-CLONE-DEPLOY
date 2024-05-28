@@ -183,7 +183,7 @@ class FooterComponent extends HTMLElement {
 														<!-- Loop through each link in the list and convert to lowercase -->
 														${list.links
 															.map((link) => {
-																return `<li><a href="${link.toLowerCase()}.html" class="hover:underline">${link}</a></li>`;
+																return `<li><a href="../pages/${link.toLowerCase()}.html" class="hover:underline">${link}</a></li>`;
 															})
 															.join('')}
 													</ul>
@@ -253,7 +253,7 @@ class FooterComponent extends HTMLElement {
 																subSection.links
 																	.map(
 																		(link) =>
-																			`<a href="" class="w-full hover:underline">${link}</a>`
+																			`<a href="" class="w-full hover:underline">../pages/${link}</a>`
 																	)
 																	.join('')
 															)
