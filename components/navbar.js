@@ -431,7 +431,8 @@ class NavbarComponent extends HTMLElement {
 								<li class="font-light text-xs text-gray-500 my-1">${item.category}</li>
 								${item.items
 									.map(
-										(link) => `<li class=""><a href="${link}">${link}</a></li>`
+										(link) =>
+											`<li class=""><a href="../pages/${link.toLowerCase()}.html">${link}</a></li>`
 									)
 									.join('')}
 								<li class="mt-3 text-xs ">${item.compare}</li>
@@ -456,7 +457,7 @@ class NavbarComponent extends HTMLElement {
 			.map(
 				(item) => `
             <li id="hover-btn">
-                  <a class="py-3 text-${textColor}/80 hover:text-${textColor}" href="${item.url}">${item.name}</a>
+                  <a class="py-3 text-${textColor}/80 hover:text-${textColor}" href="../pages/${item.url}">${item.name}</a>
             </li>
          `
 			)
@@ -472,7 +473,7 @@ class NavbarComponent extends HTMLElement {
             >
                <div class="flex items-center justify-between w-full text-xs gap-6">
                  <div>
-                     <a href="index.html">
+                     <a href="../index.html">
                      <svg class="size-5" width="800px" height="800px" viewBox="-1.5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     
                      <title>apple [#173]</title>
@@ -558,7 +559,7 @@ class NavbarComponent extends HTMLElement {
 								${navItems
 									.map(
 										(item) => `
-									<a href="${item.url}" class="flex items-center justify-between group">
+									<a href="../pages/${item.url}" class="flex items-center justify-between group">
 										${item.name}
 										<span class="material-symbols-outlined group-hover:block hidden">
 											chevron_right
