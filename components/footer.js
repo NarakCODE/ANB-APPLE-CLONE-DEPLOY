@@ -253,7 +253,7 @@ class FooterComponent extends HTMLElement {
 																subSection.links
 																	.map(
 																		(link) =>
-																			`<a href="" class="w-full hover:underline">../pages/${link}</a>`
+																			`<a href="../pages/${link.toLowercase()}.html" class="w-full hover:underline">${link}</a>`
 																	)
 																	.join('')
 															)
@@ -312,5 +312,7 @@ class FooterComponent extends HTMLElement {
       `;
 	}
 }
+
+
 
 customElements.define('footer-component', FooterComponent);
