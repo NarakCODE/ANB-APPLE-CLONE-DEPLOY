@@ -112,8 +112,6 @@ const footerLinks = [
 	],
 ];
 
-const createFooterComponent = () => {};
-
 class FooterComponent extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML = `
@@ -253,7 +251,7 @@ class FooterComponent extends HTMLElement {
 																subSection.links
 																	.map(
 																		(link) =>
-																			`<a href="../pages/${link.toLowercase()}.html" class="w-full hover:underline">${link}</a>`
+																			`<a href="../pages/${link.toLowerCase()}.html" class="w-full hover:underline">${link}</a>`
 																	)
 																	.join('')
 															)
@@ -312,7 +310,5 @@ class FooterComponent extends HTMLElement {
       `;
 	}
 }
-
-
 
 customElements.define('footer-component', FooterComponent);

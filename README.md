@@ -1,73 +1,52 @@
 # Apple Clone Project
 
-This project is a clone of Apple's website using HTML, Tailwind CSS, and JavaScript. It aims to replicate the look and feel of Apple's official website to showcase frontend development skills and demonstrate proficiency with modern web technologies.
+## 📋 Table of Contents
+1. 🤖 [Introduction](#introduction)
+2. ⚙️ [Tech Stack](#tech-stack)
+3. 🔋 [Features](#features)
+4. 🤸 [Quick Start](#quick-start)
+5. 🔗 [Demo Deployment](#demo-deployment)
 
-## Installation
+## Introduction
+
+Apple, one of the leading technology companies in the world, is famous for its sleek and simple designs. Many people choose to clone Apple’s website because of its sleek website design.
+
+Creating a website can be a daunting task, especially if you're new to web development. This tutorial will guide you through the process of creating a simple clone of the Apple website using only HTML, Tailwind CSS, and JavaScript. We'll cover everything from analyzing the design of the original website to fine-tuning the clone to make it look as professional as possible.
+
+## ⚙️ Tech Stack
+
+- HTML
+- Tailwind CSS
+- JavaScript
+- SwiperJS
+
+## 🔋 Features
+
+👉 Beautiful Smooth Animations using Tailwind CSS and JavaScript: Enhanced user experience with carousel for navigation bar animation.
+
+👉 Beautiful Smooth Animations using Tailwind CSS and JavaScript: Enhanced user experience with carousel for hover dropdown and hamburger menu dropdown (Navigation bar).
+
+👉 Completely Responsive: Consistent access and optimal viewing on any device with a fully responsive design that adapts to different screen sizes. And many more, including code architecture and reusability.
+
+## 🤸 Quick Start
+
+Follow these steps to set up the project locally on your machine.
 
 ### Prerequisites
 
-Make sure you have Node.js and npm installed on your system. You can download them from the [official Node.js website](https://nodejs.org/en).
+Make sure you have the following installed on your machine:
+- Git
+- Node.js
 
-### Clone the Repository
-
-Clone this repository using Git:
+### Cloning the Repository
 
 ```bash
-git clone https://github.com/your-github-username/apple-clone.git
-Install Dependencies
-Navigate to the project directory:
+git clone https://git.clp.kr/anbschool/2nd/hexcode/lu-channarak/luy-channarak-apple.com
+cd LUY-CHANNARAK-APPLE.com
 
-bash
-Copy code
-cd apple-clone
-Install the required dependencies:
-
+Installation
 bash
 Copy code
 npm install
-Folder Structure
-public: Contains compiled assets served to the browser.
-src: Contains development code.
-html: HTML templates.
-components: Reusable UI components using Tailwind CSS.
-styles: Tailwind CSS configuration (tailwind.config.js) and custom styles.
-scripts: JavaScript code for interactivity and functionality.
-.gitignore: Specifies files ignored by Git.
-Development Server
-Set up a development server to auto-refresh your browser:
-
-bash
-Copy code
-npm run dev
-Building for Production
-Compile Tailwind CSS, minify JavaScript, and optimize assets:
-
-bash
-Copy code
-npm run build
-Usage
-Describe how to use your project once deployed (if applicable).
-
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-Contributing
-Contributions are welcome! Please follow our Contribution Guidelines.
-
-Authors
-Your Name
-Additional Notes
-This project uses Tailwind CSS for styling.
-Include any other relevant information about libraries or frameworks used.
-Consider adding screenshots or videos to showcase your project.
-vbnet
-Copy code
-
-### Explanation
-
-- **Markdown Syntax**: Uses Markdown syntax for headings, lists, code blocks, links, and emphasis.
-- **Formatting**: Provides clear formatting to improve readability and structure.
-- **Links**: Uses Markdown links to reference external resources like Node.js website and internal project files (LICENSE, CONTRIBUTING.md).
-
-This Markdown version of the README file is ready to be included in your project repository. Adjust any URLs, usernames, or additional details as needed to fit your specific project setup.
-```
+🔗 Demo Deployment
+https://apple-clone-anb-deployment.vercel.app/index.html
