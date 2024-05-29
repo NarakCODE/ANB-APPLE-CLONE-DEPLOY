@@ -48,5 +48,3 @@ Installation
 bash
 Copy code
 npm install
-🔗 Demo Deployment
-https://apple-clone-anb-deployment.vercel.app/index.html
